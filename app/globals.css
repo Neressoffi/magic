@@ -3,31 +3,41 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+  --surface-0: #0a0a0a;
+  --surface-1: #141414;
+  --surface-2: #1e1e1e;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-0: #ffffff;
+  --foreground-1: rgba(255, 255, 255, 0.9);
+  --foreground-2: rgba(255, 255, 255, 0.7);
+  --foreground-3: rgba(255, 255, 255, 0.5);
+
+  --accent: #ff58ae;
+
+  --beige-950: #1a1614;
+  --maroon-900: #3d1f1f;
+  --maroon-950: #2a1515;
+  --neutral-875: #262626;
+
+  --marketing-surface-0: #f5f2ed;
+  --marketing-surface-1: #ffffff;
+  --marketing-foreground-0: #171717;
+  --marketing-foreground-1: #404040;
+  --marketing-foreground-2: #737373;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--surface-0);
+  color: var(--foreground-0);
+  overflow-x: hidden;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
   }
 }

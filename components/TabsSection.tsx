@@ -1,0 +1,257 @@
+"use client";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+
+import * as Tabs from "@radix-ui/react-tabs";
+import {
+  ArrowRight,
+  Box,
+  Crop,
+  Folder,
+  Image as ImageIcon,
+  LayoutGrid,
+  Music,
+  Paperclip,
+  Sparkles,
+  SunMedium,
+  Video,
+  Wand2,
+} from "lucide-react";
+
+import { tabs, type TabContent } from "@/lib/tabs-data";
+
+const ICONS: Record<string, React.ElementType> = {
+  image: ImageIcon,
+  video: Video,
+  audio: Music,
+  box: Box,
+  layout: LayoutGrid,
+};
+
+const AUTO_ROTATE_MS = 5000;
+
+function TabPanel({ tab }: { tab: TabContent }) {
+
+  const [activeItem, setActiveItem] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveItem((current) => (current + 1) % tab.items.length);
+    }, AUTO_ROTATE_MS);
+    return () => clearInterval(timer);
+  }, [activeItem, tab.items.length]);
+
+  return (
+    <div className="grid min-h-[650px] grid-cols-1 gap-8 overflow-hidden rounded-2lg bg-beige-950 p-6 lg:h-[650px] lg:grid-cols-[320px_minmax(0,1fr)] lg:p-10 xl:grid-cols-[360px_minmax(0,1fr)]">
+
+      <div className="flex min-w-0 flex-col">
+
+        <h3 className="font-display text-2xl font-bold text-white lg:text-[26px]">
+          {tab.panelTitle}
+        </h3>
+
+        <p className="mt-3 text-sm leading-relaxed text-white/80">
+          {tab.panelDescription}
+        </p>
+
+        <Link
+          href="#"
+          className="group mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-white"
+        >
+          {tab.ctaLabel}
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+        </Link>
+
+        <ul className="mt-10 flex flex-col gap-1 lg:mt-auto lg:pt-8">
+          {tab.items.map((item, index) => {
+            const Icon = ICONS[item.icon];
+
+            const isActive = index === activeItem;
+            return (
+              <li key={item.title}>
+
+                <button
+                  onClick={() => setActiveItem(index)}
+                  className="group w-full py-2.5 text-left"
+                >
+
+                  <span className="flex items-center gap-3">
+                    <Icon
+                      className={`h-[18px] w-[18px] transition-colors duration-300 ${
+                        isActive
+                          ? "text-white"
+                          : "text-white/70 group-hover:text-white"
+                      }`}
+                    />
+                    <span
+                      className={`text-[15px] font-bold transition-colors duration-300 ${
+                        isActive
+                          ? "text-white"
+                          : "text-white/70 group-hover:text-white"
+                      }`}
+                    >
+                      {item.title}
+                    </span>
+                  </span>
+
+                  <span
+                    className={`grid transition-all duration-300 ${
+                      isActive
+                        ? "grid-rows-[1fr] opacity-100"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+
+                    <span className="overflow-hidden">
+
+                      <span className="block pl-[30px] pt-1.5 text-[13px] leading-relaxed text-white/70">
+                        {item.description}
+                      </span>
+
+                      <span className="ml-[30px] mt-3 block h-[2px] w-[calc(100%-30px)] overflow-hidden rounded bg-white/20">
+                        {isActive && (
+                          <span
+                            key={activeItem}
+                            className="block h-full bg-white animate-progress motion-reduce:animate-none"
+                          />
+                        )}
+                      </span>
+                    </span>
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+      <div className="relative min-h-[320px] min-w-0 lg:min-h-0">
+
+        <div className="absolute inset-0 overflow-hidden rounded-2lg lg:inset-y-2 lg:inset-x-0 xl:inset-x-4">
+
+          {tab.items.map((item, index) => (
+            <img
+              key={item.title}
+              src={item.image}
+              alt={item.title}
+              className={`absolute inset-0 h-full w-full object-cover transition-all duration-700 ease-out ${
+                index === activeItem
+                  ? "scale-100 opacity-100"
+                  : "scale-105 opacity-0"
+              }`}
+            />
+          ))}
+        </div>
+
+        <div className="absolute bottom-6 left-1/2 w-[85%] max-w-md -translate-x-1/2 rounded-xl bg-black/80 px-4 py-3 backdrop-blur">
+
+          <div className="flex items-center justify-between gap-3">
+            <span className="truncate text-xs text-white/90">
+              Changez la couleur de la moto
+            </span>
+            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15 text-[10px] text-white">
+              ↑
+            </span>
+          </div>
+
+          <div className="mt-2.5 flex items-center gap-3 text-white/60">
+            <Wand2 className="h-3.5 w-3.5" />
+            <Paperclip className="h-3.5 w-3.5" />
+            <Crop className="h-3.5 w-3.5" />
+            <Sparkles className="h-3.5 w-3.5" />
+            <LayoutGrid className="h-3.5 w-3.5" />
+            <Folder className="h-3.5 w-3.5" />
+            <SunMedium className="h-3.5 w-3.5" />
+            <ImageIcon className="h-3.5 w-3.5" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function TabsSection() {
+
+  const [activeTab, setActiveTab] = useState(tabs[0].id);
+
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+  const [indicator, setIndicator] = useState({ left: 0, width: 0 });
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const button = tabRefs.current[activeTab];
+      if (button) {
+        setIndicator({ left: button.offsetLeft, width: button.offsetWidth });
+      }
+    };
+    updateIndicator();
+
+    window.addEventListener("resize", updateIndicator);
+    return () => window.removeEventListener("resize", updateIndicator);
+  }, [activeTab]);
+
+  return (
+
+    <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
+      <div className="mx-auto max-w-screen-2xl">
+
+        <h2 className="text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+          Un seul endroit pour tout créer
+        </h2>
+
+        <p className="mx-auto mt-4 max-w-2xl text-center text-base text-marketing-foreground-2">
+          Sous-titre placeholder : tous vos outils créatifs, vos assets et
+          votre équipe réunis dans un seul espace.
+        </p>
+
+        <Tabs.Root value={activeTab} onValueChange={setActiveTab}>
+
+          <div className="mt-10 flex justify-center">
+
+            <div className="max-w-full overflow-x-auto scrollbar-hidden rounded-full">
+              <Tabs.List className="relative flex w-max items-center rounded-full bg-marketing-surface-1 p-1.5">
+
+                <div
+                  className="absolute top-1.5 bottom-1.5 rounded-full bg-black transition-all duration-300"
+                  style={{ left: indicator.left, width: indicator.width }}
+                />
+
+                {tabs.map((tab) => (
+                  <Tabs.Trigger
+                    key={tab.id}
+                    value={tab.id}
+
+                    ref={(el) => {
+                      tabRefs.current[tab.id] = el;
+                    }}
+
+                    className={`relative z-10 flex items-center gap-1.5 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
+                      activeTab === tab.id
+                        ? "text-white"
+                        : "text-marketing-foreground-0 hover:text-marketing-foreground-1"
+                    }`}
+                  >
+                    {tab.label}
+
+                    {tab.isNew && (
+                      <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-medium leading-none text-accent">
+                        Nouveau
+                      </span>
+                    )}
+                  </Tabs.Trigger>
+                ))}
+              </Tabs.List>
+            </div>
+          </div>
+
+          {tabs.map((tab) => (
+            <Tabs.Content key={tab.id} value={tab.id} className="mt-8 outline-none">
+              <TabPanel tab={tab} />
+            </Tabs.Content>
+          ))}
+        </Tabs.Root>
+      </div>
+    </section>
+  );
+}
