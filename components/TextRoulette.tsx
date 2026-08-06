@@ -2,16 +2,16 @@
 import { useEffect, useState } from "react";
 
 const PHRASES = [
-  "Créez des workflows",
-  "Générez des images",
-  "Castez des personnages",
-  "Créez des vidéos",
-  "Composez de la musique",
-  "Dessinez des logos",
-  "Agrandissez vos photos",
-  "Clonez des voix",
-  "Créez des scènes 3D",
-  "Automatisez vos tâches",
+  "Créer une identité de marque",
+  "Repenser votre image",
+  "Concevoir vos supports",
+  "Produire une vidéo publicitaire",
+  "Lancer une campagne",
+  "Intégrer une solution IA",
+  "Mieux exploiter vos données",
+  "Faire évoluer votre organisation",
+  "Construire une marque cohérente",
+  "Clarifier votre direction",
 ];
 
 const LINE_HEIGHT = 60;

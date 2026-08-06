@@ -6,13 +6,13 @@ import {
 } from "lucide-react";
 
 const TOOL_TILES = [
-  { label: "Générateur d'images", icon: ImageIcon, image: "https://picsum.photos/id/1039/500/620" },
-  { label: "Générateur vidéo", icon: Video, image: "https://picsum.photos/id/1043/500/620" },
-  { label: "Éditeur vidéo", icon: Clapperboard, image: "https://picsum.photos/id/1044/500/620" },
-  { label: "Audio", icon: Music, image: "https://picsum.photos/id/1047/500/620" },
+  { label: "Identité de marque", icon: ImageIcon, image: "https://picsum.photos/id/1039/500/620" },
+  { label: "Contenus vidéo", icon: Video, image: "https://picsum.photos/id/1043/500/620" },
+  { label: "Campagnes créatives", icon: Clapperboard, image: "https://picsum.photos/id/1044/500/620" },
+  { label: "IA & données", icon: Music, image: "https://picsum.photos/id/1047/500/620" },
 ];
 
-const TILE_FILTERS = ["Tous", "Image", "Vidéo", "Audio"];
+const TILE_FILTERS = ["Tous", "Branding", "Vidéo", "IA"];
 
 export function BentoGrid() {
   return (
@@ -23,12 +23,11 @@ export function BentoGrid() {
         <div className="flex flex-col">
 
           <h2 className="max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-4xl">
-            Chaque outil, prêt à l&apos;emploi
+            Nos domaines d&apos;intervention
           </h2>
           <p className="mt-4 max-w-md text-base text-marketing-foreground-2">
-            Placeholder : image, vidéo, audio, 3D — trente outils, aucune
-            installation. Ouvrez ce qu&apos;il vous faut, créez ce que vous
-            voulez.
+            Branding, design, vidéo et IA : nos quatre pôles peuvent intervenir
+            séparément ou se combiner autour d&apos;une même direction.
           </p>
 
           <div className="mt-8 flex items-center gap-2">
@@ -77,12 +76,14 @@ export function BentoGrid() {
 
             <div className="md:w-[45%]">
               <h3 className="font-display text-xl font-bold text-white lg:text-2xl">
-                Tout votre processus créatif sur un canvas nodal
+                Votre demande est le point de départ. Pas toujours la réponse complète.
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/70">
-                Placeholder : tous vos outils, tous vos workflows. Un canvas
-                infini à base de nœuds. Explorez des idées, comparez des
-                versions, travaillez en équipe, le tout dans les Espaces.
+                Avant de produire, nous cherchons à comprendre le résultat
+                attendu, le contexte et les éléments qui doivent rester
+                cohérents. Notre rôle n&apos;est pas de compliquer votre idée,
+                mais d&apos;éviter qu&apos;une bonne solution soit construite
+                pour le mauvais problème.
               </p>
             </div>
 
@@ -94,10 +95,10 @@ export function BentoGrid() {
               />
 
               <span className="absolute left-4 top-1/2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold text-white">
-                Marina
+                Marque
               </span>
               <span className="absolute right-4 top-6 rounded-full bg-sky-500 px-2 py-0.5 text-[10px] font-semibold text-white">
-                Paco
+                Contenu
               </span>
             </div>
           </div>
@@ -106,18 +107,17 @@ export function BentoGrid() {
 
             <div className="flex flex-col overflow-hidden rounded-2lg bg-maroon-900 p-8">
               <h3 className="font-display text-xl font-bold text-white">
-                Un seul endroit, toute l&apos;équipe
+                Nous relions les expertises
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/70">
-                Placeholder : organisez assets de marque, contenus générés et
-                workflows avec les Projets. Votre équipe travaille ensemble,
-                votre travail reste réuni.
+                Branding, design, vidéo, intelligence artificielle et données
+                avancent autour d&apos;un même objectif pour votre organisation.
               </p>
 
               <div className="mt-6 grid flex-1 grid-cols-2 gap-3">
                 {[
                   { label: "Projet de marque", image: "https://picsum.photos/id/1050/400/300" },
-                  { label: "Assets campagne", image: "https://picsum.photos/id/1052/400/300" },
+                  { label: "Campagne", image: "https://picsum.photos/id/1052/400/300" },
                 ].map((folder) => (
                   <div key={folder.label} className="relative min-h-[120px] overflow-hidden rounded-lg">
                     <img
@@ -135,11 +135,11 @@ export function BentoGrid() {
 
             <div className="flex flex-col overflow-hidden rounded-2lg bg-sky-800 p-8">
               <h3 className="font-display text-xl font-bold text-white">
-                Un workflow en un clic
+                Nous construisons pour l&apos;évolution
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/70">
-                Placeholder : enregistrez n&apos;importe quel workflow complexe
-                comme une App. La personne suivante le lance en un clic.
+                Les solutions doivent pouvoir accompagner la prochaine étape de
+                l&apos;organisation, et pas seulement répondre au besoin du jour.
               </p>
 
               <div className="relative mt-6 min-h-[140px] flex-1 overflow-hidden rounded-lg">
@@ -149,7 +149,7 @@ export function BentoGrid() {
                   className="absolute inset-0 h-full w-full object-cover"
                 />
                 <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border-2 border-accent bg-black/40 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-                  Lancer l&apos;app
+                  Démarrer
                 </span>
               </div>
             </div>

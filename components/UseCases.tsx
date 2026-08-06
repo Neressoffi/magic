@@ -3,21 +3,21 @@ import { ArrowRight } from "lucide-react";
 
 const USE_CASES = [
   {
-    title: "Publicité",
+    title: "Vous lancez",
     description:
-      "Placeholder : du brief à l'asset final. Sans intermédiaires, sans attente. Juste le travail.",
+      "Transformer une idée en marque, structurer les premiers messages et préparer les supports nécessaires au démarrage.",
     image: "https://picsum.photos/id/1060/900/1200",
   },
   {
-    title: "Packshots produit",
+    title: "Vous professionnalisez",
     description:
-      "Placeholder : des shootings photo par IA. Sans studio, sans équipe, sans planning.",
+      "Faire correspondre votre image, vos supports et vos contenus au niveau de qualité que vous souhaitez atteindre.",
     image: "https://picsum.photos/id/1062/900/1200",
   },
   {
-    title: "Campagnes de marque",
+    title: "Vous repositionnez",
     description:
-      "Placeholder : visuels, vidéo et audio à votre image, à toute échelle, dans tous les formats.",
+      "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
     image: "https://picsum.photos/id/1067/900/1200",
   },
 ];
@@ -56,11 +56,12 @@ export function UseCases() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-              Du packshot produit au phénomène viral
+              Votre organisation est peut-être à un tournant.
             </h2>
             <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
-              Description placeholder : quel que soit votre secteur, CreativeHub
-              s&apos;adapte à vos workflows de production.
+              Chaque lancement, repositionnement, campagne ou nouvelle
+              technologie peut renforcer votre organisation. NYAKA intervient
+              pour donner une direction claire à ces moments importants.
             </p>
           </div>
 
@@ -68,7 +69,7 @@ export function UseCases() {
             href="#"
             className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
           >
-            Commencer à créer
+            Démarrer un projet
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
@@ -85,8 +86,8 @@ export function UseCases() {
 
         <div className="mt-4">
           <UseCaseCard
-            title="Cinéma"
-            description="Placeholder : personnages, storyboards et concepts à explorer. Des outils cinématographiques pensés pour l'image finale."
+            title="Vous communiquez"
+            description="Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive."
             image="https://picsum.photos/id/1015/1800/600"
 
             className="aspect-[3/2] md:aspect-[3/1]"

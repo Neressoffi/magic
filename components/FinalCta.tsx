@@ -14,14 +14,14 @@ export function FinalCta() {
       <div className="relative flex flex-col items-center text-center">
 
         <h2 className="font-display text-4xl font-bold text-white lg:text-5xl">
-          Soyez CreativeHub
+          Construisons la suite avec méthode.
         </h2>
 
         <Link
           href="#"
           className="group mt-8 flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-85"
         >
-          Commencer à créer
+          Démarrer un projet
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
       </div>

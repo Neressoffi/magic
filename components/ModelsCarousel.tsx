@@ -24,18 +24,18 @@ const SAMPLE_VIDEOS = [
 ];
 
 const MODELS = [
-  { name: "Nova XL", icon: Sparkles },
-  { name: "Pixelmind", icon: Brush },
-  { name: "Framewave", icon: Film },
-  { name: "Voxtral", icon: Mic },
-  { name: "Lumina Pro", icon: Aperture },
-  { name: "Motionary", icon: Clapperboard },
-  { name: "Neuronix", icon: Cpu },
-  { name: "Shotcraft", icon: Camera },
-  { name: "Layerbot", icon: Layers },
-  { name: "Wandify", icon: Wand2 },
-  { name: "Voltedge", icon: Zap },
-  { name: "Agentia", icon: Bot },
+  { name: "Identité", icon: Sparkles },
+  { name: "Logo", icon: Brush },
+  { name: "Supports", icon: Film },
+  { name: "Campagne", icon: Mic },
+  { name: "Vidéo", icon: Aperture },
+  { name: "Teaser", icon: Clapperboard },
+  { name: "IA", icon: Cpu },
+  { name: "Données", icon: Camera },
+  { name: "Branding", icon: Layers },
+  { name: "Design", icon: Wand2 },
+  { name: "Automatisation", icon: Zap },
+  { name: "Assistant", icon: Bot },
 
 ].map((model, index) => ({
   ...model,
@@ -124,11 +124,11 @@ export function ModelsCarousel() {
 
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-8">
         <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-          Avec tous les derniers modèles
+          Avec toutes les expertises nécessaires
         </h2>
         <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
-          Sous-titre placeholder : accédez aux meilleurs modèles d&apos;image,
-          de vidéo et d&apos;audio, mis à jour en continu.
+          Branding, design, vidéo, intelligence artificielle et données :
+          nous mobilisons les compétences adaptées à votre projet.
         </p>
       </div>
 

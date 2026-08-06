@@ -11,7 +11,7 @@ export function TopBanner() {
     >
 
       <span className="text-xs font-medium text-accent">
-        Annonce placeholder — découvrez la nouveauté
+        NYAKA prépare son lancement officiel. Découvrez bientôt nos projets et nos solutions
       </span>
 
       <ArrowRight

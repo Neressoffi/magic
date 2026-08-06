@@ -17,54 +17,54 @@ type Plan = {
 
 const INDIVIDUAL_PLANS: Plan[] = [
   {
-    name: "Premium",
-    description: "Placeholder : pour explorer les outils IA et le contenu stock.",
+    name: "Essentiel branding",
+    description: "Pour clarifier votre identité, votre logo et votre univers visuel.",
     monthly: 16,
     annual: 12,
-    credits: "Inclut 240 K crédits/an",
-    cta: "Choisir Premium",
+    credits: "Proposition sur devis selon le périmètre",
+    cta: "Demander un devis",
     features: [
-      "Accès à tous les modèles image, vidéo et audio",
-      "Espaces : canvas partagé, pensé workflows",
-      "Outils d'édition pro : image, vidéo et design",
-      "Musique, voix et effets sonores",
-      "Licence IA commerciale",
-      "Upscalers image et vidéo",
+      "Positionnement et identité de marque",
+      "Logo et direction artistique",
+      "Supports de base pour le démarrage",
+      "Charte graphique essentielle",
+      "Accompagnement au cadrage",
+      "Livrables adaptés à votre organisation",
     ],
   },
   {
-    name: "Premium+",
-    badge: "Meilleur rapport",
-    description: "Placeholder : pour les créatifs qui veulent des générations illimitées et tout l'accès IA.",
+    name: "Communication",
+    badge: "Le plus demandé",
+    description: "Pour des supports, contenus vidéo et campagnes cohérents avec votre marque.",
     monthly: 36,
     annual: 27,
-    credits: "Inclut 600 K crédits/an",
-    cta: "Choisir Premium+",
+    credits: "Proposition sur devis selon le périmètre",
+    cta: "Demander un devis",
     highlighted: true,
     features: [
-      "Accès à tous les modèles image, vidéo et audio",
-      "Espaces : canvas partagé, pensé workflows",
-      "Outils d'édition pro : image, vidéo et design",
-      "Musique, voix et effets sonores",
-      "Licence IA commerciale + droits musicaux",
-      "Upscalers exclusifs",
+      "Design et supports de communication",
+      "Contenus vidéo et teasers",
+      "Campagnes créatives",
+      "Déclinaisons multi-supports",
+      "Direction artistique de campagne",
+      "Accompagnement jusqu'au déploiement",
     ],
   },
   {
-    name: "Pro",
-    badge: "Choix des experts",
-    description: "Placeholder : pour les professionnels qui produisent du contenu à grande échelle.",
+    name: "Solution complète",
+    badge: "Organisation",
+    description: "Pour relier branding, design, vidéo, IA et données autour d'une même direction.",
     monthly: 230,
     annual: 172.5,
-    credits: "Inclut 4 M crédits/an + 25% offerts",
-    cta: "Choisir Pro",
+    credits: "Proposition sur devis selon le périmètre",
+    cta: "Démarrer un projet",
     features: [
-      "Accès à tous les modèles image, vidéo et audio",
-      "Espaces : canvas partagé, pensé workflows",
-      "Outils d'édition pro : image, vidéo et design",
-      "Musique, voix et effets sonores",
-      "Licence IA commerciale + droits musicaux",
-      "Générations en parallèle",
+      "Les quatre pôles NYAKA mobilisables",
+      "Approche structurée de bout en bout",
+      "Solutions IA et données selon le besoin",
+      "Coordination des expertises",
+      "Calendrier et périmètre validés",
+      "Accompagnement à l'évolution",
     ],
   },
 ];
@@ -80,7 +80,7 @@ export function Pricing() {
       <div className="mx-auto max-w-screen-2xl">
 
         <h2 className="text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-          Des offres qui couvrent vos besoins
+          Des offres adaptées à votre besoin
         </h2>
 
         <div className="mt-10 flex flex-col items-center justify-between gap-6 md:flex-row">
@@ -88,8 +88,8 @@ export function Pricing() {
           <div className="flex items-center rounded-full bg-marketing-surface-1 p-1.5">
             {(
               [
-                { id: "individual", label: "Particulier" },
-                { id: "teams", label: "Équipes" },
+                { id: "individual", label: "Projet" },
+                { id: "teams", label: "Organisation" },
               ] as const
             ).map((tab) => (
               <button
@@ -110,12 +110,12 @@ export function Pricing() {
             <span
               className={annual ? "text-marketing-foreground-2" : "font-medium text-marketing-foreground-0"}
             >
-              Mensuel
+              Ciblé
             </span>
 
             <button
               onClick={() => setAnnual(!annual)}
-              aria-label="Basculer entre mensuel et annuel"
+              aria-label="Basculer entre offre ciblée et offre complète"
               className={`relative h-6 w-11 rounded-full transition-colors ${
                 annual ? "bg-black" : "bg-black/20"
               }`}
@@ -129,9 +129,9 @@ export function Pricing() {
             <span
               className={annual ? "font-medium text-marketing-foreground-0" : "text-marketing-foreground-2"}
             >
-              Annuel{" "}
+              Complet{" "}
               <span className="text-marketing-foreground-2">
-                — Économisez 25 %
+                — Sur devis
               </span>
             </span>
           </div>
@@ -140,7 +140,6 @@ export function Pricing() {
         <div className="mt-8 grid grid-cols-1 gap-4 lg:grid-cols-3">
           {INDIVIDUAL_PLANS.map((plan) => {
 
-            const price = annual ? plan.annual : plan.monthly;
             return (
               <div
                 key={plan.name}
@@ -163,20 +162,12 @@ export function Pricing() {
                 </p>
 
                 <div className="mt-6 flex items-baseline gap-2">
-                  {annual && (
-                    <span className="text-lg text-marketing-foreground-2 line-through">
-                      {plan.monthly} €
-                    </span>
-                  )}
                   <span className="font-display text-4xl font-bold text-marketing-foreground-0">
-
-                    {price.toLocaleString("fr-FR")} €
+                    Sur devis
                   </span>
-                  <span className="text-sm text-marketing-foreground-2">/mois</span>
                 </div>
 
                 <p className="mt-1 text-xs text-marketing-foreground-2">
-                  {annual ? "facturé annuellement" : "facturé mensuellement"} ·{" "}
                   {plan.credits}
                 </p>
 
@@ -206,9 +197,8 @@ export function Pricing() {
 
         {audience === "teams" && (
           <p className="mt-6 text-center text-sm text-marketing-foreground-2">
-            Placeholder : les offres Équipes (Business et Entreprise) sont
-            présentées dans la section précédente — contactez-nous pour un
-            devis personnalisé.
+            Pour les organisations, nous construisons une proposition sur mesure
+            après un premier échange sur votre situation et vos objectifs.
           </p>
         )}
       </div>

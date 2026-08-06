@@ -5,21 +5,21 @@ import { ArrowRight, Play } from "lucide-react";
 
 const ORIGINALS = [
   {
-    title: "Chroniques d'Os",
+    title: "KAWA Coffee Shop",
     description:
-      "Placeholder : avec des millions de vues, Chroniques d'Os est un phénomène viral. Un monde de dark fantasy créé par un cinéaste de la communauté.",
+      "Transformer une carte de menu en une expérience de marque. Direction artistique, menu premium, version digitale et points de contact pour accompagner l'expérience client.",
     poster: "https://picsum.photos/id/1011/1600/800",
   },
   {
-    title: "Ligne d'Horizon",
+    title: "THE VISION",
     description:
-      "Placeholder : un court-métrage de science-fiction entièrement produit avec les outils de la plateforme.",
+      "Structurer des campagnes et des contenus capables de rendre les opportunités d'études, d'immigration et de recrutement plus compréhensibles et plus engageantes.",
     poster: "https://picsum.photos/id/1015/1600/800",
   },
   {
-    title: "Néon Sauvage",
+    title: "NEMESIS",
     description:
-      "Placeholder : une série de clips musicaux générés par IA, du storyboard au montage final.",
+      "Définir un univers de marque capable de traduire une ambition plus grande et de soutenir la future évolution du projet.",
     poster: "https://picsum.photos/id/1016/1600/800",
   },
 ];
@@ -48,11 +48,11 @@ export function VideosCarousel() {
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-              Créé avec CreativeHub
+              Réalisations NYAKA
             </h2>
             <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
-              Placeholder : des productions originales réalisées par des
-              créatifs talentueux du monde entier.
+              Des réponses différentes, construites autour de chaque situation.
+              Identité, communication, vidéo, supports ou technologie.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export function VideosCarousel() {
             href="#"
             className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
           >
-            Explorer les Originals
+            Voir les réalisations
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
@@ -81,8 +81,8 @@ export function VideosCarousel() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
 
             <span className="absolute left-6 top-6 text-xs font-semibold text-white/80">
-              CreativeHub{" "}
-              <span className="font-normal text-white/50">Originals</span>
+              Projet{" "}
+              <span className="font-normal text-white/50">à la une</span>
             </span>
 
             <div className="absolute bottom-6 left-6 right-20 max-w-md">
@@ -97,7 +97,7 @@ export function VideosCarousel() {
                 className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/25"
               >
                 <Play className="h-3.5 w-3.5 fill-white" />
-                Regarder la vidéo
+                Découvrir le projet
               </Link>
             </div>
           </div>

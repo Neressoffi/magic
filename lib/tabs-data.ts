@@ -18,37 +18,37 @@ export type TabContent = {
 const defaultItems: AccordionItem[] = [
   {
     icon: "image",
-    title: "Image",
+    title: "Branding",
     description:
-      "Générez, retouchez, redimensionnez, agrandissez. Gardez vos personnages et votre marque cohérents sur chaque visuel.",
+      "Construire, clarifier ou faire évoluer une marque afin qu'elle soit reconnaissable, distinctive et cohérente.",
     image: "https://picsum.photos/id/1025/1200/900",
   },
   {
     icon: "video",
     title: "Vidéo",
     description:
-      "Placeholder : créez des vidéos à partir de texte ou d'images, en quelques secondes.",
+      "Transformer un message, une offre ou un événement en contenus capables d'attirer l'attention et de provoquer une action.",
     image: "https://picsum.photos/id/1035/1200/900",
   },
   {
     icon: "audio",
-    title: "Audio",
+    title: "Campagnes",
     description:
-      "Placeholder : voix off, musiques et effets sonores générés par IA.",
+      "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.",
     image: "https://picsum.photos/id/1045/1200/900",
   },
   {
     icon: "box",
-    title: "3D",
+    title: "IA & données",
     description:
-      "Placeholder : transformez vos idées en objets et scènes 3D texturés.",
+      "Intégrer l'IA, l'automatisation et les données là où elles peuvent améliorer une expérience, une décision ou un fonctionnement.",
     image: "https://picsum.photos/id/1055/1200/900",
   },
   {
     icon: "layout",
-    title: "Espaces",
+    title: "Design",
     description:
-      "Placeholder : organisez vos projets et collaborez en temps réel avec votre équipe.",
+      "Donner une forme professionnelle à vos offres, vos messages et vos points de contact physiques ou digitaux.",
     image: "https://picsum.photos/id/1065/1200/900",
   },
 ];
@@ -56,50 +56,50 @@ const defaultItems: AccordionItem[] = [
 export const tabs: TabContent[] = [
   {
     id: "creative-suite",
-    label: "Suite créative",
-    panelTitle: "Une production de niveau pro, de bout en bout",
+    label: "Branding",
+    panelTitle: "Une identité reconnaissable et cohérente",
     panelDescription:
-      "Partez d'une idée. Dirigez les plans. Ajoutez le son. Explorez des variantes. Explorez des workflows. Connectez-vous dans les Espaces. Votre équipe, en création ensemble.",
-    ctaLabel: "Faire le tour",
+      "Positionnement, logo, identité visuelle et direction artistique : nous construisons une marque capable d'évoluer avec votre organisation.",
+    ctaLabel: "Explorer le branding",
     items: defaultItems,
   },
   {
     id: "mcp-api",
-    label: "MCP & API",
+    label: "Design",
     isNew: true,
-    panelTitle: "Intégrez l'IA dans vos produits",
+    panelTitle: "Des supports professionnels, prêts à servir votre offre",
     panelDescription:
-      "Placeholder : connectez nos modèles à vos applications grâce à une API simple et au protocole MCP.",
-    ctaLabel: "Lire la documentation",
+      "Flyers, catalogues, menus, brochures et présentations : nous donnons une forme claire et premium à vos messages et points de contact.",
+    ctaLabel: "Explorer le design",
     items: defaultItems,
   },
   {
     id: "agents",
-    label: "Agents",
+    label: "Vidéo",
     isNew: true,
-    panelTitle: "Des agents qui créent pour vous",
+    panelTitle: "Des contenus vidéo pensés pour l'action",
     panelDescription:
-      "Placeholder : décrivez votre besoin, l'agent orchestre les bons outils et vous livre le résultat.",
-    ctaLabel: "Essayer les agents",
+      "Teasers, vidéos publicitaires, spots et campagnes : nous transformons votre message en contenus capables d'attirer l'attention.",
+    ctaLabel: "Explorer la vidéo",
     items: defaultItems,
   },
   {
     id: "plugins",
-    label: "Plugins",
+    label: "IA & données",
     isNew: true,
-    panelTitle: "Dans vos outils préférés",
+    panelTitle: "L'intelligence artificielle au service du réel",
     panelDescription:
-      "Placeholder : utilisez CreativeHub directement dans Photoshop, Figma ou Blender grâce aux plugins officiels.",
-    ctaLabel: "Voir les plugins",
+      "Assistants, automatisation, collecte et structuration de données : nous intégrons l'IA là où elle améliore réellement votre fonctionnement.",
+    ctaLabel: "Explorer l'IA",
     items: defaultItems,
   },
   {
     id: "stock",
-    label: "Stock",
-    panelTitle: "Des millions d'assets prêts à l'emploi",
+    label: "Approche",
+    panelTitle: "Une méthode pour construire la bonne réponse",
     panelDescription:
-      "Placeholder : photos, vecteurs, vidéos et PSD de qualité, à combiner avec vos générations IA.",
-    ctaLabel: "Explorer la banque",
+      "Nous clarifions la transformation recherchée, analysons la situation, alignons les décisions, concevons la solution, la déployons et l'aidons à évoluer.",
+    ctaLabel: "Comprendre notre approche",
     items: defaultItems,
   },
 ];

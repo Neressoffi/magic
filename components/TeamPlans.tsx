@@ -10,50 +10,50 @@ import {
 } from "lucide-react";
 
 const FEATURES = [
-  { icon: Scale, title: "Indemnisation juridique", text: "Placeholder : protection légale complète pour les contenus IA utilisés commercialement." },
-  { icon: ShieldCheck, title: "Sécurité & conformité", text: "Placeholder : RGPD, ISO/IEC 27001 et SOC 2. Prêt pour vos achats dès le premier jour." },
-  { icon: SlidersHorizontal, title: "Contrôle admin", text: "Placeholder : utilisateurs, permissions, crédits et accès aux modèles — un seul tableau de bord." },
-  { icon: UserCheck, title: "Tout vous appartient", text: "Placeholder : chaque asset est à vous. Nous n'entraînons jamais nos modèles sur vos données." },
-  { icon: Headset, title: "Support dédié", text: "Placeholder : une vraie équipe, de l'intégration au quotidien." },
-  { icon: InfinityIcon, title: "Évoluez sans limites", text: "Placeholder : crédits flexibles, générations en parallèle, aucune restriction de sièges." },
+  { icon: Scale, title: "Une direction claire", text: "Nous clarifions le résultat attendu avant de produire, pour éviter une bonne solution au mauvais problème." },
+  { icon: ShieldCheck, title: "Cohérence de marque", text: "Branding, design, vidéo et données avancent autour d'un même objectif pour votre organisation." },
+  { icon: SlidersHorizontal, title: "Périmètre adapté", text: "Chaque projet mobilise uniquement les compétences, les formats et les partenaires nécessaires." },
+  { icon: UserCheck, title: "Votre organisation au centre", text: "Nous adaptons la réponse à votre contexte, vos contraintes et votre prochaine étape." },
+  { icon: Headset, title: "Accompagnement dédié", text: "Une vraie équipe, du cadrage au déploiement, et au-delà lorsque le projet doit évoluer." },
+  { icon: InfinityIcon, title: "Construire pour évoluer", text: "Les solutions doivent pouvoir accompagner la croissance de votre organisation, pas seulement le besoin du jour." },
 ];
 
 const TESTIMONIALS = [
   {
-    brand: "Logoipsum",
+    brand: "KAWA",
     quote:
-      "« Placeholder : les meilleurs modèles et outils de workflow dans une interface unifiée. CreativeHub a intégré l'IA à nos process, de bout en bout. »",
-    name: "Prénom Nom",
-    role: "CTO, Logoipsum",
+      "« Une expérience plus cohérente entre l'identité du lieu, la présentation de l'offre et l'interaction avec les clients. »",
+    name: "Projet KAWA Coffee Shop",
+    role: "Direction artistique · Menu · Expérience digitale",
   },
   {
-    brand: "Acme Corp",
+    brand: "THE VISION",
     quote:
-      "« Placeholder : nous sommes très satisfaits. Des résultats fiables et de grande qualité, avec des workflows simplifiés et plus efficaces. »",
-    name: "Prénom Nom",
-    role: "Head of Content, Acme Corp",
+      "« Des campagnes et des contenus capables de rendre les opportunités plus compréhensibles et plus engageantes. »",
+    name: "Projet THE VISION",
+    role: "Stratégie de communication · Design · Vidéo",
   },
   {
-    brand: "Globex",
+    brand: "NEMESIS",
     quote:
-      "« Placeholder : un élément clé de notre stack marketing. Nous créons du contenu de qualité à grande échelle. »",
-    name: "Prénom Nom",
-    role: "Co-fondateur, Globex",
+      "« Un univers de marque capable de traduire une ambition plus grande et de soutenir la future évolution du projet. »",
+    name: "Projet NEMESIS",
+    role: "Branding · Direction artistique",
   },
 ];
 
 const MODELS_TABLE = [
-  { name: "Nova Image Pro", type: "Génération d'images", color: "bg-violet-500/20 text-violet-300", on: true },
-  { name: "Framewave 2", type: "Génération vidéo", color: "bg-sky-500/20 text-sky-300", on: true },
-  { name: "Voxtral Audio", type: "Audio / Voix", color: "bg-orange-500/20 text-orange-300", on: true },
-  { name: "Flux Render", type: "Génération d'images", color: "bg-violet-500/20 text-violet-300", on: false },
+  { name: "Branding", type: "Identité de marque", color: "bg-violet-500/20 text-violet-300", on: true },
+  { name: "Design", type: "Supports de communication", color: "bg-sky-500/20 text-sky-300", on: true },
+  { name: "Vidéo", type: "Contenus et campagnes", color: "bg-orange-500/20 text-orange-300", on: true },
+  { name: "IA & données", type: "Automatisation / Assistants", color: "bg-violet-500/20 text-violet-300", on: false },
 ];
 
 const USERS_TABLE = [
-  { name: "Zoé Kendal", spent: "1,2 M", available: "1,7 M", width: "w-3/4" },
-  { name: "Arlo Finch", spent: "310 K", available: "877 K", width: "w-1/3" },
-  { name: "Demi Ochoa", spent: "10,7 M", available: "18,2 M", width: "w-2/3" },
-  { name: "Nala Jones", spent: "69 K", available: "30 K", width: "w-11/12" },
+  { name: "Équipe marque", spent: "Identité", available: "Actif", width: "w-3/4" },
+  { name: "Équipe design", spent: "Supports", available: "Actif", width: "w-1/3" },
+  { name: "Équipe vidéo", spent: "Campagnes", available: "Actif", width: "w-2/3" },
+  { name: "Équipe data", spent: "IA", available: "Sur devis", width: "w-11/12" },
 ];
 
 export function TeamPlans() {
@@ -62,18 +62,17 @@ export function TeamPlans() {
       <div className="mx-auto max-w-screen-2xl">
 
         <h2 className="max-w-2xl font-display text-3xl font-bold text-white lg:text-5xl">
-          Des offres d&apos;équipe conçues pour créer à grande échelle
+          Des collaborations pensées pour les équipes et les organisations
         </h2>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2">
 
           <div>
-            <h3 className="font-display text-2xl font-bold text-white">Business</h3>
+            <h3 className="font-display text-2xl font-bold text-white">Équipes</h3>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground-2">
-              Placeholder : pour les équipes créatives et agences qui veulent
-              produire plus vite. Crédits partagés, workflows collaboratifs et
-              accès à tous les modèles IA — sans la complexité des achats
-              entreprise.
+              Pour les équipes qui veulent une image, des supports ou des
+              contenus plus cohérents. NYAKA clarifie le besoin, propose un
+              périmètre adapté et produit les livrables nécessaires.
             </p>
 
             <Link
@@ -85,19 +84,18 @@ export function TeamPlans() {
           </div>
 
           <div>
-            <h3 className="font-display text-2xl font-bold text-white">Entreprise</h3>
+            <h3 className="font-display text-2xl font-bold text-white">Organisations</h3>
             <p className="mt-3 max-w-md text-sm leading-relaxed text-foreground-2">
-              Placeholder : pour les organisations où la production créative est
-              critique. Indemnisation juridique complète, sécurité de niveau
-              entreprise, utilisateurs illimités, SSO personnalisé et une équipe
-              dédiée dès le premier jour.
+              Pour les organisations où la marque, la communication ou les
+              outils digitaux sont stratégiques. Approche structurée, expertises
+              combinées et accompagnement sur la durée.
             </p>
 
             <Link
               href="#"
               className="mt-6 inline-block rounded-lg border border-white/30 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
             >
-              Parler à l&apos;équipe
+              Parler de votre projet
             </Link>
           </div>
         </div>
@@ -106,17 +104,17 @@ export function TeamPlans() {
 
           <div className="rounded-2lg bg-surface-1 p-8">
             <h3 className="font-display text-xl font-bold text-white">
-              Tous les outils IA au même endroit
+              Toutes les expertises au même endroit
             </h3>
             <p className="mt-2 text-sm text-foreground-2">
-              Placeholder : accédez aux meilleurs modèles génératifs depuis une
-              seule plateforme. Choisissez les modèles via le panneau admin.
+              Branding, design, vidéo, intelligence artificielle et données :
+              mobilisez les pôles nécessaires autour d&apos;une même direction.
             </p>
 
             <div className="mt-6 overflow-hidden rounded-lg bg-surface-2">
 
               <div className="grid grid-cols-[1fr_1fr_64px] gap-2 border-b border-white/10 px-4 py-2.5 text-[11px] uppercase tracking-wider text-foreground-3">
-                <span>Nom</span>
+                <span>Pôle</span>
                 <span>Type</span>
                 <span>Actif</span>
               </div>
@@ -150,11 +148,12 @@ export function TeamPlans() {
 
           <div className="rounded-2lg bg-surface-1 p-8">
             <h3 className="font-display text-xl font-bold text-white">
-              Utilisateurs illimités, crédits flexibles
+              Une équipe adaptée à chaque projet
             </h3>
             <p className="mt-2 text-sm text-foreground-2">
-              Placeholder : évoluez librement, sans limite de sièges. Payez selon
-              les crédits utilisés — pas selon le nombre de personnes.
+              Nous réunissons uniquement les expertises nécessaires. Le
+              périmètre, les responsabilités et le calendrier sont définis avant
+              le démarrage.
             </p>
 
             <div className="mt-6 flex flex-col gap-4">
@@ -173,7 +172,7 @@ export function TeamPlans() {
                     <div className="flex items-center justify-between text-xs">
                       <span className="font-medium text-white">{user.name}</span>
                       <span className="text-foreground-3">
-                        Utilisés {user.spent} · Dispo {user.available}
+                        {user.spent} · {user.available}
                       </span>
                     </div>
 
@@ -188,7 +187,7 @@ export function TeamPlans() {
         </div>
 
         <h3 className="mt-20 font-display text-2xl font-bold text-white lg:text-3xl">
-          Des fonctionnalités entreprise pensées pour l&apos;échelle
+          Pourquoi travailler avec NYAKA ?
         </h3>
         <div className="mt-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
           {FEATURES.map((feature) => (

@@ -147,7 +147,7 @@ function TabPanel({ tab }: { tab: TabContent }) {
 
           <div className="flex items-center justify-between gap-3">
             <span className="truncate text-xs text-white/90">
-              Changez la couleur de la moto
+              Clarifier la direction de votre marque
             </span>
             <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15 text-[10px] text-white">
               ↑
@@ -197,12 +197,12 @@ export function TabsSection() {
       <div className="mx-auto max-w-screen-2xl">
 
         <h2 className="text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-          Un seul endroit pour tout créer
+          Une idée peut demander plusieurs expertises.
         </h2>
 
         <p className="mx-auto mt-4 max-w-2xl text-center text-base text-marketing-foreground-2">
-          Sous-titre placeholder : tous vos outils créatifs, vos assets et
-          votre équipe réunis dans un seul espace.
+          Nos quatre pôles peuvent intervenir séparément ou se combiner autour
+          d&apos;une même direction, selon la réalité de votre projet.
         </p>
 
         <Tabs.Root value={activeTab} onValueChange={setActiveTab}>

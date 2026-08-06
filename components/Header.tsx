@@ -112,7 +112,7 @@ function ColumnsMenu({ columns }: { columns: MenuColumn[] }) {
         href="#"
         className="group mt-8 flex items-center justify-between rounded-lg bg-neutral-875 px-5 py-3.5 text-sm text-foreground-2 transition-colors hover:text-foreground-0"
       >
-        Vous cherchez l&apos;ancien service ?
+        Voir toutes nos solutions
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
       </Link>
     </div>
@@ -156,10 +156,10 @@ function ResourcesMenu() {
         className="group flex w-64 shrink-0 flex-col justify-end rounded-lg bg-gradient-to-br from-accent/60 via-purple-600/50 to-indigo-800/60 p-5"
       >
         <span className="text-lg font-bold text-white">
-          Événements placeholder
+          NYAKA - L&apos;empreinte de votre marque.
         </span>
         <span className="mt-1 flex items-center gap-1 text-sm text-white/80">
-          Événements
+          Découvrir NYAKA
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </span>
       </Link>
@@ -217,7 +217,7 @@ export function Header() {
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          <Link href="/" aria-label="CreativeHub — accueil">
+          <Link href="/" aria-label="NYAKA — accueil">
             <svg
               width="140"
               height="24"
@@ -235,17 +235,17 @@ export function Header() {
                 fontWeight="700"
                 fontFamily="var(--font-alternate)"
               >
-                CreativeHub
+                NYAKA
               </text>
             </svg>
           </Link>
 
           <nav className="hidden items-center gap-6 lg:flex">
 
-            <MegaMenu label="Suite créative" width={980}>
+            <MegaMenu label="Solutions" width={980}>
               <ColumnsMenu columns={creativeSuiteColumns} />
             </MegaMenu>
-            <MegaMenu label="Stock" width={720}>
+            <MegaMenu label="Votre situation" width={720}>
               <ColumnsMenu columns={stockColumns} />
             </MegaMenu>
             <MegaMenu label="Ressources" width={680}>
@@ -256,14 +256,14 @@ export function Header() {
               href="#"
               className="hidden text-base text-foreground-1 transition-colors duration-100 hover:text-accent xl:block"
             >
-              Entreprise
+              Réalisations
             </Link>
 
             <Link
               href="#"
               className="text-base text-foreground-1 transition-colors duration-100 hover:text-accent"
             >
-              Tarifs
+              À propos
             </Link>
           </nav>
         </div>
@@ -272,7 +272,7 @@ export function Header() {
 
           <button className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-sm text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex">
             <Search className="h-4 w-4" />
-            Rechercher ou créer
+            Rechercher
           </button>
 
           <button className="p-2 text-foreground-1 md:hidden" aria-label="Rechercher">
@@ -283,14 +283,14 @@ export function Header() {
             href="#"
             className="hidden rounded-lg px-4 py-2 text-sm font-medium text-foreground-1 transition-colors hover:bg-white/10 sm:block"
           >
-            Se connecter
+            Notre approche
           </Link>
 
           <Link
             href="#"
             className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
           >
-            S&apos;inscrire
+            Démarrer un projet
           </Link>
         </div>
       </div>
@@ -298,7 +298,7 @@ export function Header() {
       {mobileOpen && (
         <nav className="mx-4 mt-2 flex flex-col gap-1 rounded-2lg bg-surface-1 p-4 lg:hidden">
 
-          {["Suite créative", "Stock", "Ressources", "Entreprise", "Tarifs"].map(
+          {["Solutions", "Votre situation", "Ressources", "Réalisations", "À propos"].map(
             (item) => (
               <Link
                 key={item}

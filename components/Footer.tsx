@@ -5,47 +5,47 @@ const FOOTER_COLUMNS: {
   links: { label: string; isNew?: boolean }[];
 }[] = [
   {
-    title: "Produits",
+    title: "Solutions",
     links: [
-      { label: "Espaces" },
-      { label: "Assistant IA" },
-      { label: "Générateur d'images IA" },
-      { label: "Générateur vidéo IA" },
-      { label: "Générateur de voix IA" },
-      { label: "Contenu stock" },
+      { label: "Branding et identité de marque" },
+      { label: "Design et supports de communication" },
+      { label: "Contenus vidéo et campagnes créatives" },
+      { label: "Intelligence artificielle et données" },
+      { label: "Notre approche" },
+      { label: "Démarrer un projet" },
     ],
   },
   {
-    title: "Commencer",
+    title: "À propos",
     links: [
-      { label: "Académie" },
-      { label: "Documentation" },
-      { label: "Support" },
-      { label: "Conditions d'utilisation" },
+      { label: "Qui est NYAKA" },
+      { label: "Notre approche" },
+      { label: "Réalisations" },
+      { label: "Votre situation" },
+      { label: "FAQ" },
+      { label: "Projet à la une", isNew: true },
+    ],
+  },
+  {
+    title: "Informations",
+    links: [
+      { label: "FAQ" },
       { label: "Politique de confidentialité" },
-      { label: "Originals", isNew: true },
-    ],
-  },
-  {
-    title: "Entreprise",
-    links: [
-      { label: "Tarifs" },
+      { label: "Mentions légales" },
+      { label: "Conditions de collaboration" },
       { label: "À propos" },
-      { label: "Carrières" },
-      { label: "Tendances de recherche" },
-      { label: "Blog" },
-      { label: "Événements" },
+      { label: "Contact" },
     ],
   },
   {
     title: "Nous contacter",
     links: [
-      { label: "Support client" },
-      { label: "Instagram" },
-      { label: "YouTube" },
+      { label: "Démarrer un projet" },
       { label: "LinkedIn" },
+      { label: "Instagram" },
       { label: "TikTok" },
-      { label: "Discord" },
+      { label: "YouTube" },
+      { label: "WhatsApp" },
     ],
   },
 ];
@@ -68,13 +68,16 @@ export function Footer() {
                 fontWeight="700"
                 fontFamily="var(--font-alternate)"
               >
-                CreativeHub
+                NYAKA
               </text>
             </svg>
             <p className="mt-4 text-sm leading-relaxed text-foreground-3">
-              La plateforme créative pour diriger votre meilleur travail. Plus
-              d&apos;un million d&apos;abonnés parmi les créatifs, entreprises,
-              agences et studios.
+              NYAKA accompagne les organisations dans la construction et
+              l&apos;évolution de leur marque à travers le branding, le design,
+              la vidéo, l&apos;intelligence artificielle et les données.
+            </p>
+            <p className="mt-3 text-sm font-medium text-foreground-2">
+              NYAKA - L&apos;empreinte de votre marque.
             </p>
           </div>
 
@@ -109,8 +112,7 @@ export function Footer() {
 
         <div className="mt-14 border-t border-white/10 pt-6">
           <p className="text-xs text-foreground-3">
-            © 2026 CreativeHub — Site fictif de démonstration. Tous les textes
-            et images sont des placeholders.
+            © 2026 NYAKA — L&apos;empreinte de votre marque.
           </p>
         </div>
       </div>

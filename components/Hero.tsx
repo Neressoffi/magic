@@ -5,13 +5,13 @@ import { ArrowRight, Play } from "lucide-react";
 import { TextRoulette } from "./TextRoulette";
 
 const LOGOS = [
-  "Logoipsum",
-  "Acme Corp",
-  "Globex",
-  "Umbrella",
-  "Initech",
-  "Stark Co",
-  "Wayne Ent",
+  "KAWA Coffee Shop",
+  "THE VISION",
+  "7G Services",
+  "NEMESIS",
+  "BRIRENA HAIR",
+  "Perfecta",
+  "ASECAM",
 ];
 
 function LogoPlaceholder({ name }: { name: string }) {
@@ -45,25 +45,26 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur"
             >
               <span className="text-xs text-white/90">
-                Classé #1 plateforme créative
+                BRANDING · DESIGN · VIDÉO · IA & DONNÉES
               </span>
 
               <span className="h-3 w-px bg-white/30" />
               <span className="flex items-center gap-1 text-xs font-medium text-white">
-                Lire le rapport
+                Découvrir nos solutions
 
                 <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
               </span>
             </Link>
 
             <h1 className="mt-6 font-display text-[36px] font-bold leading-[1.15] text-white lg:text-[55px]">
-              La plateforme créative pour diriger votre meilleur travail
+              Nous construisons les marques, les contenus et les solutions qui font évoluer votre organisation.
             </h1>
 
             <p className="mt-5 max-w-xl text-lg text-white/70">
-              Texte placeholder : générez des images, vidéos, sons et modèles 3D
-              avec les meilleurs modèles IA, réunis dans un seul espace de
-              travail pensé pour les équipes créatives.
+              Vous venez avec une idée, un besoin ou un projet. NYAKA vous aide à
+              lui donner une direction claire, puis mobilise le branding, le
+              design, la vidéo, l&apos;intelligence artificielle et les données
+              pour construire une réponse cohérente.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -72,7 +73,7 @@ export function Hero() {
                 href="#"
                 className="rounded-lg bg-white px-6 py-3 text-base font-medium text-black transition-opacity hover:opacity-90"
               >
-                Commencer à créer
+                Parler de votre projet
               </Link>
 
               <Link
@@ -80,7 +81,7 @@ export function Hero() {
                 className="flex items-center gap-2 rounded-lg border border-white px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
               >
                 <Play className="h-4 w-4 fill-white" />
-                Pourquoi nous ?
+                Découvrir nos solutions
               </Link>
             </div>
           </div>
@@ -92,8 +93,7 @@ export function Hero() {
       <div className="relative border-t border-white/10 bg-black/10 py-12 backdrop-blur-[1px]">
 
         <p className="text-center text-sm text-white/70">
-          Plus d&apos;1 million d&apos;abonnés et les plus grandes marques nous
-          font confiance
+          Ils nous ont confié leur image, leurs contenus ou leurs projets
         </p>
 
         <div className="mt-8 hidden items-center justify-center gap-8 md:flex">

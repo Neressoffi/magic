@@ -10,9 +10,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "CreativeHub — La plateforme créative IA",
+  title: "NYAKA | Branding, design, vidéo, intelligence artificielle et données",
   description:
-    "Placeholder : la plateforme créative tout-en-un pour générer images, vidéos, audio et 3D.",
+    "NYAKA accompagne les organisations dans la création et l'évolution de leur marque grâce au branding, au design, à la vidéo, à l'intelligence artificielle et aux données.",
 };
 
 export default function RootLayout({

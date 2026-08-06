@@ -1,7 +1,8 @@
-# CreativeHub — Landing page SaaS créative (démo)
+# NYAKA — Landing page (contenu sur layout CreativeHub)
 
-Site vitrine fictif d'une plateforme créative IA, inspiré de la structure de
-magnific.com. Tous les textes et images sont des **placeholders** à remplacer.
+Site vitrine de **NYAKA** — L'empreinte de votre marque.
+Le contenu éditorial NYAKA (branding, design, vidéo, IA et données) est intégré
+sur la structure visuelle existante du prototype CreativeHub.
 
 ## Démarrer le projet
 
@@ -186,15 +187,15 @@ Bandeau noir, lien magenta centré. Au survol, la flèche se décale de 4 px
 
 ### Section 7 — `UseCases.tsx`
 
-- En-tête + CTA noir « Commencer à créer ».
-- 3 cartes verticales (aspect 3/4) + 1 carte panoramique Cinéma
-  (aspect 3/2 mobile → 3/1 desktop).
+- En-tête + CTA noir « Démarrer un projet ».
+- 3 cartes verticales (aspect 3/4) + 1 carte panoramique
+  (aspect 3/2 mobile → 3/1 desktop) — situations NYAKA.
 - Image pleine + dégradé bas + texte.
 
 ### Section 8 — `VideosCarousel.tsx`
 
 - Section claire ; **une seule grande slide** visible à la fois.
-- Texte en bas à gauche + bouton « Regarder la vidéo ».
+- Texte en bas à gauche + bouton « Découvrir le projet ».
 - Zones latérales discrètes (ombres) cliquables pour précédent / suivant
   (pas de flèches visibles).
 - Navigation compacte sous le slider : petit rond gauche (précédent) + barre
@@ -203,36 +204,36 @@ Bandeau noir, lien magenta centré. Au survol, la flèche se décale de 4 px
 
 ### Section 9 — `TeamPlans.tsx`
 
-- Titre + colonnes Business / Entreprise.
-- 2 cartes démo (tableau modèles, utilisateurs / crédits).
-- Grille de 6 fonctionnalités entreprise.
-- 3 témoignages.
+- Titre + colonnes Équipes / Organisations.
+- 2 cartes démo (pôles, équipes projet).
+- Grille de 6 fonctionnalités.
+- 3 encarts projets (KAWA, THE VISION, NEMESIS).
 
 ### Section 10 — `Pricing.tsx`
 
-- Toggle Particulier / Équipes.
-- Switch Mensuel / Annuel (−25 % en annuel).
-- 3 cartes : Premium, Premium+, Pro (avec badges et listes de features).
-- Prix formatés avec `toLocaleString("fr-FR")`.
+- Toggle Projet / Organisation.
+- Switch Ciblé / Complet.
+- 3 cartes : Essentiel branding, Communication, Solution complète — Sur devis.
+- CTA « Demander un devis » / « Démarrer un projet ».
 
 ### Section 11 — `Faq.tsx`
 
 - `"use client"` : Accordion Radix interactif.
-- Layout 2 colonnes : titre + « Contacter le support » à gauche ;
-  questions à droite.
+- Layout 2 colonnes : titre + « Parler de votre projet » à gauche ;
+  9 questions NYAKA à droite.
 - Icône `+` qui tourne à 45° (croix) à l'ouverture.
 - Réponse animée via `grid-rows`.
 
 ### Section 12 — `FinalCta.tsx`
 
 - Bandeau dégradé violet → orange.
-- Titre display centré « Soyez CreativeHub ».
-- Bouton noir « Commencer à créer » + flèche animée.
+- Titre display centré « Construisons la suite avec méthode. »
+- Bouton noir « Démarrer un projet » + flèche animée.
 - Ligne rose diagonale décorative ; bas assombri vers le footer.
 
 ### `Footer.tsx`
 
 - Fond noir.
-- Logo + blurb à gauche ; 4 colonnes de liens (titres rose/accent).
+- Logo NYAKA + description + signature à gauche ; 4 colonnes de liens (titres rose/accent).
 - Badges « Nouveau » optionnels sur certains liens.
 - Copyright en bas.

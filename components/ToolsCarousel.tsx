@@ -29,26 +29,26 @@ type Tool = {
 };
 
 const TOOLS: Tool[] = [
-  { name: "Générateur d'images", description: "Placeholder : créez des visuels à partir d'un simple texte.", icon: ImageIcon, category: "image", featured: true },
-  { name: "Upscaler", description: "Placeholder : agrandissez vos images sans perte de qualité.", icon: Expand, category: "image", featured: true },
-  { name: "Suppression de fond", description: "Placeholder : détourez n'importe quelle photo en un clic.", icon: Eraser, category: "image" },
-  { name: "Retouche magique", description: "Placeholder : corrigez et transformez vos images par IA.", icon: Wand2, category: "image", featured: true },
-  { name: "Transfert de style", description: "Placeholder : appliquez le style d'une image à une autre.", icon: Brush, category: "image" },
-  { name: "Générateur vidéo", description: "Placeholder : passez du texte à la vidéo en quelques secondes.", icon: Video, category: "video", featured: true },
-  { name: "Éditeur vidéo", description: "Placeholder : montez vos clips directement dans le navigateur.", icon: Scissors, category: "video" },
-  { name: "Capture de mouvement", description: "Placeholder : animez un personnage depuis une simple webcam.", icon: Camera, category: "video" },
-  { name: "Upscaler vidéo", description: "Placeholder : améliorez la résolution de vos séquences.", icon: Film, category: "video", featured: true },
-  { name: "Synthèse vocale", description: "Placeholder : des voix naturelles dans 30 langues.", icon: Mic, category: "audio", featured: true },
-  { name: "Musique IA", description: "Placeholder : composez des pistes libres de droits.", icon: Music, category: "audio" },
-  { name: "Générateur 3D", description: "Placeholder : générez des objets 3D texturés prêts à l'emploi.", icon: Box, category: "3d", featured: true },
+  { name: "Identité de marque", description: "Créer ou repenser votre positionnement, votre logo et votre univers visuel.", icon: ImageIcon, category: "image", featured: true },
+  { name: "Supports print", description: "Flyers, catalogues, menus, brochures et documents commerciaux.", icon: Expand, category: "image", featured: true },
+  { name: "Direction artistique", description: "Donner une cohérence visuelle à tous vos points de contact.", icon: Eraser, category: "image" },
+  { name: "Charte graphique", description: "Structurer les règles d'usage de votre identité visuelle.", icon: Wand2, category: "image", featured: true },
+  { name: "Présentations", description: "Des supports professionnels pour présenter vos offres.", icon: Brush, category: "image" },
+  { name: "Vidéo publicitaire", description: "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.", icon: Video, category: "video", featured: true },
+  { name: "Campagne créative", description: "Construire un concept, un message et des déclinaisons cohérentes.", icon: Scissors, category: "video" },
+  { name: "Teaser", description: "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.", icon: Camera, category: "video" },
+  { name: "Spot", description: "Des formats courts conçus pour un objectif précis.", icon: Film, category: "video", featured: true },
+  { name: "Assistant IA", description: "Concevoir un assistant ou un chatbot à partir d'un usage et d'un objectif précis.", icon: Mic, category: "audio", featured: true },
+  { name: "Collecte de données", description: "Organiser la collecte d'informations pour mieux comprendre vos publics.", icon: Music, category: "audio" },
+  { name: "Automatisation", description: "Intégrer l'automatisation là où elle améliore réellement votre fonctionnement.", icon: Box, category: "3d", featured: true },
 ];
 
 const FILTERS = [
   { id: "featured", label: "À la une" },
-  { id: "image", label: "Image" },
+  { id: "image", label: "Branding & design" },
   { id: "video", label: "Vidéo" },
-  { id: "audio", label: "Audio" },
-  { id: "3d", label: "3D" },
+  { id: "audio", label: "IA & données" },
+  { id: "3d", label: "Automatisation" },
 ] as const;
 
 const CATEGORY_COLORS: Record<Category, string> = {
@@ -95,11 +95,11 @@ export function ToolsCarousel() {
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-8">
 
         <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-          Choisissez un outil, commencez à créer
+          Que souhaitez-vous construire ?
         </h2>
         <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
-          Sous-titre placeholder : plus de 50 outils spécialisés, du détourage
-          à la génération vidéo.
+          Choisissez le point de départ qui correspond le mieux à votre besoin.
+          Vous n&apos;avez pas besoin d&apos;avoir déjà défini toute la solution.
         </p>
 
         <div className="mt-8 flex items-center justify-between gap-4">

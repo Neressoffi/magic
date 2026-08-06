@@ -5,29 +5,49 @@ import { Plus } from "lucide-react";
 
 const QUESTIONS = [
   {
-    question: "CreativeHub, c'est quoi exactement ?",
+    question: "Quels types de projets NYAKA accompagne-t-elle ?",
     answer:
-      "Réponse placeholder : CreativeHub est une plateforme créative fictive qui regroupe des outils de génération d'images, de vidéos, d'audio et de 3D.",
+      "NYAKA intervient sur des projets de branding et d'identité de marque, de design et de supports de communication, de contenus vidéo et de campagnes créatives, ainsi que sur certains besoins liés à l'intelligence artificielle, à l'automatisation et aux données.",
   },
   {
-    question: "J'ai déjà un abonnement — que se passe-t-il maintenant ?",
+    question: "Puis-je vous contacter si mon idée n'est pas encore bien structurée ?",
     answer:
-      "Réponse placeholder : votre abonnement actuel reste valable ; vous serez migré automatiquement vers la nouvelle offre équivalente.",
+      "Oui. Vous pouvez nous présenter une idée, un besoin ou une difficulté encore imprécise. Le premier échange sert justement à clarifier la situation, le résultat attendu et le bon point de départ.",
   },
   {
-    question: "Le contenu stock reste-t-il disponible, ou tout est-il désormais IA ?",
+    question: "Travaillez-vous seulement avec des entreprises déjà établies ?",
     answer:
-      "Réponse placeholder : la banque de contenus stock reste disponible et se combine avec vos générations IA.",
+      "Non. NYAKA peut accompagner un projet au stade de l'idée, une marque en lancement, une organisation déjà active ou une entreprise qui prépare une évolution importante.",
   },
   {
-    question: "J'ai déjà une offre payante. Que devient-elle ?",
+    question: "Puis-je commander uniquement un logo, une vidéo ou un support précis ?",
     answer:
-      "Réponse placeholder : elle est conservée à l'identique jusqu'à son renouvellement, puis alignée sur les nouvelles offres.",
+      "Oui, lorsqu'une intervention ciblée correspond réellement au besoin. Nous prendrons néanmoins le temps de comprendre le contexte afin que le livrable soit cohérent avec votre objectif et votre organisation.",
   },
   {
-    question: "À qui appartient le contenu que je crée ?",
+    question: "Comment se déroule un projet avec NYAKA ?",
     answer:
-      "Réponse placeholder : à vous. Tous les contenus générés sur les plans payants vous appartiennent, usage commercial compris.",
+      "Après la présentation du besoin, nous cadrons la mission, clarifions les objectifs, proposons une démarche et un périmètre, puis nous avançons après validation. Selon le projet, NYAKA produit directement, coordonne des partenaires et peut accompagner la mise en œuvre ou l'évolution.",
+  },
+  {
+    question: "Travaillez-vous avec des clients situés dans d'autres pays ?",
+    answer:
+      "Oui. Une partie des projets peut être conduite à distance. Lorsque le projet exige une présence locale ou une compétence particulière, nous définissons les modalités et les partenaires nécessaires.",
+  },
+  {
+    question: "Que propose NYAKA en intelligence artificielle et en données ?",
+    answer:
+      "Nous aidons à identifier des usages utiles, puis à concevoir ou coordonner des assistants intelligents, des automatisations ciblées, des systèmes de collecte et de structuration de données ou des expériences connectées. Le périmètre dépend du besoin, des données disponibles et de la faisabilité technique.",
+  },
+  {
+    question: "Comment sont calculés les tarifs ?",
+    answer:
+      "Les tarifs dépendent du périmètre, de la complexité, des livrables, des délais et des expertises mobilisées. Après un premier échange, nous transmettons une proposition claire avec les étapes, les responsabilités et les conditions de collaboration.",
+  },
+  {
+    question: "Combien de temps faut-il pour réaliser un projet ?",
+    answer:
+      "La durée varie selon la nature du besoin et les validations nécessaires. Le calendrier est défini avant le démarrage et ajusté uniquement lorsque le périmètre évolue ou qu'une dépendance externe le nécessite.",
   },
 ];
 
@@ -45,7 +65,7 @@ export function Faq() {
             href="#"
             className="mt-6 inline-block rounded-lg border border-black/20 px-5 py-2.5 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5"
           >
-            Contacter le support
+            Parler de votre projet
           </Link>
         </div>
 
