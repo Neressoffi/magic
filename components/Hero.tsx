@@ -41,7 +41,7 @@ export function Hero() {
           <div className="max-w-2xl">
 
             <Link
-              href="#"
+              href="/solutions"
               className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur"
             >
               <span className="text-xs text-white/90">
@@ -77,7 +77,7 @@ export function Hero() {
               </Link>
 
               <Link
-                href="#"
+                href="/solutions"
                 className="flex items-center gap-2 rounded-lg border border-white px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
               >
                 <Play className="h-4 w-4 fill-white" />

@@ -6,10 +6,30 @@ import {
 } from "lucide-react";
 
 const TOOL_TILES = [
-  { label: "Identité de marque", icon: ImageIcon, image: "https://picsum.photos/id/1039/500/620" },
-  { label: "Contenus vidéo", icon: Video, image: "https://picsum.photos/id/1043/500/620" },
-  { label: "Campagnes créatives", icon: Clapperboard, image: "https://picsum.photos/id/1044/500/620" },
-  { label: "IA & données", icon: Music, image: "https://picsum.photos/id/1047/500/620" },
+  {
+    label: "Identité de marque",
+    icon: ImageIcon,
+    image: "https://picsum.photos/id/1039/500/620",
+    href: "/solutions#branding",
+  },
+  {
+    label: "Contenus vidéo",
+    icon: Video,
+    image: "https://picsum.photos/id/1043/500/620",
+    href: "/solutions#video",
+  },
+  {
+    label: "Campagnes créatives",
+    icon: Clapperboard,
+    image: "https://picsum.photos/id/1044/500/620",
+    href: "/solutions#video",
+  },
+  {
+    label: "IA & données",
+    icon: Music,
+    image: "https://picsum.photos/id/1047/500/620",
+    href: "/solutions#ia-data",
+  },
 ];
 
 const TILE_FILTERS = ["Tous", "Branding", "Vidéo", "IA"];
@@ -49,7 +69,7 @@ export function BentoGrid() {
             {TOOL_TILES.map((tile) => (
               <a
                 key={tile.label}
-                href="#"
+                href={tile.href}
                 className="group relative min-h-[220px] overflow-hidden rounded-2lg"
               >
 

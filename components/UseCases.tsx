@@ -7,18 +7,21 @@ const USE_CASES = [
     description:
       "Transformer une idée en marque, structurer les premiers messages et préparer les supports nécessaires au démarrage.",
     image: "https://picsum.photos/id/1060/900/1200",
+    href: "/votre-situation#lancement",
   },
   {
     title: "Vous professionnalisez",
     description:
       "Faire correspondre votre image, vos supports et vos contenus au niveau de qualité que vous souhaitez atteindre.",
     image: "https://picsum.photos/id/1062/900/1200",
+    href: "/votre-situation#professionnalisation",
   },
   {
     title: "Vous repositionnez",
     description:
       "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
     image: "https://picsum.photos/id/1067/900/1200",
+    href: "/votre-situation#repositionnement",
   },
 ];
 
@@ -26,17 +29,25 @@ function UseCaseCard({
   title,
   description,
   image,
+  href,
   className,
 }: {
   title: string;
   description: string;
   image: string;
+  href: string;
   className: string;
 }) {
   return (
-    <div className={`relative overflow-hidden rounded-2lg ${className}`}>
-
-      <img src={image} alt="" className="absolute inset-0 h-full w-full object-cover" />
+    <Link
+      href={href}
+      className={`group relative overflow-hidden rounded-2lg ${className}`}
+    >
+      <img
+        src={image}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+      />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
 
@@ -44,7 +55,7 @@ function UseCaseCard({
         <h3 className="font-display text-lg font-bold text-white">{title}</h3>
         <p className="mt-1 text-sm text-white/70">{description}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -66,10 +77,10 @@ export function UseCases() {
           </div>
 
           <Link
-            href="#"
+            href="/votre-situation"
             className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
           >
-            Démarrer un projet
+            Identifier votre situation
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
@@ -89,7 +100,7 @@ export function UseCases() {
             title="Vous communiquez"
             description="Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive."
             image="https://picsum.photos/id/1015/1800/600"
-
+            href="/votre-situation#communication"
             className="aspect-[3/2] md:aspect-[3/1]"
           />
         </div>

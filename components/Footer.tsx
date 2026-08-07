@@ -2,28 +2,41 @@ import Link from "next/link";
 
 const FOOTER_COLUMNS: {
   title: string;
-  links: { label: string; isNew?: boolean }[];
+  links: { label: string; href?: string; isNew?: boolean }[];
 }[] = [
   {
     title: "Solutions",
     links: [
-      { label: "Branding et identité de marque" },
-      { label: "Design et supports de communication" },
-      { label: "Contenus vidéo et campagnes créatives" },
-      { label: "Intelligence artificielle et données" },
-      { label: "Notre approche" },
-      { label: "Démarrer un projet" },
+      { label: "Branding et identité de marque", href: "/solutions#branding" },
+      {
+        label: "Design et supports de communication",
+        href: "/solutions#design",
+      },
+      {
+        label: "Contenus vidéo et campagnes créatives",
+        href: "/solutions#video",
+      },
+      {
+        label: "Intelligence artificielle et données",
+        href: "/solutions#ia-data",
+      },
+      { label: "Notre approche", href: "/notre-approche" },
+      { label: "Démarrer un projet", href: "#" },
     ],
   },
   {
     title: "À propos",
     links: [
-      { label: "Qui est NYAKA" },
-      { label: "Notre approche" },
-      { label: "Réalisations" },
-      { label: "Votre situation" },
+      { label: "Qui est NYAKA", href: "/a-propos" },
+      { label: "Notre approche", href: "/notre-approche" },
+      { label: "Réalisations", href: "/realisations" },
+      { label: "Votre situation", href: "/votre-situation" },
       { label: "FAQ" },
-      { label: "Projet à la une", isNew: true },
+      {
+        label: "Projet à la une",
+        href: "/realisations/kawa-coffee-shop",
+        isNew: true,
+      },
     ],
   },
   {
@@ -33,7 +46,7 @@ const FOOTER_COLUMNS: {
       { label: "Politique de confidentialité" },
       { label: "Mentions légales" },
       { label: "Conditions de collaboration" },
-      { label: "À propos" },
+      { label: "À propos", href: "/a-propos" },
       { label: "Contact" },
     ],
   },
@@ -91,7 +104,7 @@ export function Footer() {
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <Link
-                        href="#"
+                        href={link.href ?? "#"}
                         className="inline-flex items-center gap-1.5 text-sm text-foreground-3 transition-colors duration-100 hover:text-white"
                       >
                         {link.label}

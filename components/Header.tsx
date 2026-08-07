@@ -67,20 +67,25 @@ function NavTrigger({ label }: { label: string }) {
   );
 }
 
-function ColumnsMenu({ columns }: { columns: MenuColumn[] }) {
+function ColumnsMenu({
+  columns,
+  footerLabel = "Voir toutes nos solutions",
+  footerHref = "/solutions",
+}: {
+  columns: MenuColumn[];
+  footerLabel?: string;
+  footerHref?: string;
+}) {
   return (
     <div>
-
       <div
         className="grid gap-8"
         style={{ gridTemplateColumns: `repeat(${columns.length}, minmax(0, 1fr))` }}
       >
         {columns.map((column) => {
-
           const Icon = ICONS[column.icon];
           return (
             <div key={column.title}>
-
               <div className="mb-3 flex items-center gap-2">
                 <Icon className="h-4 w-4 text-foreground-0" />
                 <span className="text-sm font-bold text-foreground-0">
@@ -91,13 +96,11 @@ function ColumnsMenu({ columns }: { columns: MenuColumn[] }) {
               <ul className="flex flex-col">
                 {column.links.map((link) => (
                   <li key={link.label}>
-
                     <Link
                       href={link.href}
                       className="flex items-center gap-2 rounded px-2 py-1.5 -mx-2 text-xs text-foreground-2 transition-colors duration-100 hover:bg-white/5 hover:text-accent"
                     >
                       {link.label}
-
                       {link.isNew && <NewBadge />}
                     </Link>
                   </li>
@@ -109,10 +112,10 @@ function ColumnsMenu({ columns }: { columns: MenuColumn[] }) {
       </div>
 
       <Link
-        href="#"
+        href={footerHref}
         className="group mt-8 flex items-center justify-between rounded-lg bg-neutral-875 px-5 py-3.5 text-sm text-foreground-2 transition-colors hover:text-foreground-0"
       >
-        Voir toutes nos solutions
+        {footerLabel}
         <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
       </Link>
     </div>
@@ -152,7 +155,7 @@ function ResourcesMenu() {
       </div>
 
       <Link
-        href="#"
+        href="/a-propos"
         className="group flex w-64 shrink-0 flex-col justify-end rounded-lg bg-gradient-to-br from-accent/60 via-purple-600/50 to-indigo-800/60 p-5"
       >
         <span className="text-lg font-bold text-white">
@@ -246,21 +249,25 @@ export function Header() {
               <ColumnsMenu columns={creativeSuiteColumns} />
             </MegaMenu>
             <MegaMenu label="Votre situation" width={720}>
-              <ColumnsMenu columns={stockColumns} />
+              <ColumnsMenu
+                columns={stockColumns}
+                footerLabel="Voir toutes les situations"
+                footerHref="/votre-situation"
+              />
             </MegaMenu>
             <MegaMenu label="Ressources" width={680}>
               <ResourcesMenu />
             </MegaMenu>
 
             <Link
-              href="#"
+              href="/realisations"
               className="hidden text-base text-foreground-1 transition-colors duration-100 hover:text-accent xl:block"
             >
               Réalisations
             </Link>
 
             <Link
-              href="#"
+              href="/a-propos"
               className="text-base text-foreground-1 transition-colors duration-100 hover:text-accent"
             >
               À propos
@@ -280,7 +287,7 @@ export function Header() {
           </button>
 
           <Link
-            href="#"
+            href="/notre-approche"
             className="hidden rounded-lg px-4 py-2 text-sm font-medium text-foreground-1 transition-colors hover:bg-white/10 sm:block"
           >
             Notre approche
@@ -297,18 +304,23 @@ export function Header() {
 
       {mobileOpen && (
         <nav className="mx-4 mt-2 flex flex-col gap-1 rounded-2lg bg-surface-1 p-4 lg:hidden">
-
-          {["Solutions", "Votre situation", "Ressources", "Réalisations", "À propos"].map(
-            (item) => (
-              <Link
-                key={item}
-                href="#"
-                className="rounded-lg px-3 py-2.5 text-base text-foreground-1 transition-colors hover:bg-white/5 hover:text-accent"
-              >
-                {item}
-              </Link>
-            )
-          )}
+          {[
+            { label: "Solutions", href: "/solutions" },
+            { label: "Votre situation", href: "/votre-situation" },
+            { label: "Notre approche", href: "/notre-approche" },
+            { label: "Ressources", href: "#" },
+            { label: "Réalisations", href: "/realisations" },
+            { label: "À propos", href: "/a-propos" },
+          ].map((item) => (
+            <Link
+              key={item.label}
+              href={item.href}
+              className="rounded-lg px-3 py-2.5 text-base text-foreground-1 transition-colors hover:bg-white/5 hover:text-accent"
+              onClick={() => setMobileOpen(false)}
+            >
+              {item.label}
+            </Link>
+          ))}
         </nav>
       )}
     </header>

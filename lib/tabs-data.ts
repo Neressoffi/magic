@@ -12,6 +12,7 @@ export type TabContent = {
   panelTitle: string;
   panelDescription: string;
   ctaLabel: string;
+  ctaHref: string;
   items: AccordionItem[];
 };
 
@@ -61,6 +62,7 @@ export const tabs: TabContent[] = [
     panelDescription:
       "Positionnement, logo, identité visuelle et direction artistique : nous construisons une marque capable d'évoluer avec votre organisation.",
     ctaLabel: "Explorer le branding",
+    ctaHref: "/solutions#branding",
     items: defaultItems,
   },
   {
@@ -71,6 +73,7 @@ export const tabs: TabContent[] = [
     panelDescription:
       "Flyers, catalogues, menus, brochures et présentations : nous donnons une forme claire et premium à vos messages et points de contact.",
     ctaLabel: "Explorer le design",
+    ctaHref: "/solutions#design",
     items: defaultItems,
   },
   {
@@ -81,6 +84,7 @@ export const tabs: TabContent[] = [
     panelDescription:
       "Teasers, vidéos publicitaires, spots et campagnes : nous transformons votre message en contenus capables d'attirer l'attention.",
     ctaLabel: "Explorer la vidéo",
+    ctaHref: "/solutions#video",
     items: defaultItems,
   },
   {
@@ -91,6 +95,7 @@ export const tabs: TabContent[] = [
     panelDescription:
       "Assistants, automatisation, collecte et structuration de données : nous intégrons l'IA là où elle améliore réellement votre fonctionnement.",
     ctaLabel: "Explorer l'IA",
+    ctaHref: "/solutions#ia-data",
     items: defaultItems,
   },
   {
@@ -100,6 +105,7 @@ export const tabs: TabContent[] = [
     panelDescription:
       "Nous clarifions la transformation recherchée, analysons la situation, alignons les décisions, concevons la solution, la déployons et l'aidons à évoluer.",
     ctaLabel: "Comprendre notre approche",
+    ctaHref: "/notre-approche",
     items: defaultItems,
   },
 ];

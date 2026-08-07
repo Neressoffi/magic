@@ -57,7 +57,7 @@ export function VideosCarousel() {
           </div>
 
           <Link
-            href="#"
+            href="/realisations"
             className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
           >
             Voir les réalisations

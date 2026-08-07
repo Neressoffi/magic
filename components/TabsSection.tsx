@@ -55,7 +55,7 @@ function TabPanel({ tab }: { tab: TabContent }) {
         </p>
 
         <Link
-          href="#"
+          href={tab.ctaHref}
           className="group mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-white"
         >
           {tab.ctaLabel}
