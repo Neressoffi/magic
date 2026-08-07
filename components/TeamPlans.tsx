@@ -22,21 +22,21 @@ const TESTIMONIALS = [
   {
     brand: "KAWA",
     quote:
-      "« Une expérience plus cohérente entre l'identité du lieu, la présentation de l'offre et l'interaction avec les clients. »",
+      "Une expérience plus cohérente entre l'identité du lieu, la présentation de l'offre et l'interaction avec les clients.",
     name: "Projet KAWA Coffee Shop",
     role: "Direction artistique · Menu · Expérience digitale",
   },
   {
     brand: "THE VISION",
     quote:
-      "« Des campagnes et des contenus capables de rendre les opportunités plus compréhensibles et plus engageantes. »",
+      "Des campagnes et des contenus capables de rendre les opportunités plus compréhensibles et plus engageantes.",
     name: "Projet THE VISION",
     role: "Stratégie de communication · Design · Vidéo",
   },
   {
     brand: "NEMESIS",
     quote:
-      "« Un univers de marque capable de traduire une ambition plus grande et de soutenir la future évolution du projet. »",
+      "Un univers de marque capable de traduire une ambition plus grande et de soutenir la future évolution du projet.",
     name: "Projet NEMESIS",
     role: "Branding · Direction artistique",
   },
@@ -61,9 +61,16 @@ export function TeamPlans() {
     <section className="bg-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
 
-        <h2 className="max-w-2xl font-display text-3xl font-bold text-white lg:text-5xl">
-          Des collaborations pensées pour les équipes et les organisations
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          Pourquoi travailler avec NYAKA ?
+        </p>
+        <h2 className="mt-3 max-w-2xl font-display text-3xl font-bold text-white lg:text-5xl">
+          Plus qu&apos;un livrable, une direction cohérente.
         </h2>
+        <p className="mt-4 max-w-2xl text-base text-foreground-2">
+          Nous réunissons la réflexion, la création et la technologie autour du
+          résultat que votre organisation cherche réellement à atteindre.
+        </p>
 
         <div className="mt-12 grid grid-cols-1 gap-10 md:grid-cols-2">
 
@@ -76,10 +83,10 @@ export function TeamPlans() {
             </p>
 
             <Link
-              href="#"
+              href="/notre-approche"
               className="mt-6 inline-block rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90"
             >
-              En savoir plus
+              Découvrir notre approche
             </Link>
           </div>
 
@@ -92,7 +99,7 @@ export function TeamPlans() {
             </p>
 
             <Link
-              href="#"
+              href="/demarrer-un-projet"
               className="mt-6 inline-block rounded-lg border border-white/30 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
             >
               Parler de votre projet

@@ -10,8 +10,6 @@ const PHRASES = [
   "Intégrer une solution IA",
   "Mieux exploiter vos données",
   "Faire évoluer votre organisation",
-  "Construire une marque cohérente",
-  "Clarifier votre direction",
 ];
 
 const LINE_HEIGHT = 60;

@@ -27,12 +27,13 @@ export function Hero() {
     <section className="relative overflow-hidden">
 
       <img
-        src="https://picsum.photos/id/1015/1974/1175"
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover"
+        src="/nyaka-hero-bg.png"
+        alt="NYAKA — branding, design, vidéo, intelligence artificielle et données"
+        className="absolute inset-0 h-full w-full object-cover object-center"
       />
 
-      <div className="absolute inset-0 bg-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/40" />
 
       <div className="relative flex min-h-screen flex-col justify-end">
 
@@ -45,7 +46,7 @@ export function Hero() {
               className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur"
             >
               <span className="text-xs text-white/90">
-                BRANDING · DESIGN · VIDÉO · IA & DONNÉES
+                BRANDING · DESIGN · VIDÉO · INTELLIGENCE ARTIFICIELLE &amp; DONNÉES
               </span>
 
               <span className="h-3 w-px bg-white/30" />
@@ -70,7 +71,7 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
 
               <Link
-                href="#"
+                href="/demarrer-un-projet"
                 className="rounded-lg bg-white px-6 py-3 text-base font-medium text-black transition-opacity hover:opacity-90"
               >
                 Parler de votre projet
@@ -84,6 +85,11 @@ export function Hero() {
                 Découvrir nos solutions
               </Link>
             </div>
+
+            <p className="mt-4 text-sm text-white/55">
+              Votre projet peut encore être au stade de l&apos;idée. Nous
+              commencerons par le clarifier avec vous.
+            </p>
           </div>
 
           <TextRoulette />
@@ -92,8 +98,13 @@ export function Hero() {
 
       <div className="relative border-t border-white/10 bg-black/10 py-12 backdrop-blur-[1px]">
 
-        <p className="text-center text-sm text-white/70">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
           Ils nous ont confié leur image, leurs contenus ou leurs projets
+        </p>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-white/70">
+          Des projets construits pour des réalités différentes. NYAKA accompagne
+          des marques, des entreprises et des organisations à différentes étapes
+          de leur développement.
         </p>
 
         <div className="mt-8 hidden items-center justify-center gap-8 md:flex">

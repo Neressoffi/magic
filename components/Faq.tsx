@@ -62,7 +62,7 @@ export function Faq() {
           </h2>
 
           <Link
-            href="#"
+            href="/demarrer-un-projet"
             className="mt-6 inline-block rounded-lg border border-black/20 px-5 py-2.5 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5"
           >
             Parler de votre projet

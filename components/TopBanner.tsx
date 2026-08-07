@@ -11,7 +11,7 @@ export function TopBanner() {
     >
 
       <span className="text-xs font-medium text-accent">
-        NYAKA prépare son lancement officiel. Découvrez bientôt nos projets et nos solutions
+        NYAKA prépare son lancement officiel. Découvrez bientôt nos projets, nos solutions et notre nouvelle plateforme.
       </span>
 
       <ArrowRight

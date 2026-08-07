@@ -19,7 +19,7 @@ export function ApprocheFinalCta() {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
-            href="#"
+            href="/demarrer-un-projet"
             className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-85"
           >
             Démarrer un projet

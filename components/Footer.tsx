@@ -21,7 +21,7 @@ const FOOTER_COLUMNS: {
         href: "/solutions#ia-data",
       },
       { label: "Notre approche", href: "/notre-approche" },
-      { label: "Démarrer un projet", href: "#" },
+      { label: "Démarrer un projet", href: "/demarrer-un-projet" },
     ],
   },
   {
@@ -53,7 +53,7 @@ const FOOTER_COLUMNS: {
   {
     title: "Nous contacter",
     links: [
-      { label: "Démarrer un projet" },
+      { label: "Démarrer un projet", href: "/demarrer-un-projet" },
       { label: "LinkedIn" },
       { label: "Instagram" },
       { label: "TikTok" },

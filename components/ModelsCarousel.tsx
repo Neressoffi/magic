@@ -127,8 +127,9 @@ export function ModelsCarousel() {
           Avec toutes les expertises nécessaires
         </h2>
         <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
-          Branding, design, vidéo, intelligence artificielle et données :
-          nous mobilisons les compétences adaptées à votre projet.
+          Branding, design, vidéo, intelligence artificielle et données : nous
+          mobilisons les compétences adaptées à votre projet, séparément ou
+          combinées autour d&apos;une même direction.
         </p>
       </div>
 

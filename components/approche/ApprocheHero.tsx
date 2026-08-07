@@ -29,7 +29,7 @@ export function ApprocheHero() {
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <Link
-            href="#"
+            href="/demarrer-un-projet"
             className="rounded-lg bg-white px-6 py-3 text-base font-medium text-black transition-opacity hover:opacity-90"
           >
             Parler de votre projet

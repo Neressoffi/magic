@@ -196,7 +196,10 @@ export function TabsSection() {
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
 
-        <h2 className="text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+        <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+          Nos domaines d&apos;intervention
+        </p>
+        <h2 className="mt-3 text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
           Une idée peut demander plusieurs expertises.
         </h2>
 

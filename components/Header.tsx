@@ -294,7 +294,7 @@ export function Header() {
           </Link>
 
           <Link
-            href="#"
+            href="/demarrer-un-projet"
             className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
           >
             Démarrer un projet

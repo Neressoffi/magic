@@ -172,7 +172,7 @@ export function Pricing() {
                 </p>
 
                 <Link
-                  href="#"
+                  href="/demarrer-un-projet"
                   className={`mt-6 rounded-lg px-5 py-2.5 text-center text-sm font-medium transition-opacity hover:opacity-90 ${
                     plan.highlighted
                       ? "bg-black text-white"

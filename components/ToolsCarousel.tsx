@@ -25,22 +25,23 @@ type Tool = {
   description: string;
   icon: React.ElementType;
   category: Category;
+  href: string;
   featured?: boolean;
 };
 
 const TOOLS: Tool[] = [
-  { name: "Identité de marque", description: "Créer ou repenser votre positionnement, votre logo et votre univers visuel.", icon: ImageIcon, category: "image", featured: true },
-  { name: "Supports print", description: "Flyers, catalogues, menus, brochures et documents commerciaux.", icon: Expand, category: "image", featured: true },
-  { name: "Direction artistique", description: "Donner une cohérence visuelle à tous vos points de contact.", icon: Eraser, category: "image" },
-  { name: "Charte graphique", description: "Structurer les règles d'usage de votre identité visuelle.", icon: Wand2, category: "image", featured: true },
-  { name: "Présentations", description: "Des supports professionnels pour présenter vos offres.", icon: Brush, category: "image" },
-  { name: "Vidéo publicitaire", description: "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.", icon: Video, category: "video", featured: true },
-  { name: "Campagne créative", description: "Construire un concept, un message et des déclinaisons cohérentes.", icon: Scissors, category: "video" },
-  { name: "Teaser", description: "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.", icon: Camera, category: "video" },
-  { name: "Spot", description: "Des formats courts conçus pour un objectif précis.", icon: Film, category: "video", featured: true },
-  { name: "Assistant IA", description: "Concevoir un assistant ou un chatbot à partir d'un usage et d'un objectif précis.", icon: Mic, category: "audio", featured: true },
-  { name: "Collecte de données", description: "Organiser la collecte d'informations pour mieux comprendre vos publics.", icon: Music, category: "audio" },
-  { name: "Automatisation", description: "Intégrer l'automatisation là où elle améliore réellement votre fonctionnement.", icon: Box, category: "3d", featured: true },
+  { name: "Une identité de marque", description: "Créer ou repenser votre positionnement, votre logo et votre univers visuel.", icon: ImageIcon, category: "image", href: "/solutions#branding", featured: true },
+  { name: "Des supports professionnels", description: "Présenter vos offres à travers des flyers, brochures, catalogues, menus ou documents commerciaux.", icon: Expand, category: "image", href: "/solutions#design", featured: true },
+  { name: "Direction artistique", description: "Donner une cohérence visuelle à tous vos points de contact.", icon: Eraser, category: "image", href: "/solutions#branding" },
+  { name: "Une expérience digitale simple", description: "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.", icon: Wand2, category: "image", href: "/solutions#design", featured: true },
+  { name: "Présentations", description: "Des supports professionnels pour présenter vos offres.", icon: Brush, category: "image", href: "/solutions#design" },
+  { name: "Une vidéo publicitaire", description: "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.", icon: Video, category: "video", href: "/solutions#video", featured: true },
+  { name: "Une campagne créative", description: "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.", icon: Scissors, category: "video", href: "/solutions#video", featured: true },
+  { name: "Teaser", description: "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.", icon: Camera, category: "video", href: "/solutions#video" },
+  { name: "Spot", description: "Des formats courts conçus pour un objectif précis.", icon: Film, category: "video", href: "/solutions#video" },
+  { name: "Un assistant intelligent", description: "Concevoir un assistant ou un chatbot à partir d'un usage, de données et d'un objectif précis.", icon: Mic, category: "audio", href: "/solutions#ia-data", featured: true },
+  { name: "Un système de collecte de données", description: "Organiser la collecte d'informations clients afin de mieux comprendre, segmenter ou accompagner vos publics.", icon: Music, category: "audio", href: "/solutions#ia-data", featured: true },
+  { name: "Un projet encore à clarifier", description: "Présentez-nous votre situation. Nous vous aiderons à identifier le bon point de départ.", icon: Box, category: "3d", href: "/demarrer-un-projet", featured: true },
 ];
 
 const FILTERS = [
@@ -165,13 +166,11 @@ export function ToolsCarousel() {
         onPointerLeave={() => (dragRef.current = null)}
       >
         {visibleTools.map((tool) => (
-
           <a
             key={tool.name}
-            href="#"
+            href={tool.href}
             className="flex h-[177px] w-[200px] shrink-0 select-none flex-col rounded-2xl bg-white p-4 transition-transform duration-200 hover:-translate-y-1"
           >
-
             <span
               className={`flex h-12 w-12 items-center justify-center rounded-xl ${CATEGORY_COLORS[tool.category]}`}
             >
@@ -187,6 +186,15 @@ export function ToolsCarousel() {
             </span>
           </a>
         ))}
+      </div>
+
+      <div className="mx-auto mt-8 max-w-screen-2xl px-4 lg:px-8">
+        <a
+          href="/demarrer-un-projet"
+          className="text-sm font-medium text-marketing-foreground-0 underline-offset-4 hover:underline"
+        >
+          Je ne sais pas encore quelle solution choisir
+        </a>
       </div>
     </section>
   );

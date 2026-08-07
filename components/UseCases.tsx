@@ -6,6 +6,7 @@ const USE_CASES = [
     title: "Vous lancez",
     description:
       "Transformer une idée en marque, structurer les premiers messages et préparer les supports nécessaires au démarrage.",
+    tags: "Création · Lancement",
     image: "https://picsum.photos/id/1060/900/1200",
     href: "/votre-situation#lancement",
   },
@@ -13,6 +14,7 @@ const USE_CASES = [
     title: "Vous professionnalisez",
     description:
       "Faire correspondre votre image, vos supports et vos contenus au niveau de qualité que vous souhaitez atteindre.",
+    tags: "Crédibilité · Montée en gamme",
     image: "https://picsum.photos/id/1062/900/1200",
     href: "/votre-situation#professionnalisation",
   },
@@ -20,7 +22,32 @@ const USE_CASES = [
     title: "Vous repositionnez",
     description:
       "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
+    tags: "Évolution · Rebranding",
     image: "https://picsum.photos/id/1067/900/1200",
+    href: "/votre-situation#repositionnement",
+  },
+  {
+    title: "Vous communiquez",
+    description:
+      "Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive.",
+    tags: "Campagne · Vidéo",
+    image: "https://picsum.photos/id/1015/900/1200",
+    href: "/votre-situation#communication",
+  },
+  {
+    title: "Vous transformez",
+    description:
+      "Intégrer une nouvelle expérience, une technologie, une automatisation ou un usage des données de manière cohérente.",
+    tags: "IA · Données · Processus",
+    image: "https://picsum.photos/id/1047/900/1200",
+    href: "/votre-situation#transformation",
+  },
+  {
+    title: "Vous changez d'échelle",
+    description:
+      "Préserver la cohérence de votre marque et de vos messages lorsque votre activité, vos offres ou vos marchés s'élargissent.",
+    tags: "Croissance · Nouveaux marchés",
+    image: "https://picsum.photos/id/1031/900/1200",
     href: "/votre-situation#repositionnement",
   },
 ];
@@ -28,12 +55,14 @@ const USE_CASES = [
 function UseCaseCard({
   title,
   description,
+  tags,
   image,
   href,
   className,
 }: {
   title: string;
   description: string;
+  tags: string;
   image: string;
   href: string;
   className: string;
@@ -49,10 +78,13 @@ function UseCaseCard({
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
       <div className="absolute inset-x-0 bottom-0 p-6">
-        <h3 className="font-display text-lg font-bold text-white">{title}</h3>
+        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+          {tags}
+        </p>
+        <h3 className="mt-1 font-display text-lg font-bold text-white">{title}</h3>
         <p className="mt-1 text-sm text-white/70">{description}</p>
       </div>
     </Link>
@@ -63,26 +95,37 @@ export function UseCases() {
   return (
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
-
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+              À quel moment avez-vous besoin de NYAKA ?
+            </p>
+            <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
               Votre organisation est peut-être à un tournant.
             </h2>
             <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
               Chaque lancement, repositionnement, campagne ou nouvelle
-              technologie peut renforcer votre organisation. NYAKA intervient
-              pour donner une direction claire à ces moments importants.
+              technologie peut renforcer votre organisation ou créer de nouvelles
+              incohérences. Nous intervenons pour donner une direction claire à
+              ces moments importants.
             </p>
           </div>
 
-          <Link
-            href="/votre-situation"
-            className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
-          >
-            Identifier votre situation
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/votre-situation"
+              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
+            >
+              Identifier votre situation
+              <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Link>
+            <Link
+              href="/demarrer-un-projet"
+              className="inline-flex w-fit shrink-0 items-center rounded-lg border border-black/15 px-6 py-3 text-base font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5"
+            >
+              Parler de votre situation
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -93,16 +136,6 @@ export function UseCases() {
               className="aspect-[3/4]"
             />
           ))}
-        </div>
-
-        <div className="mt-4">
-          <UseCaseCard
-            title="Vous communiquez"
-            description="Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive."
-            image="https://picsum.photos/id/1015/1800/600"
-            href="/votre-situation#communication"
-            className="aspect-[3/2] md:aspect-[3/1]"
-          />
         </div>
       </div>
     </section>

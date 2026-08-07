@@ -35,7 +35,7 @@ export function AproposHero() {
           </Link>
 
           <Link
-            href="#"
+            href="/demarrer-un-projet"
             className="rounded-lg border border-white px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
           >
             Parler de votre projet

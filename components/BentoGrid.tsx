@@ -42,8 +42,11 @@ export function BentoGrid() {
 
         <div className="flex flex-col">
 
-          <h2 className="max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-4xl">
-            Nos domaines d&apos;intervention
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+            Notre différence
+          </p>
+          <h2 className="mt-3 max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-4xl">
+            Votre demande est le point de départ
           </h2>
           <p className="mt-4 max-w-md text-base text-marketing-foreground-2">
             Branding, design, vidéo et IA : nos quatre pôles peuvent intervenir
