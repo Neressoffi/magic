@@ -12,7 +12,7 @@ export function SolutionsHero() {
       <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
 
       <div className="relative mx-auto flex min-h-[78vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 pt-40 lg:px-8 lg:pb-24">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
           Nos solutions
         </p>
 

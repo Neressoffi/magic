@@ -35,7 +35,7 @@ export default function KawaCaseStudyPage() {
             Retour aux réalisations
           </Link>
 
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
             Étude de cas
           </p>
           <h1 className="mt-4 max-w-4xl font-display text-[36px] font-bold leading-[1.12] text-white lg:text-[55px]">

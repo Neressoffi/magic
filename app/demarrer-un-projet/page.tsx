@@ -20,7 +20,7 @@ export default function DemarrerUnProjetPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-beige-950 via-surface-0 to-surface-0" />
         <div className="relative mx-auto flex min-h-[70vh] max-w-screen-2xl flex-col justify-center px-4 py-32 lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
             Démarrer un projet
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-[36px] font-bold leading-[1.12] text-white lg:text-[55px]">
