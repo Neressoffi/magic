@@ -20,7 +20,7 @@ export function SolutionsHero() {
           Quatre expertises pour construire une réponse cohérente.
         </h1>
 
-        <p className="mt-5 max-w-2xl text-lg text-white/70">
+        <p className="mt-5 max-w-2xl text-lg text-white/85">
           NYAKA accompagne les organisations à travers le branding, le design,
           la création vidéo, l&apos;intelligence artificielle et les données.
           Selon votre situation, nous mobilisons une ou plusieurs expertises

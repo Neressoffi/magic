@@ -21,7 +21,7 @@ export function SituationHero() {
           réponse différente.
         </h1>
 
-        <p className="mt-5 max-w-2xl text-lg text-white/70">
+        <p className="mt-5 max-w-2xl text-lg text-white/85">
           Vous pouvez venir avec une idée précise ou simplement avec une
           situation à résoudre. NYAKA commence par comprendre ce que votre
           organisation traverse afin de construire la réponse adaptée.

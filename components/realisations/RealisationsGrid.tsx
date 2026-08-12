@@ -22,17 +22,17 @@ function ProjectCardItem({ project }: { project: ProjectCard }) {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/50">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">
           {project.sector}
         </p>
         <h3 className="mt-2 font-display text-2xl font-bold text-white">
           {project.name}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-white/70">
+        <p className="mt-3 text-sm leading-relaxed text-white/85">
           {project.situation}
         </p>
-        <p className="mt-4 text-sm text-white/55">
-          <span className="font-medium text-white/80">Interventions :</span>{" "}
+        <p className="mt-4 text-sm text-white/75">
+          <span className="font-medium text-white">Interventions :</span>{" "}
           {project.interventions}
         </p>
 
@@ -41,11 +41,7 @@ function ProjectCardItem({ project }: { project: ProjectCard }) {
             {project.ctaLabel ?? "Voir le projet"}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
-        ) : (
-          <span className="mt-auto pt-6 text-xs text-white/40">
-            Étude de cas à venir
-          </span>
-        )}
+        ) : null}
       </div>
     </>
   );
@@ -86,7 +82,7 @@ export function RealisationsGrid() {
             <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
               Sélection de projets
             </h2>
-            <p className="mt-4 text-base text-white/70">
+            <p className="mt-4 text-base text-white/85">
               Des cartes courtes pour montrer la diversité des situations et
               des expertises, sans répéter le contenu de la page Solutions.
             </p>

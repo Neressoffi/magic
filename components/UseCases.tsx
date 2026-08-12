@@ -19,14 +19,6 @@ const USE_CASES = [
     href: "/votre-situation#professionnalisation",
   },
   {
-    title: "Vous repositionnez",
-    description:
-      "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
-    tags: "Évolution · Rebranding",
-    image: "https://picsum.photos/id/1067/900/1200",
-    href: "/votre-situation#repositionnement",
-  },
-  {
     title: "Vous communiquez",
     description:
       "Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive.",
@@ -35,20 +27,20 @@ const USE_CASES = [
     href: "/votre-situation#communication",
   },
   {
+    title: "Vous repositionnez",
+    description:
+      "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
+    tags: "Évolution · Rebranding",
+    image: "https://picsum.photos/id/1067/900/1200",
+    href: "/votre-situation#repositionnement",
+  },
+  {
     title: "Vous transformez",
     description:
       "Intégrer une nouvelle expérience, une technologie, une automatisation ou un usage des données de manière cohérente.",
     tags: "IA · Données · Processus",
     image: "https://picsum.photos/id/1047/900/1200",
     href: "/votre-situation#transformation",
-  },
-  {
-    title: "Vous changez d'échelle",
-    description:
-      "Préserver la cohérence de votre marque et de vos messages lorsque votre activité, vos offres ou vos marchés s'élargissent.",
-    tags: "Croissance · Nouveaux marchés",
-    image: "https://picsum.photos/id/1031/900/1200",
-    href: "/votre-situation#repositionnement",
   },
 ];
 
@@ -78,14 +70,18 @@ function UseCaseCard({
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
-      <div className="absolute inset-x-0 bottom-0 p-6">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">
+      <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">
           {tags}
         </p>
-        <h3 className="mt-1 font-display text-lg font-bold text-white">{title}</h3>
-        <p className="mt-1 text-sm text-white/70">{description}</p>
+        <h3 className="mt-1 font-display text-lg font-bold text-white sm:text-xl">
+          {title}
+        </h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-white/85 line-clamp-4">
+          {description}
+        </p>
       </div>
     </Link>
   );
@@ -128,12 +124,12 @@ export function UseCases() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {USE_CASES.map((useCase) => (
             <UseCaseCard
               key={useCase.title}
               {...useCase}
-              className="aspect-[3/4]"
+              className="aspect-[4/5] min-h-[320px]"
             />
           ))}
         </div>

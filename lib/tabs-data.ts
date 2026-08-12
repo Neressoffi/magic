@@ -8,7 +8,7 @@ export type AccordionItem = {
 export type TabContent = {
   id: string;
   label: string;
-  isNew?: boolean;
+  shortLabel: string;
   panelTitle: string;
   panelDescription: string;
   ctaLabel: string;
@@ -16,96 +16,137 @@ export type TabContent = {
   items: AccordionItem[];
 };
 
-const defaultItems: AccordionItem[] = [
-  {
-    icon: "image",
-    title: "Branding",
-    description:
-      "Construire, clarifier ou faire évoluer une marque afin qu'elle soit reconnaissable, distinctive et cohérente.",
-    image: "https://picsum.photos/id/1025/1200/900",
-  },
-  {
-    icon: "video",
-    title: "Vidéo",
-    description:
-      "Transformer un message, une offre ou un événement en contenus capables d'attirer l'attention et de provoquer une action.",
-    image: "https://picsum.photos/id/1035/1200/900",
-  },
-  {
-    icon: "audio",
-    title: "Campagnes",
-    description:
-      "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.",
-    image: "https://picsum.photos/id/1045/1200/900",
-  },
-  {
-    icon: "box",
-    title: "IA & données",
-    description:
-      "Intégrer l'IA, l'automatisation et les données là où elles peuvent améliorer une expérience, une décision ou un fonctionnement.",
-    image: "https://picsum.photos/id/1055/1200/900",
-  },
-  {
-    icon: "layout",
-    title: "Design",
-    description:
-      "Donner une forme professionnelle à vos offres, vos messages et vos points de contact physiques ou digitaux.",
-    image: "https://picsum.photos/id/1065/1200/900",
-  },
-];
-
 export const tabs: TabContent[] = [
   {
-    id: "creative-suite",
-    label: "Branding",
+    id: "branding",
+    label: "Branding et identité de marque",
+    shortLabel: "Branding",
     panelTitle: "Une identité reconnaissable et cohérente",
     panelDescription:
       "Positionnement, logo, identité visuelle et direction artistique : nous construisons une marque capable d'évoluer avec votre organisation.",
     ctaLabel: "Explorer le branding",
     ctaHref: "/solutions#branding",
-    items: defaultItems,
+    items: [
+      {
+        icon: "image",
+        title: "Positionnement",
+        description:
+          "Clarifier ce que la marque représente, pour qui, et ce qui doit la distinguer.",
+        image: "https://picsum.photos/id/1025/1200/900",
+      },
+      {
+        icon: "layout",
+        title: "Identité visuelle",
+        description:
+          "Logo, couleurs, typographie et règles pour une marque reconnaissable.",
+        image: "https://picsum.photos/id/1065/1200/900",
+      },
+      {
+        icon: "box",
+        title: "Direction artistique",
+        description:
+          "Donner une cohérence visuelle à tous les points de contact de la marque.",
+        image: "https://picsum.photos/id/1055/1200/900",
+      },
+    ],
   },
   {
-    id: "mcp-api",
-    label: "Design",
-    isNew: true,
+    id: "design",
+    label: "Design et supports de communication",
+    shortLabel: "Design",
     panelTitle: "Des supports professionnels, prêts à servir votre offre",
     panelDescription:
       "Flyers, catalogues, menus, brochures et présentations : nous donnons une forme claire et premium à vos messages et points de contact.",
     ctaLabel: "Explorer le design",
     ctaHref: "/solutions#design",
-    items: defaultItems,
+    items: [
+      {
+        icon: "layout",
+        title: "Supports print",
+        description:
+          "Flyers, brochures, catalogues et documents commerciaux cohérents avec la marque.",
+        image: "https://picsum.photos/id/1065/1200/900",
+      },
+      {
+        icon: "image",
+        title: "Menus et catalogues",
+        description:
+          "Présenter l'offre de façon claire, premium et utilisable au quotidien.",
+        image: "https://picsum.photos/id/1025/1200/900",
+      },
+      {
+        icon: "box",
+        title: "Présentations",
+        description:
+          "Des supports professionnels pour présenter une offre, un projet ou une vision.",
+        image: "https://picsum.photos/id/1055/1200/900",
+      },
+    ],
   },
   {
-    id: "agents",
-    label: "Vidéo",
-    isNew: true,
-    panelTitle: "Des contenus vidéo pensés pour l'action",
+    id: "video",
+    label: "Contenus vidéo et campagnes créatives",
+    shortLabel: "Vidéo",
+    panelTitle: "Des contenus pensés pour l'action",
     panelDescription:
       "Teasers, vidéos publicitaires, spots et campagnes : nous transformons votre message en contenus capables d'attirer l'attention.",
     ctaLabel: "Explorer la vidéo",
     ctaHref: "/solutions#video",
-    items: defaultItems,
+    items: [
+      {
+        icon: "video",
+        title: "Vidéo publicitaire",
+        description:
+          "Transformer une offre ou un message en teaser, spot ou contenu de lancement.",
+        image: "https://picsum.photos/id/1035/1200/900",
+      },
+      {
+        icon: "box",
+        title: "Campagnes créatives",
+        description:
+          "Construire un concept, un message et des déclinaisons cohérentes.",
+        image: "https://picsum.photos/id/1045/1200/900",
+      },
+      {
+        icon: "image",
+        title: "Contenus de lancement",
+        description:
+          "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.",
+        image: "https://picsum.photos/id/1025/1200/900",
+      },
+    ],
   },
   {
-    id: "plugins",
-    label: "IA & données",
-    isNew: true,
+    id: "ia-data",
+    label: "Intelligence artificielle et données",
+    shortLabel: "IA et données",
     panelTitle: "L'intelligence artificielle au service du réel",
     panelDescription:
       "Assistants, automatisation, collecte et structuration de données : nous intégrons l'IA là où elle améliore réellement votre fonctionnement.",
     ctaLabel: "Explorer l'IA",
     ctaHref: "/solutions#ia-data",
-    items: defaultItems,
-  },
-  {
-    id: "stock",
-    label: "Approche",
-    panelTitle: "Une méthode pour construire la bonne réponse",
-    panelDescription:
-      "Nous clarifions la transformation recherchée, analysons la situation, alignons les décisions, concevons la solution, la déployons et l'aidons à évoluer.",
-    ctaLabel: "Comprendre notre approche",
-    ctaHref: "/notre-approche",
-    items: defaultItems,
+    items: [
+      {
+        icon: "audio",
+        title: "Assistants intelligents",
+        description:
+          "Concevoir un assistant ou un chatbot à partir d'un usage et d'un objectif précis.",
+        image: "https://picsum.photos/id/1055/1200/900",
+      },
+      {
+        icon: "box",
+        title: "Collecte de données",
+        description:
+          "Organiser la collecte d'informations pour mieux comprendre et accompagner vos publics.",
+        image: "https://picsum.photos/id/1045/1200/900",
+      },
+      {
+        icon: "layout",
+        title: "Automatisation",
+        description:
+          "Intégrer l'automatisation là où elle simplifie un parcours ou une décision.",
+        image: "https://picsum.photos/id/1065/1200/900",
+      },
+    ],
   },
 ];

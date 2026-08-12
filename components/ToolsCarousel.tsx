@@ -1,13 +1,8 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-
+import Link from "next/link";
 import {
-  ArrowLeft,
-  ArrowRight,
   Box,
   Brush,
   Camera,
-  Eraser,
   Expand,
   Film,
   Image as ImageIcon,
@@ -18,83 +13,99 @@ import {
   Wand2,
 } from "lucide-react";
 
-type Category = "image" | "video" | "audio" | "3d";
-
-type Tool = {
-  name: string;
-  description: string;
-  icon: React.ElementType;
-  category: Category;
-  href: string;
-  featured?: boolean;
-};
-
-const TOOLS: Tool[] = [
-  { name: "Une identité de marque", description: "Créer ou repenser votre positionnement, votre logo et votre univers visuel.", icon: ImageIcon, category: "image", href: "/solutions#branding", featured: true },
-  { name: "Des supports professionnels", description: "Présenter vos offres à travers des flyers, brochures, catalogues, menus ou documents commerciaux.", icon: Expand, category: "image", href: "/solutions#design", featured: true },
-  { name: "Direction artistique", description: "Donner une cohérence visuelle à tous vos points de contact.", icon: Eraser, category: "image", href: "/solutions#branding" },
-  { name: "Une expérience digitale simple", description: "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.", icon: Wand2, category: "image", href: "/solutions#design", featured: true },
-  { name: "Présentations", description: "Des supports professionnels pour présenter vos offres.", icon: Brush, category: "image", href: "/solutions#design" },
-  { name: "Une vidéo publicitaire", description: "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.", icon: Video, category: "video", href: "/solutions#video", featured: true },
-  { name: "Une campagne créative", description: "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.", icon: Scissors, category: "video", href: "/solutions#video", featured: true },
-  { name: "Teaser", description: "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.", icon: Camera, category: "video", href: "/solutions#video" },
-  { name: "Spot", description: "Des formats courts conçus pour un objectif précis.", icon: Film, category: "video", href: "/solutions#video" },
-  { name: "Un assistant intelligent", description: "Concevoir un assistant ou un chatbot à partir d'un usage, de données et d'un objectif précis.", icon: Mic, category: "audio", href: "/solutions#ia-data", featured: true },
-  { name: "Un système de collecte de données", description: "Organiser la collecte d'informations clients afin de mieux comprendre, segmenter ou accompagner vos publics.", icon: Music, category: "audio", href: "/solutions#ia-data", featured: true },
-  { name: "Un projet encore à clarifier", description: "Présentez-nous votre situation. Nous vous aiderons à identifier le bon point de départ.", icon: Box, category: "3d", href: "/demarrer-un-projet", featured: true },
+const NEEDS = [
+  {
+    name: "Une identité de marque",
+    description:
+      "Créer ou repenser votre positionnement, votre logo et votre univers visuel.",
+    icon: ImageIcon,
+    href: "/solutions#branding",
+    color: "bg-violet-500",
+  },
+  {
+    name: "Des supports professionnels",
+    description:
+      "Présenter vos offres à travers des flyers, brochures, catalogues, menus ou documents commerciaux.",
+    icon: Expand,
+    href: "/solutions#design",
+    color: "bg-sky-500",
+  },
+  {
+    name: "Direction artistique",
+    description: "Donner une cohérence visuelle à tous vos points de contact.",
+    icon: Brush,
+    href: "/solutions#branding",
+    color: "bg-violet-500",
+  },
+  {
+    name: "Une expérience digitale simple",
+    description:
+      "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.",
+    icon: Wand2,
+    href: "/solutions#design",
+    color: "bg-emerald-500",
+  },
+  {
+    name: "Une vidéo publicitaire",
+    description:
+      "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.",
+    icon: Video,
+    href: "/solutions#video",
+    color: "bg-blue-500",
+  },
+  {
+    name: "Une campagne créative",
+    description:
+      "Construire un concept, un message et des déclinaisons visuelles ou audiovisuelles cohérentes.",
+    icon: Scissors,
+    href: "/solutions#video",
+    color: "bg-blue-500",
+  },
+  {
+    name: "Teaser ou spot",
+    description: "Des formats courts conçus pour un objectif précis.",
+    icon: Film,
+    href: "/solutions#video",
+    color: "bg-blue-500",
+  },
+  {
+    name: "Un assistant intelligent",
+    description:
+      "Concevoir un assistant ou un chatbot à partir d'un usage, de données et d'un objectif précis.",
+    icon: Mic,
+    href: "/solutions#ia-data",
+    color: "bg-orange-500",
+  },
+  {
+    name: "Un système de collecte de données",
+    description:
+      "Organiser la collecte d'informations clients afin de mieux comprendre, segmenter ou accompagner vos publics.",
+    icon: Music,
+    href: "/solutions#ia-data",
+    color: "bg-orange-500",
+  },
+  {
+    name: "Un projet encore à clarifier",
+    description:
+      "Présentez-nous votre situation. Nous vous aiderons à identifier le bon point de départ.",
+    icon: Box,
+    href: "/demarrer-un-projet",
+    color: "bg-emerald-500",
+  },
+  {
+    name: "Contenus de lancement",
+    description:
+      "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.",
+    icon: Camera,
+    href: "/solutions#video",
+    color: "bg-blue-500",
+  },
 ];
 
-const FILTERS = [
-  { id: "featured", label: "À la une" },
-  { id: "image", label: "Branding & design" },
-  { id: "video", label: "Vidéo" },
-  { id: "audio", label: "IA & données" },
-  { id: "3d", label: "Automatisation" },
-] as const;
-
-const CATEGORY_COLORS: Record<Category, string> = {
-  image: "bg-violet-500",
-  video: "bg-blue-500",
-  audio: "bg-orange-500",
-  "3d": "bg-emerald-500",
-};
-
 export function ToolsCarousel() {
-
-  const [filter, setFilter] = useState<(typeof FILTERS)[number]["id"]>("featured");
-
-  const [canPrev, setCanPrev] = useState(false);
-  const [canNext, setCanNext] = useState(true);
-
-  const rowRef = useRef<HTMLDivElement>(null);
-
-  const dragRef = useRef<{ startX: number; startScroll: number } | null>(null);
-
-  const visibleTools =
-    filter === "featured"
-      ? TOOLS.filter((tool) => tool.featured)
-      : TOOLS.filter((tool) => tool.category === filter);
-
-  const updateArrows = () => {
-    const row = rowRef.current;
-    if (!row) return;
-    setCanPrev(row.scrollLeft > 0);
-
-    setCanNext(row.scrollLeft < row.scrollWidth - row.clientWidth - 1);
-  };
-
-  useEffect(() => {
-    updateArrows();
-  }, [filter]);
-
-  const scrollBy = (distance: number) => {
-    rowRef.current?.scrollBy({ left: distance, behavior: "smooth" });
-  };
-
   return (
     <section className="bg-marketing-surface-0 py-20 lg:py-28">
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-8">
-
         <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
           Que souhaitez-vous construire ?
         </h2>
@@ -103,98 +114,36 @@ export function ToolsCarousel() {
           Vous n&apos;avez pas besoin d&apos;avoir déjà défini toute la solution.
         </p>
 
-        <div className="mt-8 flex items-center justify-between gap-4">
-
-          <div className="max-w-full overflow-x-auto scrollbar-hidden rounded-full">
-            <div className="flex w-max items-center rounded-full bg-marketing-surface-1 p-1.5">
-              {FILTERS.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => setFilter(item.id)}
-
-                  className={`whitespace-nowrap rounded-full px-5 py-2 text-sm font-medium transition-colors duration-200 ${
-                    filter === item.id
-                      ? "bg-black text-white"
-                      : "text-marketing-foreground-0 hover:bg-black/5"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          <div className="hidden items-center gap-2 md:flex">
-            <button
-              onClick={() => scrollBy(-400)}
-              disabled={!canPrev}
-              aria-label="Précédent"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-marketing-foreground-0 transition-colors hover:bg-black/10 disabled:opacity-50 disabled:hover:bg-black/5"
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {NEEDS.map((need) => (
+            <Link
+              key={need.name}
+              href={need.href}
+              className="flex flex-col rounded-2xl bg-white p-5 transition-transform duration-200 hover:-translate-y-1"
             >
-              <ArrowLeft className="h-4 w-4" />
-            </button>
-            <button
-              onClick={() => scrollBy(400)}
-              disabled={!canNext}
-              aria-label="Suivant"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-black/5 text-marketing-foreground-0 transition-colors hover:bg-black/10 disabled:opacity-50 disabled:hover:bg-black/5"
-            >
-              <ArrowRight className="h-4 w-4" />
-            </button>
-          </div>
+              <span
+                className={`flex h-12 w-12 items-center justify-center rounded-xl ${need.color}`}
+              >
+                <need.icon className="h-6 w-6 text-white" />
+              </span>
+              <span className="mt-4 text-sm font-semibold text-marketing-foreground-0">
+                {need.name}
+              </span>
+              <span className="mt-1 text-sm leading-relaxed text-marketing-foreground-2">
+                {need.description}
+              </span>
+            </Link>
+          ))}
         </div>
-      </div>
 
-      <div
-        ref={rowRef}
-        onScroll={updateArrows}
-        className="mt-8 flex cursor-grab gap-3 overflow-x-auto scrollbar-hidden px-4 active:cursor-grabbing lg:px-8"
-
-        onPointerDown={(e) => {
-          dragRef.current = {
-            startX: e.clientX,
-            startScroll: rowRef.current?.scrollLeft ?? 0,
-          };
-        }}
-        onPointerMove={(e) => {
-          if (dragRef.current && rowRef.current) {
-            rowRef.current.scrollLeft =
-              dragRef.current.startScroll - (e.clientX - dragRef.current.startX);
-          }
-        }}
-        onPointerUp={() => (dragRef.current = null)}
-        onPointerLeave={() => (dragRef.current = null)}
-      >
-        {visibleTools.map((tool) => (
-          <a
-            key={tool.name}
-            href={tool.href}
-            className="flex h-[177px] w-[200px] shrink-0 select-none flex-col rounded-2xl bg-white p-4 transition-transform duration-200 hover:-translate-y-1"
+        <p className="mt-8">
+          <Link
+            href="/demarrer-un-projet"
+            className="text-sm font-medium text-marketing-foreground-0 underline-offset-4 hover:underline"
           >
-            <span
-              className={`flex h-12 w-12 items-center justify-center rounded-xl ${CATEGORY_COLORS[tool.category]}`}
-            >
-              <tool.icon className="h-6 w-6 text-white" />
-            </span>
-
-            <span className="mt-3 text-sm font-semibold text-marketing-foreground-0">
-              {tool.name}
-            </span>
-
-            <span className="mt-1 text-xs text-marketing-foreground-2 line-clamp-2">
-              {tool.description}
-            </span>
-          </a>
-        ))}
-      </div>
-
-      <div className="mx-auto mt-8 max-w-screen-2xl px-4 lg:px-8">
-        <a
-          href="/demarrer-un-projet"
-          className="text-sm font-medium text-marketing-foreground-0 underline-offset-4 hover:underline"
-        >
-          Je ne sais pas encore quelle solution choisir
-        </a>
+            Je ne sais pas encore quelle solution choisir
+          </Link>
+        </p>
       </div>
     </section>
   );

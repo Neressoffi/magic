@@ -14,7 +14,7 @@ export function ApprocheModele() {
           <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
             Cinq dimensions à faire évoluer ensemble
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/70">
+          <p className="mt-5 text-base leading-relaxed text-white/85">
             NYAKA lit une organisation comme un système. Une solution devient
             cohérente lorsqu&apos;elle soutient plusieurs dimensions sans en
             fragiliser une autre.
@@ -39,7 +39,7 @@ export function ApprocheModele() {
                 <p className="mt-2 text-sm font-medium text-white/90">
                   {dimension.question}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/60">
+                <p className="mt-3 text-sm leading-relaxed text-white/80">
                   {dimension.looksAt}
                 </p>
               </div>

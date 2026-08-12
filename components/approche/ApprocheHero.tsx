@@ -20,7 +20,7 @@ export function ApprocheHero() {
           ce qu&apos;il faut réellement construire.
         </h1>
 
-        <p className="mt-5 max-w-2xl text-lg text-white/70">
+        <p className="mt-5 max-w-2xl text-lg text-white/85">
           Un logo, une vidéo, un support ou une solution d&apos;intelligence
           artificielle n&apos;a de valeur que s&apos;il répond au bon problème.
           NYAKA part de votre situation, clarifie l&apos;enjeu, puis construit

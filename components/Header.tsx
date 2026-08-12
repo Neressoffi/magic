@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import * as Popover from "@radix-ui/react-popover";
@@ -30,6 +30,8 @@ import {
   resourceLinks,
   type MenuColumn,
 } from "@/lib/menu-data";
+import { SiteSearch } from "@/components/SiteSearch";
+import { ANNOUNCEMENT } from "@/components/TopBanner";
 
 const ICONS: Record<string, React.ElementType> = {
   image: ImageIcon,
@@ -45,14 +47,6 @@ const ICONS: Record<string, React.ElementType> = {
   help: HelpCircle,
   sparkles: Sparkles,
 };
-
-function NewBadge() {
-  return (
-    <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-medium leading-none text-accent">
-      Nouveau
-    </span>
-  );
-}
 
 function NavTrigger({ label }: { label: string }) {
   return (
@@ -101,7 +95,6 @@ function ColumnsMenu({
                       className="flex items-center gap-2 rounded px-2 py-1.5 -mx-2 text-xs text-foreground-2 transition-colors duration-100 hover:bg-white/5 hover:text-accent"
                     >
                       {link.label}
-                      {link.isNew && <NewBadge />}
                     </Link>
                   </li>
                 ))}
@@ -202,10 +195,28 @@ function MegaMenu({
 export function Header() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const onKeyDown = (event: KeyboardEvent) => {
+      const isShortcut =
+        (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k";
+      if (!isShortcut) return;
+      event.preventDefault();
+      setSearchOpen(true);
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   return (
+    <>
+    <SiteSearch open={searchOpen} onOpenChange={setSearchOpen} />
 
-    <header className="absolute inset-x-0 top-9 z-40">
+    <header
+      className={`absolute inset-x-0 z-40 ${ANNOUNCEMENT ? "top-9" : "top-0"}`}
+    >
 
       <div className="mx-auto flex h-[72px] max-w-screen-2xl items-center justify-between px-4 lg:px-8">
 
@@ -277,12 +288,21 @@ export function Header() {
 
         <div className="flex items-center gap-2">
 
-          <button className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-sm text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-sm text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex"
+          >
             <Search className="h-4 w-4" />
             Rechercher
           </button>
 
-          <button className="p-2 text-foreground-1 md:hidden" aria-label="Rechercher">
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            className="p-2 text-foreground-1 md:hidden"
+            aria-label="Rechercher"
+          >
             <Search className="h-5 w-5" />
           </button>
 
@@ -324,5 +344,6 @@ export function Header() {
         </nav>
       )}
     </header>
+    </>
   );
 }

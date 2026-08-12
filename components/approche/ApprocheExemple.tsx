@@ -27,13 +27,13 @@ export function ApprocheExemple() {
                 index % 2 === 0 ? "bg-white/[0.03]" : "bg-transparent"
               } ${index !== exampleRows.length - 1 ? "border-b border-white/10" : ""}`}
             >
-              <p className="text-sm font-semibold text-white/55">{row.label}</p>
+              <p className="text-sm font-semibold text-white/80">{row.label}</p>
               <p className="text-base leading-relaxed text-white">{row.value}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/60">
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/80">
           Autre exemple : un client demande une solution IA ; NYAKA commence
           par identifier le cas d&apos;usage, les utilisateurs, les données
           disponibles et la valeur recherchée avant de définir la technologie.

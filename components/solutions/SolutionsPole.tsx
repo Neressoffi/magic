@@ -151,15 +151,15 @@ export function SolutionsPole({
               alt={`Réalisation ${pole.proof.project}`}
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/70">
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
                 Preuve / projet associé
               </p>
               <p className="mt-2 font-display text-2xl font-bold text-white">
                 {pole.proof.project}
               </p>
-              <p className="mt-2 max-w-md text-sm text-white/75">
+              <p className="mt-2 max-w-md text-sm text-white/85">
                 {pole.proof.note}
               </p>
             </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const FOOTER_COLUMNS: {
   title: string;
-  links: { label: string; href?: string; isNew?: boolean }[];
+  links: { label: string; href?: string }[];
 }[] = [
   {
     title: "Solutions",
@@ -33,9 +33,8 @@ const FOOTER_COLUMNS: {
       { label: "Votre situation", href: "/votre-situation" },
       { label: "FAQ" },
       {
-        label: "Projet à la une",
+        label: "Projet KAWA",
         href: "/realisations/kawa-coffee-shop",
-        isNew: true,
       },
     ],
   },
@@ -108,12 +107,6 @@ export function Footer() {
                         className="inline-flex items-center gap-1.5 text-sm text-foreground-3 transition-colors duration-100 hover:text-white"
                       >
                         {link.label}
-
-                        {link.isNew && (
-                          <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-medium leading-none text-accent">
-                            Nouveau
-                          </span>
-                        )}
                       </Link>
                     </li>
                   ))}

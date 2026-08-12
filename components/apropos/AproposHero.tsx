@@ -20,7 +20,7 @@ export function AproposHero() {
           la faire évoluer avec cohérence.
         </h1>
 
-        <p className="mt-5 max-w-2xl text-lg text-white/70">
+        <p className="mt-5 max-w-2xl text-lg text-white/85">
           NYAKA réunit création, réflexion stratégique et technologie pour
           accompagner les marques et les organisations dans les moments qui
           façonnent durablement leur perception et leur évolution.

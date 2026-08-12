@@ -23,11 +23,11 @@ export default function DemarrerUnProjetPage() {
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
             Démarrer un projet
           </p>
-          <h1 className="mt-4 max-w-3xl font-display text-4xl font-bold text-white lg:text-6xl">
+          <h1 className="mt-4 max-w-3xl font-display text-[36px] font-bold leading-[1.12] text-white lg:text-[55px]">
             Présentez-nous votre projet, même s&apos;il n&apos;est pas encore
             totalement structuré.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg text-white/70">
+          <p className="mt-5 max-w-2xl text-lg text-white/85">
             Un premier échange sert à comprendre votre situation, clarifier le
             résultat attendu et définir le bon point de départ. Le formulaire
             complet sera branché prochainement.

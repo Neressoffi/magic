@@ -15,43 +15,13 @@ export const creativeSuiteColumns: MenuColumn[] = [
     title: "Branding",
     icon: "image",
     links: [
-      { label: "Identité de marque", href: "/solutions#branding", isNew: true },
+      { label: "Identité de marque", href: "/solutions#branding" },
       { label: "Positionnement", href: "/solutions#branding" },
       { label: "Logo", href: "/solutions#branding" },
       { label: "Identité visuelle", href: "/solutions#branding" },
       { label: "Direction artistique", href: "/solutions#branding" },
       { label: "Charte graphique", href: "/solutions#branding" },
       { label: "Univers de marque", href: "/solutions#branding" },
-    ],
-  },
-  {
-    title: "Vidéo",
-    icon: "video",
-    links: [
-      { label: "Vidéos publicitaires", href: "/solutions#video", isNew: true },
-      { label: "Teasers", href: "/solutions#video" },
-      { label: "Spots", href: "/solutions#video", isNew: true },
-      { label: "Contenus de lancement", href: "/solutions#video" },
-      { label: "Campagnes audiovisuelles", href: "/solutions#video" },
-    ],
-  },
-  {
-    title: "IA & données",
-    icon: "audio",
-    links: [
-      { label: "Assistants intelligents", href: "/solutions#ia-data" },
-      { label: "Automatisation", href: "/solutions#ia-data", isNew: true },
-      { label: "Collecte de données", href: "/solutions#ia-data" },
-      { label: "Structuration de données", href: "/solutions#ia-data" },
-    ],
-  },
-  {
-    title: "Campagnes",
-    icon: "box",
-    links: [
-      { label: "Concepts créatifs", href: "/solutions#video", isNew: true },
-      { label: "Messages de campagne", href: "/solutions#video" },
-      { label: "Déclinaisons visuelles", href: "/solutions#video" },
     ],
   },
   {
@@ -66,13 +36,25 @@ export const creativeSuiteColumns: MenuColumn[] = [
     ],
   },
   {
-    title: "Approche",
-    icon: "wrench",
+    title: "Vidéo & campagnes",
+    icon: "video",
     links: [
-      { label: "Cadrer le besoin", href: "/notre-approche#framework", isNew: true },
-      { label: "Diagnostiquer", href: "/notre-approche#framework" },
-      { label: "Concevoir la solution", href: "/notre-approche#framework" },
-      { label: "Déployer et faire évoluer", href: "/notre-approche#framework" },
+      { label: "Vidéos publicitaires", href: "/solutions#video" },
+      { label: "Teasers", href: "/solutions#video" },
+      { label: "Spots", href: "/solutions#video" },
+      { label: "Contenus de lancement", href: "/solutions#video" },
+      { label: "Campagnes créatives", href: "/solutions#video" },
+      { label: "Concepts créatifs", href: "/solutions#video" },
+    ],
+  },
+  {
+    title: "IA & données",
+    icon: "audio",
+    links: [
+      { label: "Assistants intelligents", href: "/solutions#ia-data" },
+      { label: "Automatisation", href: "/solutions#ia-data" },
+      { label: "Collecte de données", href: "/solutions#ia-data" },
+      { label: "Structuration de données", href: "/solutions#ia-data" },
     ],
   },
 ];
@@ -113,7 +95,6 @@ export const stockColumns: MenuColumn[] = [
       {
         label: "Campagne ou lancement",
         href: "/votre-situation#communication",
-        isNew: true,
       },
     ],
   },
@@ -139,6 +120,6 @@ export const resourceLinks: ResourceLink[] = [
   { title: "Notre approche", subtitle: "De l'idée à la solution", icon: "graduation", href: "/notre-approche" },
   { title: "Réalisations", subtitle: "Projets et études de cas", icon: "book", href: "/realisations" },
   { title: "Votre situation", subtitle: "Lancement, évolution, campagne", icon: "users", href: "/votre-situation" },
-  { title: "FAQ", subtitle: "Réponses à vos questions", icon: "help", href: "#" },
-  { title: "Démarrer un projet", subtitle: "Parler de votre besoin", icon: "sparkles", href: "#" },
+  { title: "FAQ", subtitle: "Réponses à vos questions", icon: "help", href: "/#faq" },
+  { title: "Démarrer un projet", subtitle: "Parler de votre besoin", icon: "sparkles", href: "/demarrer-un-projet" },
 ];

@@ -28,7 +28,7 @@ export function AproposPrincipes() {
               <h3 className="mt-3 font-display text-xl font-bold text-white">
                 {principle.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/65">
+              <p className="mt-3 text-sm leading-relaxed text-white/85">
                 {principle.description}
               </p>
             </div>

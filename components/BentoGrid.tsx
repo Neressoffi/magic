@@ -32,20 +32,15 @@ const TOOL_TILES = [
   },
 ];
 
-const TILE_FILTERS = ["Tous", "Branding", "Vidéo", "IA"];
-
 export function BentoGrid() {
   return (
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
-
       <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-4 xl:grid-cols-[1fr_1.2fr]">
-
         <div className="flex flex-col">
-
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
-            Notre différence
+            Différence NYAKA
           </p>
-          <h2 className="mt-3 max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-4xl">
+          <h2 className="mt-3 max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
             Votre demande est le point de départ
           </h2>
           <p className="mt-4 max-w-md text-base text-marketing-foreground-2">
@@ -53,38 +48,20 @@ export function BentoGrid() {
             séparément ou se combiner autour d&apos;une même direction.
           </p>
 
-          <div className="mt-8 flex items-center gap-2">
-            {TILE_FILTERS.map((filter, index) => (
-              <button
-                key={filter}
-                className={`rounded-full px-5 py-2 text-sm font-medium uppercase tracking-wide transition-colors ${
-                  index === 0
-                    ? "bg-black text-white"
-                    : "text-marketing-foreground-2 hover:text-marketing-foreground-0"
-                }`}
-              >
-                {filter}
-              </button>
-            ))}
-          </div>
-
-          <div className="mt-6 grid flex-1 grid-cols-2 gap-3">
+          <div className="mt-8 grid flex-1 grid-cols-2 gap-3">
             {TOOL_TILES.map((tile) => (
               <a
                 key={tile.label}
                 href={tile.href}
                 className="group relative min-h-[220px] overflow-hidden rounded-2lg"
               >
-
                 <img
                   src={tile.image}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-
-                <span className="absolute bottom-3 left-3 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+                <span className="absolute bottom-3 left-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-white">
                   <tile.icon className="h-3.5 w-3.5" />
                   {tile.label}
                 </span>
@@ -94,14 +71,13 @@ export function BentoGrid() {
         </div>
 
         <div className="flex flex-col gap-4">
-
           <div className="flex flex-1 flex-col gap-6 overflow-hidden rounded-2lg bg-black p-8 md:flex-row md:items-center">
-
             <div className="md:w-[45%]">
               <h3 className="font-display text-xl font-bold text-white lg:text-2xl">
-                Votre demande est le point de départ. Pas toujours la réponse complète.
+                Votre demande est le point de départ. Pas toujours la réponse
+                complète.
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">
+              <p className="mt-3 text-sm leading-relaxed text-white/85">
                 Avant de produire, nous cherchons à comprendre le résultat
                 attendu, le contexte et les éléments qui doivent rester
                 cohérents. Notre rôle n&apos;est pas de compliquer votre idée,
@@ -116,39 +92,41 @@ export function BentoGrid() {
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
               />
-
-              <span className="absolute left-4 top-1/2 rounded-full bg-accent px-2 py-0.5 text-[10px] font-semibold text-white">
-                Marque
-              </span>
-              <span className="absolute right-4 top-6 rounded-full bg-sky-500 px-2 py-0.5 text-[10px] font-semibold text-white">
-                Contenu
-              </span>
             </div>
           </div>
 
           <div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
-
             <div className="flex flex-col overflow-hidden rounded-2lg bg-maroon-900 p-8">
               <h3 className="font-display text-xl font-bold text-white">
                 Nous relions les expertises
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">
+              <p className="mt-3 text-sm leading-relaxed text-white/85">
                 Branding, design, vidéo, intelligence artificielle et données
                 avancent autour d&apos;un même objectif pour votre organisation.
               </p>
 
               <div className="mt-6 grid flex-1 grid-cols-2 gap-3">
                 {[
-                  { label: "Projet de marque", image: "https://picsum.photos/id/1050/400/300" },
-                  { label: "Campagne", image: "https://picsum.photos/id/1052/400/300" },
+                  {
+                    label: "Projet de marque",
+                    image: "https://picsum.photos/id/1050/400/300",
+                  },
+                  {
+                    label: "Campagne",
+                    image: "https://picsum.photos/id/1052/400/300",
+                  },
                 ].map((folder) => (
-                  <div key={folder.label} className="relative min-h-[120px] overflow-hidden rounded-lg">
+                  <div
+                    key={folder.label}
+                    className="relative min-h-[120px] overflow-hidden rounded-lg"
+                  >
                     <img
                       src={folder.image}
                       alt=""
                       className="absolute inset-0 h-full w-full object-cover"
                     />
-                    <span className="absolute bottom-2 left-2 text-[10px] font-semibold uppercase tracking-wider text-white">
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
+                    <span className="absolute bottom-2 left-2 text-xs font-semibold uppercase tracking-wider text-white">
                       {folder.label}
                     </span>
                   </div>
@@ -160,7 +138,7 @@ export function BentoGrid() {
               <h3 className="font-display text-xl font-bold text-white">
                 Nous construisons pour l&apos;évolution
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/70">
+              <p className="mt-3 text-sm leading-relaxed text-white/85">
                 Les solutions doivent pouvoir accompagner la prochaine étape de
                 l&apos;organisation, et pas seulement répondre au besoin du jour.
               </p>
@@ -171,9 +149,6 @@ export function BentoGrid() {
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />
-                <span className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full border-2 border-accent bg-black/40 px-4 py-1.5 text-xs font-bold uppercase tracking-wide text-white backdrop-blur">
-                  Démarrer
-                </span>
               </div>
             </div>
           </div>

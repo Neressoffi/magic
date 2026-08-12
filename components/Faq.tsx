@@ -53,11 +53,11 @@ const QUESTIONS = [
 
 export function Faq() {
   return (
-    <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
+    <section id="faq" className="scroll-mt-28 bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-10 lg:grid-cols-[1fr_2fr]">
 
         <div>
-          <h2 className="max-w-xs font-display text-3xl font-bold text-marketing-foreground-0 lg:text-4xl">
+          <h2 className="max-w-xs font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
             Réponses à vos questions
           </h2>
 
@@ -78,7 +78,7 @@ export function Faq() {
             >
 
               <Accordion.Header>
-                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-5 text-left text-sm font-medium text-marketing-foreground-0 transition-colors hover:text-marketing-foreground-1">
+                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-marketing-foreground-0 transition-colors hover:text-marketing-foreground-1">
                   {item.question}
 
                   <Plus className="h-4 w-4 shrink-0 text-accent transition-transform duration-300 group-data-[state=open]:rotate-45" />

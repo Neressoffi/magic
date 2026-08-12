@@ -1,31 +1,9 @@
 import Link from "next/link";
-
-import { ArrowRight, Play } from "lucide-react";
-
-import { TextRoulette } from "./TextRoulette";
-
-const LOGOS = [
-  "KAWA Coffee Shop",
-  "THE VISION",
-  "7G Services",
-  "NEMESIS",
-  "BRIRENA HAIR",
-  "Perfecta",
-  "ASECAM",
-];
-
-function LogoPlaceholder({ name }: { name: string }) {
-  return (
-    <div className="flex h-9 w-32 shrink-0 items-center justify-center rounded bg-white/10 text-xs font-semibold tracking-widest text-white opacity-50 transition-opacity hover:opacity-100">
-      {name.toUpperCase()}
-    </div>
-  );
-}
+import { Play } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-
       <img
         src="/nyaka-hero-bg.png"
         alt="NYAKA — branding, design, vidéo, intelligence artificielle et données"
@@ -36,32 +14,20 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/40" />
 
       <div className="relative flex min-h-screen flex-col justify-end">
-
-        <div className="relative mx-auto flex w-full max-w-screen-2xl items-end justify-between px-4 pb-16 pt-40 lg:px-8">
-
+        <div className="relative mx-auto w-full max-w-screen-2xl px-4 pb-20 pt-40 lg:px-8 lg:pb-28">
           <div className="max-w-2xl">
-
-            <Link
-              href="/solutions"
-              className="group inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur"
-            >
+            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur">
               <span className="text-xs text-white/90">
                 BRANDING · DESIGN · VIDÉO · INTELLIGENCE ARTIFICIELLE &amp; DONNÉES
               </span>
-
-              <span className="h-3 w-px bg-white/30" />
-              <span className="flex items-center gap-1 text-xs font-medium text-white">
-                Découvrir nos solutions
-
-                <ArrowRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-1" />
-              </span>
-            </Link>
+            </div>
 
             <h1 className="mt-6 font-display text-[36px] font-bold leading-[1.15] text-white lg:text-[55px]">
-              Nous construisons les marques, les contenus et les solutions qui font évoluer votre organisation.
+              Nous construisons les marques, les contenus et les solutions qui
+              font évoluer votre organisation.
             </h1>
 
-            <p className="mt-5 max-w-xl text-lg text-white/70">
+            <p className="mt-5 max-w-xl text-lg text-white/85">
               Vous venez avec une idée, un besoin ou un projet. NYAKA vous aide à
               lui donner une direction claire, puis mobilise le branding, le
               design, la vidéo, l&apos;intelligence artificielle et les données
@@ -69,7 +35,6 @@ export function Hero() {
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
-
               <Link
                 href="/demarrer-un-projet"
                 className="rounded-lg bg-white px-6 py-3 text-base font-medium text-black transition-opacity hover:opacity-90"
@@ -86,43 +51,10 @@ export function Hero() {
               </Link>
             </div>
 
-            <p className="mt-4 text-sm text-white/55">
+            <p className="mt-4 text-sm text-white/80">
               Votre projet peut encore être au stade de l&apos;idée. Nous
               commencerons par le clarifier avec vous.
             </p>
-          </div>
-
-          <TextRoulette />
-        </div>
-      </div>
-
-      <div className="relative border-t border-white/10 bg-black/10 py-12 backdrop-blur-[1px]">
-
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.16em] text-white/60">
-          Ils nous ont confié leur image, leurs contenus ou leurs projets
-        </p>
-        <p className="mx-auto mt-3 max-w-2xl text-center text-sm text-white/70">
-          Des projets construits pour des réalités différentes. NYAKA accompagne
-          des marques, des entreprises et des organisations à différentes étapes
-          de leur développement.
-        </p>
-
-        <div className="mt-8 hidden items-center justify-center gap-8 md:flex">
-          {LOGOS.map((name) => (
-            <LogoPlaceholder key={name} name={name} />
-          ))}
-        </div>
-
-        <div className="mt-8 overflow-hidden md:hidden">
-          <div className="flex w-max gap-8 animate-scroll-horizontal motion-reduce:animate-none">
-
-            {LOGOS.map((name) => (
-              <LogoPlaceholder key={`a-${name}`} name={name} />
-            ))}
-
-            {LOGOS.map((name) => (
-              <LogoPlaceholder key={`b-${name}`} name={name} />
-            ))}
           </div>
         </div>
       </div>

@@ -197,7 +197,7 @@ export function TabsSection() {
       <div className="mx-auto max-w-screen-2xl">
 
         <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
-          Nos domaines d&apos;intervention
+          Nos quatre pôles
         </p>
         <h2 className="mt-3 text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
           Une idée peut demander plusieurs expertises.
@@ -229,19 +229,14 @@ export function TabsSection() {
                       tabRefs.current[tab.id] = el;
                     }}
 
-                    className={`relative z-10 flex items-center gap-1.5 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
+                    className={`relative z-10 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
                       activeTab === tab.id
                         ? "text-white"
                         : "text-marketing-foreground-0 hover:text-marketing-foreground-1"
                     }`}
                   >
-                    {tab.label}
-
-                    {tab.isNew && (
-                      <span className="rounded bg-accent/15 px-1.5 py-0.5 text-[10px] font-medium leading-none text-accent">
-                        Nouveau
-                      </span>
-                    )}
+                    <span className="lg:hidden">{tab.shortLabel}</span>
+                    <span className="hidden lg:inline">{tab.label}</span>
                   </Tabs.Trigger>
                 ))}
               </Tabs.List>

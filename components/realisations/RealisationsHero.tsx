@@ -20,7 +20,7 @@ export function RealisationsHero() {
           remplir un portfolio.
         </h1>
 
-        <p className="mt-5 max-w-2xl text-lg text-white/70">
+        <p className="mt-5 max-w-2xl text-lg text-white/85">
           Découvrez comment NYAKA transforme un besoin initial en identité,
           support, contenu ou solution cohérente avec la réalité de
           l&apos;organisation.

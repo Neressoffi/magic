@@ -5,14 +5,6 @@ import { ArrowRight, Play } from "lucide-react";
 
 const ORIGINALS = [
   {
-    title: "KAWA Coffee Shop",
-    description:
-      "Transformer une carte de menu en une expérience de marque. Direction artistique, menu premium, version digitale et points de contact pour accompagner l'expérience client.",
-    poster: "https://picsum.photos/id/1060/1600/800",
-    href: "/realisations/kawa-coffee-shop",
-    cta: "Découvrir le projet KAWA",
-  },
-  {
     title: "THE VISION",
     description:
       "Structurer des campagnes et des contenus capables de rendre les opportunités d'études, d'immigration et de recrutement plus compréhensibles et plus engageantes.",
@@ -47,9 +39,7 @@ const ORIGINALS = [
 ];
 
 export function VideosCarousel() {
-
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const currentOriginal = ORIGINALS[currentSlide];
 
   const showPrevious = () => {
@@ -63,14 +53,12 @@ export function VideosCarousel() {
   };
 
   return (
-
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
-
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
-              Autres projets
+              Autres réalisations
             </p>
             <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
               Des réponses différentes, construites autour de chaque situation.
@@ -92,72 +80,73 @@ export function VideosCarousel() {
         </div>
 
         <div className="relative mt-10">
-
           <div
             key={currentOriginal.title}
             className="relative aspect-[16/10] animate-[fadeIn_500ms_ease-out] overflow-hidden rounded-2lg bg-black md:aspect-[2/1]"
           >
-
             <img
               src={currentOriginal.poster}
-              alt={currentOriginal.title}
-              className="absolute inset-0 h-full w-full object-cover"
+              alt=""
+              className="absolute inset-0 h-full w-full object-cover opacity-80"
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6 md:flex-row md:items-end md:justify-between md:p-10">
+              <div className="max-w-xl">
+                <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+                  {currentOriginal.title}
+                </h3>
+                <p className="mt-3 text-sm text-white/90 md:text-base">
+                  {currentOriginal.description}
+                </p>
+              </div>
 
-            <span className="absolute left-6 top-6 text-xs font-semibold text-white/80">
-              {currentSlide === 0 ? "Projet à la une" : "Réalisation"}
-            </span>
-
-            <div className="absolute bottom-6 left-6 right-20 max-w-md">
-              <h3 className="font-display text-xl font-bold text-white">
-                {currentOriginal.title}
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/80">
-                {currentOriginal.description}
-              </p>
               <Link
                 href={currentOriginal.href}
-                className="mt-4 inline-flex items-center gap-2 rounded-lg bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur transition-colors hover:bg-white/25"
+                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90"
               >
-                <Play className="h-3.5 w-3.5 fill-white" />
+                <Play className="h-3.5 w-3.5 fill-black" />
                 {currentOriginal.cta}
               </Link>
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={showPrevious}
-            aria-label="Production précédente"
-            className="group absolute inset-y-0 left-0 z-10 w-[14%] cursor-pointer rounded-l-2lg bg-gradient-to-r from-black/20 via-black/5 to-transparent transition-colors hover:from-black/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white md:w-[10%]"
-          />
-          <button
-            type="button"
-            onClick={showNext}
-            aria-label="Production suivante"
-            className="group absolute inset-y-0 right-0 z-10 w-[14%] cursor-pointer rounded-r-2lg bg-gradient-to-l from-black/20 via-black/5 to-transparent transition-colors hover:from-black/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-4px] focus-visible:outline-white md:w-[10%]"
-          />
-        </div>
+          <div className="mt-4 flex items-center justify-between">
+            <div className="flex gap-2">
+              {ORIGINALS.map((item, index) => (
+                <button
+                  key={item.title}
+                  type="button"
+                  onClick={() => setCurrentSlide(index)}
+                  aria-label={`Voir ${item.title}`}
+                  className={`h-1.5 rounded-full transition-all ${
+                    index === currentSlide
+                      ? "w-8 bg-black"
+                      : "w-1.5 bg-black/20 hover:bg-black/40"
+                  }`}
+                />
+              ))}
+            </div>
 
-        <div className="mt-6 flex items-center justify-center gap-4">
-          <button
-            type="button"
-            onClick={showPrevious}
-            aria-label="Afficher la production précédente"
-            className="h-3.5 w-3.5 rounded-full bg-[#8b8b8b] transition-colors hover:bg-[#5f5f5f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#626262]"
-          />
-          <span
-            aria-hidden="true"
-            className="h-3.5 w-12 rounded-full bg-[#626262]"
-          />
-          <button
-            type="button"
-            onClick={showNext}
-            aria-label="Afficher la production suivante"
-            className="h-3.5 w-3.5 rounded-full bg-[#8b8b8b] transition-colors hover:bg-[#5f5f5f] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#626262]"
-          />
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={showPrevious}
+                aria-label="Projet précédent"
+                className="rounded-lg border border-black/10 px-3 py-1.5 text-sm text-marketing-foreground-0 hover:bg-black/5"
+              >
+                Précédent
+              </button>
+              <button
+                type="button"
+                onClick={showNext}
+                aria-label="Projet suivant"
+                className="rounded-lg border border-black/10 px-3 py-1.5 text-sm text-marketing-foreground-0 hover:bg-black/5"
+              >
+                Suivant
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

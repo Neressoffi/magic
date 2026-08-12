@@ -11,7 +11,7 @@ export function FinalCta() {
       <div className="absolute left-1/2 top-1/2 h-px w-[160%] -translate-x-1/2 -rotate-[8deg] bg-accent/70" />
 
       <div className="relative flex max-w-3xl flex-col items-center text-center">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/70">
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/85">
           Parlons de votre projet
         </p>
 
@@ -44,7 +44,7 @@ export function FinalCta() {
           </Link>
         </div>
 
-        <p className="mt-5 text-sm text-white/60">
+        <p className="mt-5 text-sm text-white/80">
           Un premier échange ne vous engage pas sur une production. Il sert à
           comprendre votre situation et à vérifier comment NYAKA peut intervenir.
         </p>

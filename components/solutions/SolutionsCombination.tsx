@@ -14,11 +14,11 @@ export function SolutionsCombination() {
           <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
             Un projet ne se limite pas toujours à une seule expertise
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/70">
+          <p className="mt-5 text-base leading-relaxed text-white/85">
             Vous pouvez venir pour un logo, une vidéo, un catalogue ou une idée
             liée à l&apos;IA. Le besoin initial reste le point de départ.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-white/70">
+          <p className="mt-4 text-base leading-relaxed text-white/85">
             Après compréhension de votre situation, NYAKA peut recommander une
             intervention limitée à un seul pôle ou une combinaison de plusieurs
             expertises. L&apos;objectif n&apos;est pas d&apos;ajouter des
@@ -27,7 +27,7 @@ export function SolutionsCombination() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/50">
+          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/75">
             Exemples simples
           </h3>
 
@@ -40,7 +40,7 @@ export function SolutionsCombination() {
                 <p className="text-sm font-semibold text-white">
                   {example.situation}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/65">
+                <p className="mt-3 text-sm leading-relaxed text-white/85">
                   {example.combination}
                 </p>
               </div>
