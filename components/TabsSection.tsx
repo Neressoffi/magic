@@ -6,16 +6,10 @@ import * as Tabs from "@radix-ui/react-tabs";
 import {
   ArrowRight,
   Box,
-  Crop,
-  Folder,
   Image as ImageIcon,
   LayoutGrid,
   Music,
-  Paperclip,
-  Sparkles,
-  SunMedium,
   Video,
-  Wand2,
 } from "lucide-react";
 
 import { tabs, type TabContent } from "@/lib/tabs-data";
@@ -141,29 +135,6 @@ function TabPanel({ tab }: { tab: TabContent }) {
               }`}
             />
           ))}
-        </div>
-
-        <div className="absolute bottom-6 left-1/2 w-[85%] max-w-md -translate-x-1/2 rounded-xl bg-black/80 px-4 py-3 backdrop-blur">
-
-          <div className="flex items-center justify-between gap-3">
-            <span className="truncate text-xs text-white/90">
-              Clarifier la direction de votre marque
-            </span>
-            <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/15 text-[10px] text-white">
-              ↑
-            </span>
-          </div>
-
-          <div className="mt-2.5 flex items-center gap-3 text-white/60">
-            <Wand2 className="h-3.5 w-3.5" />
-            <Paperclip className="h-3.5 w-3.5" />
-            <Crop className="h-3.5 w-3.5" />
-            <Sparkles className="h-3.5 w-3.5" />
-            <LayoutGrid className="h-3.5 w-3.5" />
-            <Folder className="h-3.5 w-3.5" />
-            <SunMedium className="h-3.5 w-3.5" />
-            <ImageIcon className="h-3.5 w-3.5" />
-          </div>
         </div>
       </div>
     </div>

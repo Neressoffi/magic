@@ -1,157 +1,77 @@
-import {
-  Clapperboard,
-  Image as ImageIcon,
-  Music,
-  Video,
-} from "lucide-react";
-
-const TOOL_TILES = [
+const CASES = [
   {
-    label: "Identité de marque",
-    icon: ImageIcon,
-    image: "https://picsum.photos/id/1039/500/620",
-    href: "/solutions#branding",
+    ask: "Vous demandez un logo",
+    understand:
+      "Le positionnement, la perception recherchée, ce qui doit rester reconnaissable et les contextes d’usage.",
+    result:
+      "Une identité capable de soutenir la marque — pas seulement un symbole isolé.",
   },
   {
-    label: "Contenus vidéo",
-    icon: Video,
-    image: "https://picsum.photos/id/1043/500/620",
-    href: "/solutions#video",
+    ask: "Vous demandez une vidéo",
+    understand:
+      "L’offre à promouvoir, la cible, le message, l’action attendue et le contexte de diffusion.",
+    result:
+      "Un contenu construit autour d’un objectif — pas une vidéo isolée.",
   },
   {
-    label: "Campagnes créatives",
-    icon: Clapperboard,
-    image: "https://picsum.photos/id/1044/500/620",
-    href: "/solutions#video",
-  },
-  {
-    label: "IA & données",
-    icon: Music,
-    image: "https://picsum.photos/id/1047/500/620",
-    href: "/solutions#ia-data",
+    ask: "Vous demandez une solution IA",
+    understand:
+      "Le cas d’usage, les utilisateurs, les données disponibles et la valeur réellement recherchée.",
+    result:
+      "Une solution adaptée au réel — pas une technologie posée pour elle-même.",
   },
 ];
 
 export function BentoGrid() {
   return (
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
-      <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-4 xl:grid-cols-[1fr_1.2fr]">
-        <div className="flex flex-col">
+      <div className="mx-auto max-w-screen-2xl">
+        <div className="max-w-2xl">
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
             Différence NYAKA
           </p>
-          <h2 className="mt-3 max-w-md font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
-            Votre demande est le point de départ
+          <h2 className="mt-3 font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+            Votre demande est le point de départ. Pas toujours la réponse
+            complète.
           </h2>
-          <p className="mt-4 max-w-md text-base text-marketing-foreground-2">
-            Branding, design, vidéo et IA : nos quatre pôles peuvent intervenir
-            séparément ou se combiner autour d&apos;une même direction.
+          <p className="mt-4 text-base text-marketing-foreground-2">
+            Avant de produire, nous cherchons à comprendre le résultat attendu,
+            le contexte et ce qui doit rester cohérent. Voici comment cela
+            change concrètement un projet.
           </p>
-
-          <div className="mt-8 grid flex-1 grid-cols-2 gap-3">
-            {TOOL_TILES.map((tile) => (
-              <a
-                key={tile.label}
-                href={tile.href}
-                className="group relative min-h-[220px] overflow-hidden rounded-2lg"
-              >
-                <img
-                  src={tile.image}
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-                <span className="absolute bottom-3 left-3 flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-white">
-                  <tile.icon className="h-3.5 w-3.5" />
-                  {tile.label}
-                </span>
-              </a>
-            ))}
-          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="flex flex-1 flex-col gap-6 overflow-hidden rounded-2lg bg-black p-8 md:flex-row md:items-center">
-            <div className="md:w-[45%]">
-              <h3 className="font-display text-xl font-bold text-white lg:text-2xl">
-                Votre demande est le point de départ. Pas toujours la réponse
-                complète.
+        <div className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-3">
+          {CASES.map((item) => (
+            <article
+              key={item.ask}
+              className="flex flex-col rounded-2xl border border-black/5 bg-white p-6 lg:p-8"
+            >
+              <h3 className="font-display text-xl font-bold text-marketing-foreground-0">
+                {item.ask}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/85">
-                Avant de produire, nous cherchons à comprendre le résultat
-                attendu, le contexte et les éléments qui doivent rester
-                cohérents. Notre rôle n&apos;est pas de compliquer votre idée,
-                mais d&apos;éviter qu&apos;une bonne solution soit construite
-                pour le mauvais problème.
-              </p>
-            </div>
 
-            <div className="relative min-h-[200px] flex-1 overflow-hidden rounded-lg">
-              <img
-                src="https://picsum.photos/id/1076/700/450"
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
+              <div className="mt-6 flex flex-1 flex-col gap-5">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-marketing-foreground-2">
+                    Ce que nous cherchons à comprendre
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-1">
+                    {item.understand}
+                  </p>
+                </div>
 
-          <div className="grid flex-1 grid-cols-1 gap-4 md:grid-cols-2">
-            <div className="flex flex-col overflow-hidden rounded-2lg bg-maroon-900 p-8">
-              <h3 className="font-display text-xl font-bold text-white">
-                Nous relions les expertises
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/85">
-                Branding, design, vidéo, intelligence artificielle et données
-                avancent autour d&apos;un même objectif pour votre organisation.
-              </p>
-
-              <div className="mt-6 grid flex-1 grid-cols-2 gap-3">
-                {[
-                  {
-                    label: "Projet de marque",
-                    image: "https://picsum.photos/id/1050/400/300",
-                  },
-                  {
-                    label: "Campagne",
-                    image: "https://picsum.photos/id/1052/400/300",
-                  },
-                ].map((folder) => (
-                  <div
-                    key={folder.label}
-                    className="relative min-h-[120px] overflow-hidden rounded-lg"
-                  >
-                    <img
-                      src={folder.image}
-                      alt=""
-                      className="absolute inset-0 h-full w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 to-transparent" />
-                    <span className="absolute bottom-2 left-2 text-xs font-semibold uppercase tracking-wider text-white">
-                      {folder.label}
-                    </span>
-                  </div>
-                ))}
+                <div className="border-t border-black/5 pt-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.14em] text-marketing-foreground-2">
+                    Résultat
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-0">
+                    {item.result}
+                  </p>
+                </div>
               </div>
-            </div>
-
-            <div className="flex flex-col overflow-hidden rounded-2lg bg-sky-800 p-8">
-              <h3 className="font-display text-xl font-bold text-white">
-                Nous construisons pour l&apos;évolution
-              </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/85">
-                Les solutions doivent pouvoir accompagner la prochaine étape de
-                l&apos;organisation, et pas seulement répondre au besoin du jour.
-              </p>
-
-              <div className="relative mt-6 min-h-[140px] flex-1 overflow-hidden rounded-lg">
-                <img
-                  src="https://picsum.photos/id/1058/500/350"
-                  alt=""
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

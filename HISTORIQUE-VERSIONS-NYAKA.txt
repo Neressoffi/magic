@@ -1,0 +1,308 @@
+================================================================================
+NYAKA — HISTORIQUE DES VERSIONS DU SITE
+Projet : magic (Next.js) — https://magic-eight-lake.vercel.app
+Document généré le : 15 août 2026
+Périmètre : du prototype initial jusqu’à l’état local actuel
+================================================================================
+
+Ce fichier récapitule ce qui a été AJOUTÉ, RETIRÉ ou MODIFIÉ à chaque version
+du site, en suivant les commits Git et les corrections éditoriales NYAKA.
+
+
+--------------------------------------------------------------------------------
+VERSION 0 — Prototype initial CreativeHub
+Date : 13–21 juillet 2026
+Commits : b4d478d · 3dca198
+--------------------------------------------------------------------------------
+
+CONTEXTE
+  Site marketing basé sur un modèle type « CreativeHub » (outils créatifs /
+  SaaS). Structure visuelle et composants déjà en place.
+
+AJOUTÉ
+  - Application Next.js 14 (App Router)
+  - Design system Tailwind (tokens surface, marketing, accent)
+  - Header avec méga-menus
+  - Accueil composé de sections prototype :
+    TopBanner, Hero, TabsSection, ModelsCarousel, BentoGrid, ToolsCarousel,
+    UseCases, VideosCarousel, TeamPlans, Pricing, Faq, FinalCta, Footer
+  - Composants UI (carrousels, onglets, accordion FAQ, etc.)
+
+REMARQUE
+  Contenu encore générique / modèle, pas encore rebrandé NYAKA.
+
+
+--------------------------------------------------------------------------------
+VERSION 1 — Rebrand texte CreativeHub → NYAKA
+Date : 6 août 2026
+Commit : 766c474
+Message : « Remplacer les textes CreativeHub par le contenu NYAKA. »
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Remplacer les textes du prototype par le contenu NYAKA, sans casser le design.
+
+AJOUTÉ / MODIFIÉ
+  - Textes Hero, FAQ, CTA et intitulés adaptés à NYAKA
+  - Messaging : branding, design, vidéo, intelligence artificielle et données
+  - Signature : « NYAKA — L’empreinte de votre marque. »
+  - Navigation et footer partiellement adaptés aux intitulés NYAKA
+
+RETIRÉ / REMPLACÉ
+  - Mentions « CreativeHub » et formulations génériques du modèle SaaS
+  - Logique éditoriale « plateforme créative » au profit de NYAKA
+
+ÉTAT
+  Accueil encore structuré comme le prototype (Pricing, TeamPlans type SaaS,
+  ordre des sections non conforme au brief NYAKA V1).
+
+
+--------------------------------------------------------------------------------
+VERSION 2 — Pages secondaires NYAKA
+Date : 8 août 2026
+Commit : 1dd68a1
+Message : « Ajouter les pages secondaires NYAKA et brancher la navigation. »
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Créer les pages secondaires validées et les brancher dans la navigation.
+
+AJOUTÉ
+  Routes
+  - /solutions — 4 pôles en sections internes (#branding, #design, #video, #ia-data)
+  - /votre-situation — 5 situations (lancez / professionnalisez / communiquez /
+    repositionnez / transformez)
+  - /notre-approche — Modèle NYAKA + Framework + exemple concret
+  - /realisations — portfolio éditorial + projet phare KAWA
+  - /realisations/kawa-coffee-shop — étude de cas détaillée
+  - /a-propos — organisation, principes, équipe / réseau
+  - /demarrer-un-projet — page d’entrée projet (stub formulaire)
+
+  Données
+  - lib/solutions-data.ts, situation-data.ts, approche-data.ts,
+    realisations-data.ts, apropos-data.ts
+  - Composants dédiés par page (Hero, StickyNav, sections, CTA)
+
+  Navigation
+  - Header / menus / Footer branchés vers ces routes et ancres
+
+RETIRÉ
+  - Liens morts « # » remplacés progressivement par de vraies routes
+  - Idée de 4 pages Solutions séparées (une seule page /solutions)
+
+ÉTAT
+  Architecture secondaire conforme ; accueil encore partiellement prototype.
+
+
+--------------------------------------------------------------------------------
+VERSION 3 — Accueil adapté + Hero lisible
+Date : 8 août 2026
+Commit : 3ed3c3d
+Message : « Adapter l’accueil NYAKA et améliorer la lisibilité du Hero. »
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Adapter les textes de l’accueil NYAKA et améliorer le contraste du Hero,
+  sans tout détruire structurellement.
+
+AJOUTÉ / MODIFIÉ
+  - Textes d’accueil davantage alignés NYAKA
+  - Image Hero : public/nyaka-hero-bg.png
+  - Overlays plus sombres pour lisibilité du titre et des CTA
+
+RETIRÉ / LIMITÉ
+  - Image placeholder picsum du Hero (remplacée par le fond NYAKA)
+
+ÉTAT
+  Accueil plus lisible, mais ordre des sections et Pricing encore hérités
+  du prototype.
+
+
+--------------------------------------------------------------------------------
+VERSION 4 — Correction n°1 Structure & contenus + UX
+Date : 12 août 2026
+Commit : 28ed100
+Message : « Aligner la structure NYAKA, activer la recherche et renforcer
+           la lisibilité. »
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Appliquer le document d’exécution développeur (Correction n°1) :
+  structure, textes, ordre, CTA, suppression des contenus provisoires ;
+  puis améliorer lisibilité / recherche.
+
+AJOUTÉ
+  Accueil — nouvel ordre
+  Header → Hero → Bande des besoins → Références → 4 pôles →
+  Que souhaitez-vous construire ? → Différence NYAKA → Votre situation →
+  Notre manière de travailler (Framework 6 étapes) → KAWA →
+  Autres réalisations → Pourquoi NYAKA → FAQ → CTA final → Footer
+
+  Nouveaux composants
+  - NeedsBand.tsx
+  - HomeReferences.tsx
+  - HomeFramework.tsx (Cadrer, Diagnostiquer, Aligner, Concevoir,
+    Déployer, Faire évoluer)
+  - HomeKawa.tsx (projet phare)
+  - SiteSearch.tsx + lib/search-data.ts (recherche site, Ctrl/⌘ K)
+
+  Contenu
+  - Exactement 4 pôles (plus de 5e pôle / Approche dans les onglets)
+  - Pourquoi NYAKA : 4 différences + signature
+  - 5 situations uniquement (plus « Vous changez d’échelle »)
+
+MODIFIÉ
+  - TopBanner conditionnel (masqué tant qu’aucune annonce validée)
+  - ToolsCarousel : grille de besoins (sans filtres « À la une », etc.)
+  - Contrastes et tailles de texte renforcés (heroes, overlays, cartes)
+  - Labels d’onglets courts sur mobile
+  - Header : offset adapté si bandeau vide
+
+RETIRÉ
+  - Section Pricing / packs (« Des offres adaptées… ») de l’accueil
+  - ModelsCarousel de l’accueil
+  - Labels « Nouveau »
+  - Note de production À propos (« noms, rôles, portraits seront ajoutés… »)
+  - Mention « Étude de cas à venir » sur cartes sans page détaillée
+  - Texte « Découvrir nos solutions » + flèche dans le chip Hero
+  - Mentions « nouvelle plateforme » / bandeau de lancement
+
+ÉTAT EN LIGNE APRÈS CE COMMIT
+  Structure V1 beaucoup plus proche du brief ; médias définitifs hors scope.
+
+
+--------------------------------------------------------------------------------
+VERSION 5 — Labels heroes en blanc
+Date : 12 août 2026
+Commit : 33225a4
+Message : « Passer les labels des heroes en blanc pour améliorer la
+           lisibilité. »
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Rendre visibles les libellés d’eyebrow des pages secondaires.
+
+MODIFIÉ
+  Couleur accent (rose) → blanc pur sur :
+  - Nos solutions
+  - Votre situation
+  - Notre approche
+  - À propos de NYAKA
+  - Réalisations
+  - Démarrer un projet
+  - Étude de cas (KAWA)
+
+AJOUTÉ / RETIRÉ
+  Aucune section ajoutée ou retirée ; changement de style uniquement.
+
+
+--------------------------------------------------------------------------------
+VERSION 6 — Nettoyage éditorial accueil (état local au 15 août 2026)
+Statut : modifié en local, PAS ENCORE COMMITTÉ / POUSSÉ au moment de
+         la rédaction de ce document
+Fichiers : Footer.tsx · BentoGrid.tsx · ToolsCarousel.tsx · HomeReferences.tsx
+--------------------------------------------------------------------------------
+
+OBJECTIF
+  Appliquer 4 corrections éditoriales précises validées.
+
+1) FOOTER
+   RETIRÉ
+   - Doublons Solutions / À propos / Informations
+   - « Qui est NYAKA », « Projet KAWA », « Votre situation », « Contact »
+   - Instagram, YouTube
+   - Liens hors structure validée
+   AJOUTÉ / GARDÉ (structure exacte)
+   - NYAKA : À propos · Notre approche · Réalisations · Démarrer un projet
+   - Solutions : Branding · Design · Vidéo & campagnes · IA & données
+   - Informations : FAQ (seule page réellement disponible)
+   - Coordonnées : LinkedIn · TikTok · WhatsApp
+   NOTE
+   - Politique de confidentialité, Mentions légales, Conditions de
+     collaboration : non ajoutées car pages absentes du site
+     (« si réellement disponibles »)
+
+2) DIFFÉRENCE NYAKA (BentoGrid)
+   RETIRÉ
+   - Blocs « Nous relions les expertises »
+   - Blocs « Nous construisons pour l’évolution »
+   - Tuiles image type catalogue de pôles (répétition avec Pourquoi NYAKA)
+   AJOUTÉ
+   - Structure démonstrative à 3 cas :
+     • Vous demandez un logo → comprendre → résultat
+     • Vous demandez une vidéo → comprendre → résultat
+     • Vous demandez une solution IA → comprendre → résultat
+   CONSERVÉ
+   - Idée d’ouverture : « Votre demande est le point de départ… »
+
+3) QUE SOUHAITEZ-VOUS CONSTRUIRE ?
+   RETIRÉ (sous-services / doublons)
+   - Direction artistique
+   - Teaser ou spot
+   - Contenus de lancement
+   GARDÉ (exactement 8 entrées)
+   1. Une identité de marque
+   2. Des supports professionnels
+   3. Une vidéo publicitaire
+   4. Une campagne créative
+   5. Une expérience digitale simple
+   6. Un assistant intelligent
+   7. Un système de collecte de données
+   8. Un projet encore à clarifier
+
+4) ILS NOUS FONT CONFIANCE
+   RETIRÉ (noms inventés)
+   - Studio Nova, Apex Group, Lumina, Vertigo, Horizon
+   AJOUTÉ / GARDÉ (références réelles / candidates)
+   - KAWA · THE VISION · 7G Services · BRIRENA HAIR · Perfecta
+
+
+--------------------------------------------------------------------------------
+RÉCAPITULATIF PAR THÈME
+--------------------------------------------------------------------------------
+
+STRUCTURE ACCUEIL
+  V0–V3 : ordre prototype CreativeHub
+  V4+   : ordre validé NYAKA (sans Pricing)
+
+PAGES
+  V0–V1 : surtout accueil
+  V2+   : Solutions, Situation, Approche, Réalisations, À propos, Démarrer
+
+ÉDITORIAL
+  V1    : textes NYAKA
+  V4    : Correction n°1 (pôles, situations, framework, pourquoi)
+  V6    : Différence = cas concrets ; 8 besoins ; refs réelles ; footer propre
+
+UX / LISIBILITÉ
+  V3    : Hero image + overlays
+  V4    : contrastes, recherche, header
+  V5    : eyebrows heroes en blanc
+
+HORS PÉRIMÈTRE TOUJOURS
+  - Médias définitifs (photos, vidéos, logos clients)
+  - Formulaire « Démarrer un projet » complet
+  - Pages légales (politique, mentions, conditions)
+  - URLs définitives LinkedIn / TikTok / WhatsApp
+  - Témoignages (conditionnels, non publiés)
+
+
+--------------------------------------------------------------------------------
+ORDRE DES COMMITS GIT
+--------------------------------------------------------------------------------
+
+b4d478d  Initial commit from Create Next App
+3dca198  Premier commit
+766c474  Remplacer les textes CreativeHub par le contenu NYAKA.
+1dd68a1  Ajouter les pages secondaires NYAKA et brancher la navigation.
+3ed3c3d  Adapter l’accueil NYAKA et améliorer la lisibilité du Hero.
+28ed100  Aligner la structure NYAKA, activer la recherche et renforcer
+         la lisibilité.
+33225a4  Passer les labels des heroes en blanc pour améliorer la lisibilité.
+(+ local) Version 6 — Footer / Différence / 8 besoins / Références réelles
+         → à committer et pousser pour mise à jour Vercel
+
+
+--------------------------------------------------------------------------------
+FIN DU DOCUMENT
+================================================================================

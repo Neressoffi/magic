@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Play } from "lucide-react";
+import { TextRoulette } from "./TextRoulette";
 
 export function Hero() {
   return (
@@ -14,7 +15,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/25 to-black/40" />
 
       <div className="relative flex min-h-screen flex-col justify-end">
-        <div className="relative mx-auto w-full max-w-screen-2xl px-4 pb-20 pt-40 lg:px-8 lg:pb-28">
+        <div className="relative mx-auto flex w-full max-w-screen-2xl items-end justify-between px-4 pb-20 pt-40 lg:px-8 lg:pb-28">
           <div className="max-w-2xl">
             <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur">
               <span className="text-xs text-white/90">
@@ -56,6 +57,8 @@ export function Hero() {
               commencerons par le clarifier avec vous.
             </p>
           </div>
+
+          <TextRoulette />
         </div>
       </div>
     </section>

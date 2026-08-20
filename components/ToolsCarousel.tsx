@@ -1,10 +1,7 @@
 import Link from "next/link";
 import {
   Box,
-  Brush,
-  Camera,
   Expand,
-  Film,
   Image as ImageIcon,
   Mic,
   Music,
@@ -31,21 +28,6 @@ const NEEDS = [
     color: "bg-sky-500",
   },
   {
-    name: "Direction artistique",
-    description: "Donner une cohérence visuelle à tous vos points de contact.",
-    icon: Brush,
-    href: "/solutions#branding",
-    color: "bg-violet-500",
-  },
-  {
-    name: "Une expérience digitale simple",
-    description:
-      "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.",
-    icon: Wand2,
-    href: "/solutions#design",
-    color: "bg-emerald-500",
-  },
-  {
     name: "Une vidéo publicitaire",
     description:
       "Transformer votre offre ou votre message en teaser, spot ou contenu de lancement.",
@@ -62,11 +44,12 @@ const NEEDS = [
     color: "bg-blue-500",
   },
   {
-    name: "Teaser ou spot",
-    description: "Des formats courts conçus pour un objectif précis.",
-    icon: Film,
-    href: "/solutions#video",
-    color: "bg-blue-500",
+    name: "Une expérience digitale simple",
+    description:
+      "Créer un catalogue, un menu digital, un formulaire ou un parcours relié à un QR code.",
+    icon: Wand2,
+    href: "/solutions#design",
+    color: "bg-emerald-500",
   },
   {
     name: "Un assistant intelligent",
@@ -92,14 +75,6 @@ const NEEDS = [
     href: "/demarrer-un-projet",
     color: "bg-emerald-500",
   },
-  {
-    name: "Contenus de lancement",
-    description:
-      "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.",
-    icon: Camera,
-    href: "/solutions#video",
-    color: "bg-blue-500",
-  },
 ];
 
 export function ToolsCarousel() {
@@ -114,7 +89,7 @@ export function ToolsCarousel() {
           Vous n&apos;avez pas besoin d&apos;avoir déjà défini toute la solution.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {NEEDS.map((need) => (
             <Link
               key={need.name}

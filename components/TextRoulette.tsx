@@ -2,14 +2,14 @@
 import { useEffect, useState } from "react";
 
 const PHRASES = [
-  "Créer une identité de marque",
-  "Repenser votre image",
-  "Concevoir vos supports",
-  "Produire une vidéo publicitaire",
-  "Lancer une campagne",
-  "Intégrer une solution IA",
-  "Mieux exploiter vos données",
-  "Faire évoluer votre organisation",
+  "Une identité qui marque",
+  "Une communication claire",
+  "Des contenus qui engagent",
+  "Une présence digitale cohérente",
+  "Une campagne créative",
+  "Une solution data & IA",
+  "Un repositionnement de marque",
+  "Une expérience digitale",
 ];
 
 const LINE_HEIGHT = 60;

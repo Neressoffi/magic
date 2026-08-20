@@ -1,10 +1,9 @@
 const LOGOS = [
   "KAWA",
-  "Studio Nova",
-  "Apex Group",
-  "Lumina",
-  "Vertigo",
-  "Horizon",
+  "THE VISION",
+  "7G Services",
+  "BRIRENA HAIR",
+  "Perfecta",
 ];
 
 export function HomeReferences() {

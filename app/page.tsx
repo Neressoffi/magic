@@ -1,7 +1,6 @@
 import { TopBanner } from "@/components/TopBanner";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
-import { NeedsBand } from "@/components/NeedsBand";
 import { HomeReferences } from "@/components/HomeReferences";
 import { TabsSection } from "@/components/TabsSection";
 import { ToolsCarousel } from "@/components/ToolsCarousel";
@@ -21,7 +20,6 @@ export default function Home() {
       <TopBanner />
       <Header />
       <Hero />
-      <NeedsBand />
       <HomeReferences />
       <TabsSection />
       <ToolsCarousel />

@@ -32,6 +32,7 @@ import {
 } from "@/lib/menu-data";
 import { SiteSearch } from "@/components/SiteSearch";
 import { ANNOUNCEMENT } from "@/components/TopBanner";
+import { NyakaLogo } from "@/components/NyakaLogo";
 
 const ICONS: Record<string, React.ElementType> = {
   image: ImageIcon,
@@ -231,28 +232,7 @@ export function Header() {
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
 
-          <Link href="/" aria-label="NYAKA — accueil">
-            <svg
-              width="140"
-              height="24"
-              viewBox="0 0 140 24"
-              className="h-5 w-auto lg:h-6"
-            >
-
-              <rect x="0" y="4" width="16" height="16" rx="4" fill="var(--accent)" />
-
-              <text
-                x="24"
-                y="17"
-                fill="white"
-                fontSize="17"
-                fontWeight="700"
-                fontFamily="var(--font-alternate)"
-              >
-                NYAKA
-              </text>
-            </svg>
-          </Link>
+          <NyakaLogo />
 
           <nav className="hidden items-center gap-6 lg:flex">
 
