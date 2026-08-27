@@ -86,7 +86,7 @@ export function ApprocheStickyNav() {
             <Link
               key={item.id}
               href={`#${item.id}`}
-              className={`shrink-0 rounded-lg px-3.5 py-2 text-sm transition-colors ${
+              className={`shrink-0 rounded-lg px-3.5 py-2 text-[13px] transition-colors sm:text-sm ${
                 isActive
                   ? "bg-white text-black"
                   : "text-foreground-2 hover:bg-white/5 hover:text-foreground-0"

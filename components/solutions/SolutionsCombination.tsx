@@ -8,17 +8,17 @@ export function SolutionsCombination() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
             Combinaison des pôles
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Un projet ne se limite pas toujours à une seule expertise
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/85">
+          <p className="mt-5 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
             Vous pouvez venir pour un logo, une vidéo, un catalogue ou une idée
             liée à l&apos;IA. Le besoin initial reste le point de départ.
           </p>
-          <p className="mt-4 text-base leading-relaxed text-white/85">
+          <p className="mt-4 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
             Après compréhension de votre situation, NYAKA peut recommander une
             intervention limitée à un seul pôle ou une combinaison de plusieurs
             expertises. L&apos;objectif n&apos;est pas d&apos;ajouter des
@@ -27,7 +27,7 @@ export function SolutionsCombination() {
         </div>
 
         <div className="mt-12">
-          <h3 className="text-xs font-semibold uppercase tracking-[0.16em] text-white/75">
+          <h3 className="text-[11px] font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-xs">
             Exemples simples
           </h3>
 
@@ -37,10 +37,10 @@ export function SolutionsCombination() {
                 key={example.situation}
                 className="rounded-2lg border border-white/10 bg-white/[0.03] p-6 transition-colors hover:bg-white/[0.06]"
               >
-                <p className="text-sm font-semibold text-white">
+                <p className="text-[17px] font-semibold leading-snug text-white sm:text-lg">
                   {example.situation}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/85">
+                <p className="mt-3 text-sm leading-relaxed text-white/85 sm:text-[15px]">
                   {example.combination}
                 </p>
               </div>

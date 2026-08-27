@@ -8,10 +8,10 @@ export function AproposPrincipes() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
             Nos principes de travail
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
             La manière dont nous choisissons de travailler
           </h2>
         </div>
@@ -22,13 +22,13 @@ export function AproposPrincipes() {
               key={principle.title}
               className="rounded-2lg border border-white/10 bg-white/[0.03] p-7"
             >
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent sm:text-xs">
                 0{index + 1}
               </span>
-              <h3 className="mt-3 font-display text-xl font-bold text-white">
+              <h3 className="mt-3 font-display text-lg font-bold text-white sm:text-xl">
                 {principle.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-white/85">
+              <p className="mt-3 text-sm leading-relaxed text-white/85 sm:text-[15px]">
                 {principle.description}
               </p>
             </div>

@@ -29,22 +29,22 @@ export default function KawaCaseStudyPage() {
         <div className="relative mx-auto flex min-h-[72vh] w-full max-w-screen-2xl flex-col justify-end px-4 pb-16 pt-40 lg:px-8 lg:pb-24">
           <Link
             href="/realisations"
-            className="mb-8 inline-flex w-fit items-center gap-2 text-sm text-white/70 transition-colors hover:text-white"
+            className="mb-8 inline-flex w-fit items-center gap-2 text-sm text-white/70 transition-colors hover:text-white sm:text-[15px]"
           >
             <ArrowLeft className="h-4 w-4" />
             Retour aux réalisations
           </Link>
 
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-white">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-white sm:text-xs">
             Étude de cas
           </p>
-          <h1 className="mt-4 max-w-4xl font-display text-[36px] font-bold leading-[1.12] text-white lg:text-[55px]">
+          <h1 className="mt-4 max-w-4xl font-display text-[30px] font-bold leading-[1.15] text-white sm:text-[38px] lg:text-[52px]">
             {kawaCaseStudy.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-xl text-white/80">
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
             {kawaCaseStudy.subtitle}
           </p>
-          <p className="mt-4 text-sm text-white/60">
+          <p className="mt-4 text-[13px] text-white/60 sm:text-sm">
             {kawaCaseStudy.sector}
             <span className="mx-2">|</span>
             {kawaCaseStudy.location}
@@ -67,14 +67,14 @@ export default function KawaCaseStudyPage() {
             <div className="mx-auto grid max-w-screen-2xl grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
               <div className={imageFirst ? "lg:order-2" : undefined}>
                 <p
-                  className={`text-xs font-semibold uppercase tracking-[0.18em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.18em] sm:text-xs ${
                     isDark ? "text-accent" : "text-marketing-foreground-2"
                   }`}
                 >
                   0{index + 1}
                 </p>
                 <h2
-                  className={`mt-3 font-display text-3xl font-bold lg:text-5xl ${
+                  className={`mt-3 font-display text-[26px] font-bold leading-[1.2] sm:text-[32px] sm:leading-tight lg:text-[40px] ${
                     isDark
                       ? "text-white"
                       : "text-marketing-foreground-0"
@@ -83,7 +83,7 @@ export default function KawaCaseStudyPage() {
                   {section.title}
                 </h2>
                 <p
-                  className={`mt-5 max-w-xl text-base leading-relaxed lg:text-lg ${
+                  className={`mt-5 max-w-xl text-[15px] leading-relaxed sm:text-base lg:text-[17px] ${
                     isDark
                       ? "text-white/70"
                       : "text-marketing-foreground-2"
@@ -115,10 +115,10 @@ export default function KawaCaseStudyPage() {
         <div className="absolute left-1/2 top-1/2 h-px w-[160%] -translate-x-1/2 -rotate-[8deg] bg-accent/70" />
 
         <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-          <h2 className="font-display text-3xl font-bold text-white lg:text-5xl">
+          <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Votre projet peut être le prochain.
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/80 lg:text-lg">
+          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
             Présentez-nous votre besoin, votre idée ou la transformation que
             vous préparez. Nous partirons de votre situation pour construire
             la réponse adaptée.
@@ -127,14 +127,14 @@ export default function KawaCaseStudyPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <Link
               href="#"
-              className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-85"
+              className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-85 sm:text-[15px]"
             >
               Démarrer un projet
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               href="/realisations"
-              className="rounded-lg border border-white/40 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
+              className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
             >
               Voir toutes les réalisations
             </Link>

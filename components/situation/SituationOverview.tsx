@@ -10,13 +10,13 @@ export function SituationOverview() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
             Vue d&apos;ensemble
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Commencez par vous reconnaître.
           </h2>
-          <p className="mt-4 text-base text-marketing-foreground-2">
+          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
             Cinq situations concrètes pour identifier le moment que traverse
             votre organisation — avant de parler d&apos;approche ou de
             solutions.
@@ -33,18 +33,18 @@ export function SituationOverview() {
               }`}
             >
               <div>
-                <span className="text-xs font-semibold uppercase tracking-[0.16em] text-accent">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent sm:text-xs">
                   0{index + 1}
                 </span>
-                <h3 className="mt-3 font-display text-xl font-bold text-marketing-foreground-0 lg:text-2xl">
+                <h3 className="mt-3 font-display text-lg font-bold text-marketing-foreground-0 sm:text-xl">
                   {situation.title}
                 </h3>
-                <p className="mt-3 text-sm leading-relaxed text-marketing-foreground-2">
+                <p className="mt-3 text-sm leading-relaxed text-marketing-foreground-2 sm:text-[15px]">
                   {situation.description}
                 </p>
               </div>
 
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0">
+              <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]">
                 Voir cette situation
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
               </span>

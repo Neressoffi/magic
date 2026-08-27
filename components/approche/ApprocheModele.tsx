@@ -8,13 +8,13 @@ export function ApprocheModele() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
             Le Modèle NYAKA
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Cinq dimensions à faire évoluer ensemble
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-white/85">
+          <p className="mt-5 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
             NYAKA lit une organisation comme un système. Une solution devient
             cohérente lorsqu&apos;elle soutient plusieurs dimensions sans en
             fragiliser une autre.
@@ -30,16 +30,16 @@ export function ApprocheModele() {
                 key={dimension.name}
                 className="relative rounded-2lg border border-white/10 bg-white/[0.03] p-5 transition-colors hover:bg-white/[0.06]"
               >
-                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-accent sm:text-xs">
                   0{index + 1}
                 </span>
-                <h3 className="mt-3 font-display text-lg font-bold text-white">
+                <h3 className="mt-3 font-display text-lg font-bold text-white sm:text-xl">
                   {dimension.name}
                 </h3>
-                <p className="mt-2 text-sm font-medium text-white/90">
+                <p className="mt-2 text-sm font-medium leading-relaxed text-white/90 sm:text-[15px]">
                   {dimension.question}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-white/80">
+                <p className="mt-3 text-sm leading-relaxed text-white/80 sm:text-[15px]">
                   {dimension.looksAt}
                 </p>
               </div>

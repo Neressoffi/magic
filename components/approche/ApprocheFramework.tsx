@@ -20,13 +20,13 @@ export function ApprocheFramework() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
             Le Framework NYAKA
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Six phases, du besoin initial à l&apos;évolution
           </h2>
-          <p className="mt-5 text-base leading-relaxed text-marketing-foreground-2">
+          <p className="mt-5 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
             Le Framework décrit la manière dont NYAKA accompagne un projet.
             Un parcours continu, du cadrage jusqu&apos;à l&apos;évolution.
           </p>
@@ -56,17 +56,17 @@ export function ApprocheFramework() {
                 }`}
               >
                 <span
-                  className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                     isActive ? "text-accent" : "text-marketing-foreground-2"
                   }`}
                 >
                   {phase.number}
                 </span>
-                <h3 className="mt-2 font-display text-xl font-bold">
+                <h3 className="mt-2 font-display text-lg font-bold sm:text-xl">
                   {phase.title}
                 </h3>
                 <p
-                  className={`mt-2 text-sm leading-relaxed ${
+                  className={`mt-2 text-sm leading-relaxed sm:text-[15px] ${
                     isActive ? "text-white/75" : "text-marketing-foreground-2"
                   }`}
                 >

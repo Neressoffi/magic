@@ -38,21 +38,21 @@ const CASES = [
     understand:
       "Le positionnement, la perception recherchée, ce qui doit rester reconnaissable et les contextes d’usage.",
     result:
-      "Une identité capable de soutenir la marque — pas seulement un symbole isolé.",
+      "Une identité capable de soutenir la marque, pas seulement un symbole isolé.",
   },
   {
     ask: "Vous demandez une vidéo",
     understand:
       "L’offre à promouvoir, la cible, le message, l’action attendue et le contexte de diffusion.",
     result:
-      "Un contenu construit autour d’un objectif — pas une vidéo isolée.",
+      "Un contenu construit autour d’un objectif, pas une vidéo isolée.",
   },
   {
     ask: "Vous demandez une solution IA",
     understand:
       "Le cas d’usage, les utilisateurs, les données disponibles et la valeur réellement recherchée.",
     result:
-      "Une solution adaptée au réel — pas une technologie posée pour elle-même.",
+      "Une solution adaptée au réel, pas une technologie posée pour elle-même.",
   },
 ];
 

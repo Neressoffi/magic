@@ -8,14 +8,14 @@ export function AproposPoles() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
               Ce que nous construisons
             </p>
-            <h2 className="mt-3 font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
               Des expertises différentes, réunies autour d&apos;une même
               logique
             </h2>
-            <p className="mt-4 text-base text-marketing-foreground-2">
+            <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
               NYAKA intervient aujourd&apos;hui à travers quatre pôles. Ils
               peuvent être mobilisés séparément ou combinés selon le besoin du
               projet.
@@ -24,7 +24,7 @@ export function AproposPoles() {
 
           <Link
             href="/solutions"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-marketing-foreground-0 sm:text-[15px]"
           >
             Voir toutes nos solutions
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -38,10 +38,10 @@ export function AproposPoles() {
               href={pole.href}
               className="group rounded-2lg border border-black/5 bg-marketing-surface-1 p-7 transition-transform duration-300 hover:-translate-y-0.5"
             >
-              <h3 className="font-display text-xl font-bold text-marketing-foreground-0">
+              <h3 className="font-display text-lg font-bold text-marketing-foreground-0 sm:text-xl">
                 {pole.title}
               </h3>
-              <p className="mt-3 text-sm leading-relaxed text-marketing-foreground-2">
+              <p className="mt-3 text-sm leading-relaxed text-marketing-foreground-2 sm:text-[15px]">
                 {pole.description}
               </p>
             </Link>

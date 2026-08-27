@@ -22,7 +22,7 @@ export function SolutionsPole({
         <div className="grid grid-cols-1 gap-12 xl:grid-cols-[1.05fr_0.95fr] xl:gap-16">
           <div>
             <h2
-              className={`mt-3 font-display text-3xl font-bold lg:text-5xl ${
+              className={`mt-3 font-display text-[26px] font-bold leading-[1.2] sm:text-[32px] sm:leading-tight lg:text-[40px] ${
                 isLight
                   ? "text-marketing-foreground-0"
                   : "text-foreground-0"
@@ -32,7 +32,7 @@ export function SolutionsPole({
             </h2>
 
             <p
-              className={`mt-4 text-xl font-medium ${
+              className={`mt-4 text-lg font-medium sm:text-xl ${
                 isLight
                   ? "text-marketing-foreground-1"
                   : "text-foreground-1"
@@ -42,7 +42,7 @@ export function SolutionsPole({
             </p>
 
             <p
-              className={`mt-4 max-w-2xl text-base leading-relaxed ${
+              className={`mt-4 max-w-2xl text-[15px] leading-relaxed sm:text-base lg:text-[17px] ${
                 isLight
                   ? "text-marketing-foreground-2"
                   : "text-foreground-2"
@@ -54,7 +54,7 @@ export function SolutionsPole({
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
                 <h3
-                  className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                     isLight
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
@@ -66,7 +66,7 @@ export function SolutionsPole({
                   {pole.whenRelevant.map((item) => (
                     <li
                       key={item}
-                      className={`flex gap-3 text-sm leading-relaxed ${
+                      className={`flex gap-3 text-sm leading-relaxed sm:text-[15px] ${
                         isLight
                           ? "text-marketing-foreground-1"
                           : "text-foreground-1"
@@ -85,7 +85,7 @@ export function SolutionsPole({
 
               <div>
                 <h3
-                  className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                     isLight
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
@@ -97,7 +97,7 @@ export function SolutionsPole({
                   {pole.solutions.map((item) => (
                     <li
                       key={item}
-                      className={`flex gap-3 text-sm leading-relaxed ${
+                      className={`flex gap-3 text-sm leading-relaxed sm:text-[15px] ${
                         isLight
                           ? "text-marketing-foreground-1"
                           : "text-foreground-1"
@@ -118,7 +118,7 @@ export function SolutionsPole({
             <div className="mt-10 flex flex-wrap items-center gap-3">
               <Link
                 href={pole.primaryCta.href}
-                className={`group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90 ${
+                className={`group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90 sm:text-[15px] ${
                   isLight
                     ? "bg-black text-white"
                     : "bg-white text-black"
@@ -130,7 +130,7 @@ export function SolutionsPole({
 
               <Link
                 href={pole.secondaryCta.href}
-                className={`rounded-lg border px-5 py-3 text-sm font-medium transition-colors ${
+                className={`rounded-lg border px-5 py-3 text-sm font-medium transition-colors sm:text-[15px] ${
                   isLight
                     ? "border-black/15 text-marketing-foreground-0 hover:bg-black/5"
                     : "border-white/20 text-white hover:bg-white/10"
@@ -149,13 +149,13 @@ export function SolutionsPole({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/80 sm:text-xs">
                 Preuve / projet associé
               </p>
-              <p className="mt-2 font-display text-2xl font-bold text-white">
+              <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
                 {pole.proof.project}
               </p>
-              <p className="mt-2 max-w-md text-sm text-white/85">
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-white/85 sm:text-[15px]">
                 {pole.proof.note}
               </p>
             </div>

@@ -21,12 +21,12 @@ export function SituationSection({
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 gap-12 xl:grid-cols-[1.05fr_0.95fr] xl:gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
               {situation.number} · Votre situation
             </p>
 
             <h2
-              className={`mt-3 font-display text-3xl font-bold lg:text-5xl ${
+              className={`mt-3 font-display text-[26px] font-bold leading-[1.2] sm:text-[32px] sm:leading-tight lg:text-[40px] ${
                 isLight
                   ? "text-marketing-foreground-0"
                   : "text-foreground-0"
@@ -36,7 +36,7 @@ export function SituationSection({
             </h2>
 
             <p
-              className={`mt-4 text-xl font-medium ${
+              className={`mt-4 text-[15px] font-medium leading-relaxed sm:text-base lg:text-[17px] ${
                 isLight
                   ? "text-marketing-foreground-1"
                   : "text-foreground-1"
@@ -46,7 +46,7 @@ export function SituationSection({
             </p>
 
             <p
-              className={`mt-4 max-w-2xl text-base leading-relaxed ${
+              className={`mt-4 max-w-2xl text-sm leading-relaxed sm:text-[15px] ${
                 isLight
                   ? "text-marketing-foreground-2"
                   : "text-foreground-2"
@@ -58,7 +58,7 @@ export function SituationSection({
             <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2">
               <div>
                 <h3
-                  className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                     isLight
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
@@ -70,7 +70,7 @@ export function SituationSection({
                   {situation.recognizeIf.map((item) => (
                     <li
                       key={item}
-                      className={`flex gap-3 text-sm leading-relaxed ${
+                      className={`flex gap-3 text-sm leading-relaxed sm:text-[15px] ${
                         isLight
                           ? "text-marketing-foreground-1"
                           : "text-foreground-1"
@@ -89,7 +89,7 @@ export function SituationSection({
 
               <div>
                 <h3
-                  className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                  className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                     isLight
                       ? "text-marketing-foreground-2"
                       : "text-foreground-3"
@@ -101,7 +101,7 @@ export function SituationSection({
                   {situation.howWeHelp.map((item) => (
                     <li
                       key={item}
-                      className={`flex gap-3 text-sm leading-relaxed ${
+                      className={`flex gap-3 text-sm leading-relaxed sm:text-[15px] ${
                         isLight
                           ? "text-marketing-foreground-1"
                           : "text-foreground-1"
@@ -121,7 +121,7 @@ export function SituationSection({
 
             <div className="mt-8">
               <h3
-                className={`text-xs font-semibold uppercase tracking-[0.16em] ${
+                className={`text-[11px] font-semibold uppercase tracking-[0.16em] sm:text-xs ${
                   isLight
                     ? "text-marketing-foreground-2"
                     : "text-foreground-3"
@@ -134,7 +134,7 @@ export function SituationSection({
                   <Link
                     key={pole.label}
                     href={pole.href}
-                    className={`rounded-lg border px-3.5 py-2 text-sm transition-colors ${
+                    className={`rounded-lg border px-3.5 py-2 text-sm transition-colors sm:text-[15px] ${
                       isLight
                         ? "border-black/10 text-marketing-foreground-1 hover:border-black/25 hover:text-marketing-foreground-0"
                         : "border-white/15 text-foreground-2 hover:border-white/30 hover:text-foreground-0"
@@ -149,7 +149,7 @@ export function SituationSection({
             <div className="mt-10">
               <Link
                 href={situation.cta.href}
-                className={`group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90 ${
+                className={`group inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-opacity hover:opacity-90 sm:text-[15px] ${
                   isLight ? "bg-black text-white" : "bg-white text-black"
                 }`}
               >
@@ -167,13 +167,13 @@ export function SituationSection({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6 lg:p-8">
-              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-white/80 sm:text-xs">
                 Situation
               </p>
-              <p className="mt-2 font-display text-2xl font-bold text-white">
+              <p className="mt-2 font-display text-xl font-bold text-white sm:text-2xl">
                 {situation.title}
               </p>
-              <p className="mt-2 max-w-md text-sm text-white/85">
+              <p className="mt-2 max-w-md text-sm leading-relaxed text-white/85 sm:text-[15px]">
                 {situation.overview}
               </p>
             </div>

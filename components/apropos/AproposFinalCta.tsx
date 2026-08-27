@@ -9,11 +9,11 @@ export function AproposFinalCta() {
       <div className="absolute left-1/2 top-1/2 h-px w-[160%] -translate-x-1/2 -rotate-[8deg] bg-accent/70" />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-        <h2 className="font-display text-3xl font-bold text-white lg:text-5xl">
+        <h2 className="font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
           Vous voulez voir comment cette approche prend forme dans des projets
           réels ?
         </h2>
-        <p className="mt-5 text-base leading-relaxed text-white/80 lg:text-lg">
+        <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
           Découvrez nos réalisations ou présentez-nous directement ce que votre
           organisation cherche à construire, améliorer ou transformer.
         </p>
@@ -21,7 +21,7 @@ export function AproposFinalCta() {
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="/realisations"
-            className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-85"
+            className="group inline-flex items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-85 sm:text-[15px]"
           >
             Voir nos réalisations
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -29,7 +29,7 @@ export function AproposFinalCta() {
 
           <Link
             href="/demarrer-un-projet"
-            className="rounded-lg border border-white/40 px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
+            className="rounded-lg border border-white/40 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
           >
             Démarrer un projet
           </Link>

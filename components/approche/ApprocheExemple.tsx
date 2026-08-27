@@ -8,13 +8,13 @@ export function ApprocheExemple() {
     >
       <div className="mx-auto max-w-screen-2xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
             Exemple concret
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Ce que l&apos;approche change dans un projet
           </h2>
-          <p className="mt-5 text-lg text-white/80">
+          <p className="mt-5 text-[15px] leading-relaxed text-white/80 sm:text-base lg:text-[17px]">
             Demande initiale : « Nous voulons une vidéo publicitaire. »
           </p>
         </div>
@@ -27,13 +27,17 @@ export function ApprocheExemple() {
                 index % 2 === 0 ? "bg-white/[0.03]" : "bg-transparent"
               } ${index !== exampleRows.length - 1 ? "border-b border-white/10" : ""}`}
             >
-              <p className="text-sm font-semibold text-white/80">{row.label}</p>
-              <p className="text-base leading-relaxed text-white">{row.value}</p>
+              <p className="text-sm font-semibold leading-relaxed text-white/80 sm:text-[15px]">
+                {row.label}
+              </p>
+              <p className="text-sm leading-relaxed text-white sm:text-[15px]">
+                {row.value}
+              </p>
             </div>
           ))}
         </div>
 
-        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/80">
+        <p className="mt-8 max-w-3xl text-sm leading-relaxed text-white/80 sm:text-[15px]">
           Autre exemple : un client demande une solution IA ; NYAKA commence
           par identifier le cas d&apos;usage, les utilisateurs, les données
           disponibles et la valeur recherchée avant de définir la technologie.

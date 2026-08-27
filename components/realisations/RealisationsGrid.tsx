@@ -22,22 +22,22 @@ function ProjectCardItem({ project }: { project: ProjectCard }) {
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/75">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/75 sm:text-xs">
           {project.sector}
         </p>
-        <h3 className="mt-2 font-display text-2xl font-bold text-white">
+        <h3 className="mt-2 font-display text-lg font-bold text-white sm:text-xl">
           {project.name}
         </h3>
-        <p className="mt-3 text-sm leading-relaxed text-white/85">
+        <p className="mt-3 text-sm leading-relaxed text-white/85 sm:text-[15px]">
           {project.situation}
         </p>
-        <p className="mt-4 text-sm text-white/75">
+        <p className="mt-4 text-sm leading-relaxed text-white/75 sm:text-[15px]">
           <span className="font-medium text-white">Interventions :</span>{" "}
           {project.interventions}
         </p>
 
         {project.href ? (
-          <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white">
+          <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white sm:text-[15px]">
             {project.ctaLabel ?? "Voir le projet"}
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </span>
@@ -76,13 +76,13 @@ export function RealisationsGrid() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent sm:text-xs">
               Autres réalisations
             </p>
-            <h2 className="mt-3 font-display text-3xl font-bold text-white lg:text-5xl">
+            <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] text-white sm:text-[32px] sm:leading-tight lg:text-[40px]">
               Sélection de projets
             </h2>
-            <p className="mt-4 text-base text-white/85">
+            <p className="mt-4 text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
               Des cartes courtes pour montrer la diversité des situations et
               des expertises, sans répéter le contenu de la page Solutions.
             </p>
@@ -96,7 +96,7 @@ export function RealisationsGrid() {
                   key={filter.id}
                   type="button"
                   onClick={() => setActiveFilter(filter.id)}
-                  className={`rounded-lg px-4 py-2 text-sm transition-colors ${
+                  className={`rounded-lg px-4 py-2 text-sm transition-colors sm:text-[15px] ${
                     isActive
                       ? "bg-white text-black"
                       : "border border-white/15 text-foreground-2 hover:border-white/30 hover:text-foreground-0"
