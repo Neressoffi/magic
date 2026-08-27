@@ -73,13 +73,13 @@ function UseCaseCard({
       <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/35 to-transparent" />
 
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">
-        <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-white/80 sm:text-xs">
           {tags}
         </p>
         <h3 className="mt-1 font-display text-lg font-bold text-white sm:text-xl">
           {title}
         </h3>
-        <p className="mt-1.5 text-sm leading-relaxed text-white/85 line-clamp-4">
+        <p className="mt-1.5 text-[13px] leading-relaxed text-white/85 line-clamp-4 sm:text-sm">
           {description}
         </p>
       </div>
@@ -93,13 +93,13 @@ export function UseCases() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
               À quel moment avez-vous besoin de NYAKA ?
             </p>
-            <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+            <h2 className="mt-3 max-w-xl font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
               Votre organisation est peut-être à un tournant.
             </h2>
-            <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
               Chaque lancement, repositionnement, campagne ou nouvelle
               technologie peut renforcer votre organisation ou créer de nouvelles
               incohérences. Nous intervenons pour donner une direction claire à
@@ -110,14 +110,14 @@ export function UseCases() {
           <div className="flex flex-wrap gap-3">
             <Link
               href="/votre-situation"
-              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
+              className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:text-[15px]"
             >
               Identifier votre situation
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
             </Link>
             <Link
               href="/demarrer-un-projet"
-              className="inline-flex w-fit shrink-0 items-center rounded-lg border border-black/15 px-6 py-3 text-base font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5"
+              className="inline-flex w-fit shrink-0 items-center rounded-lg border border-black/15 px-6 py-3 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5 sm:text-[15px]"
             >
               Parler de votre situation
             </Link>

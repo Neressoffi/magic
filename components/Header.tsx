@@ -27,7 +27,6 @@ import {
 import {
   creativeSuiteColumns,
   stockColumns,
-  resourceLinks,
   type MenuColumn,
 } from "@/lib/menu-data";
 import { SiteSearch } from "@/components/SiteSearch";
@@ -116,53 +115,7 @@ function ColumnsMenu({
   );
 }
 
-function ResourcesMenu() {
-  return (
-    <div className="flex gap-8">
 
-      <div className="grid flex-1 grid-cols-2 gap-2">
-        {resourceLinks.map((resource) => {
-          const Icon = ICONS[resource.icon];
-          return (
-
-            <Link
-              key={resource.title}
-              href={resource.href}
-              className="group flex items-center gap-3 rounded-lg p-2 transition-colors hover:bg-white/5"
-            >
-
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-2">
-                <Icon className="h-5 w-5 text-foreground-2 transition-colors group-hover:text-foreground-0" />
-              </span>
-
-              <span className="flex flex-col">
-                <span className="text-sm font-medium text-foreground-0">
-                  {resource.title}
-                </span>
-                <span className="text-xs text-foreground-3">
-                  {resource.subtitle}
-                </span>
-              </span>
-            </Link>
-          );
-        })}
-      </div>
-
-      <Link
-        href="/a-propos"
-        className="group flex w-64 shrink-0 flex-col justify-end rounded-lg bg-gradient-to-br from-accent/60 via-purple-600/50 to-indigo-800/60 p-5"
-      >
-        <span className="text-lg font-bold text-white">
-          NYAKA - L&apos;empreinte de votre marque.
-        </span>
-        <span className="mt-1 flex items-center gap-1 text-sm text-white/80">
-          Découvrir NYAKA
-          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-        </span>
-      </Link>
-    </div>
-  );
-}
 
 function MegaMenu({
   label,
@@ -246,10 +199,6 @@ export function Header() {
                 footerHref="/votre-situation"
               />
             </MegaMenu>
-            <MegaMenu label="Ressources" width={680}>
-              <ResourcesMenu />
-            </MegaMenu>
-
             <Link
               href="/realisations"
               className="hidden text-base text-foreground-1 transition-colors duration-100 hover:text-accent xl:block"

@@ -81,10 +81,10 @@ export function ToolsCarousel() {
   return (
     <section className="bg-marketing-surface-0 py-20 lg:py-28">
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-8">
-        <h2 className="max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+        <h2 className="max-w-xl font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
           Que souhaitez-vous construire ?
         </h2>
-        <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
+        <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
           Choisissez le point de départ qui correspond le mieux à votre besoin.
           Vous n&apos;avez pas besoin d&apos;avoir déjà défini toute la solution.
         </p>
@@ -101,10 +101,10 @@ export function ToolsCarousel() {
               >
                 <need.icon className="h-6 w-6 text-white" />
               </span>
-              <span className="mt-4 text-sm font-semibold text-marketing-foreground-0">
+              <span className="mt-4 font-display text-[17px] font-bold leading-snug text-marketing-foreground-0 sm:text-lg">
                 {need.name}
               </span>
-              <span className="mt-1 text-sm leading-relaxed text-marketing-foreground-2">
+              <span className="mt-1.5 text-[13px] leading-relaxed text-marketing-foreground-2 sm:text-sm">
                 {need.description}
               </span>
             </Link>
@@ -114,7 +114,7 @@ export function ToolsCarousel() {
         <p className="mt-8">
           <Link
             href="/demarrer-un-projet"
-            className="text-sm font-medium text-marketing-foreground-0 underline-offset-4 hover:underline"
+            className="text-sm font-medium text-marketing-foreground-0 underline-offset-4 hover:underline sm:text-[15px]"
           >
             Je ne sais pas encore quelle solution choisir
           </Link>

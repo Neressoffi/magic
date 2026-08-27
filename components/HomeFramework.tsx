@@ -30,13 +30,13 @@ export function HomeFramework() {
     <section className="bg-marketing-surface-0 py-20 lg:py-28">
       <div className="mx-auto max-w-screen-2xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-medium uppercase tracking-[0.18em] text-marketing-foreground-2">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
             Notre manière de travailler
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-marketing-foreground-0 lg:text-5xl">
+          <h2 className="mt-3 font-display text-[26px] font-bold leading-[1.2] tracking-tight text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Un cadre clair, de l’idée au déploiement
           </h2>
-          <p className="mt-4 text-marketing-foreground-2">
+          <p className="mt-4 text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
             Six étapes pour construire une réponse cohérente, sans transformer
             votre projet en théorie.
           </p>
@@ -48,13 +48,13 @@ export function HomeFramework() {
               key={step.title}
               className="rounded-2xl border border-black/5 bg-white p-6"
             >
-              <span className="text-xs font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-marketing-foreground-2 sm:text-xs">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-3 font-display text-xl font-semibold text-marketing-foreground-0">
+              <h3 className="mt-3 font-display text-lg font-semibold text-marketing-foreground-0 sm:text-xl">
                 {step.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-2">
+              <p className="mt-2 text-sm leading-relaxed text-marketing-foreground-2 sm:text-[15px]">
                 {step.text}
               </p>
             </li>

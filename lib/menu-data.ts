@@ -108,18 +108,4 @@ export const stockColumns: MenuColumn[] = [
   },
 ];
 
-export type ResourceLink = {
-  title: string;
-  subtitle: string;
-  icon: string;
-  href: string;
-};
 
-export const resourceLinks: ResourceLink[] = [
-  { title: "À propos", subtitle: "Qui est NYAKA", icon: "newspaper", href: "/a-propos" },
-  { title: "Notre approche", subtitle: "De l'idée à la solution", icon: "graduation", href: "/notre-approche" },
-  { title: "Réalisations", subtitle: "Projets et études de cas", icon: "book", href: "/realisations" },
-  { title: "Votre situation", subtitle: "Lancement, évolution, campagne", icon: "users", href: "/votre-situation" },
-  { title: "FAQ", subtitle: "Réponses à vos questions", icon: "help", href: "/#faq" },
-  { title: "Démarrer un projet", subtitle: "Parler de votre besoin", icon: "sparkles", href: "/demarrer-un-projet" },
-];

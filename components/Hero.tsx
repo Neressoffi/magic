@@ -18,17 +18,17 @@ export function Hero() {
         <div className="relative mx-auto flex w-full max-w-screen-2xl items-end justify-between px-4 pb-20 pt-40 lg:px-8 lg:pb-28">
           <div className="max-w-2xl">
             <div className="inline-flex items-center rounded-full border border-white/10 bg-white/10 px-4 py-1.5 backdrop-blur">
-              <span className="text-xs text-white/90">
+              <span className="text-[10px] text-white/90 sm:text-[11px] lg:text-xs">
                 BRANDING · DESIGN · VIDÉO · INTELLIGENCE ARTIFICIELLE &amp; DONNÉES
               </span>
             </div>
 
-            <h1 className="mt-6 font-display text-[36px] font-bold leading-[1.15] text-white lg:text-[55px]">
+            <h1 className="mt-6 font-display text-[30px] font-bold leading-[1.15] text-white sm:text-[38px] lg:text-[52px]">
               Nous construisons les marques, les contenus et les solutions qui
               font évoluer votre organisation.
             </h1>
 
-            <p className="mt-5 max-w-xl text-lg text-white/85">
+            <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-white/85 sm:text-base lg:text-[17px]">
               Vous venez avec une idée, un besoin ou un projet. NYAKA vous aide à
               lui donner une direction claire, puis mobilise le branding, le
               design, la vidéo, l&apos;intelligence artificielle et les données
@@ -38,21 +38,21 @@ export function Hero() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
                 href="/demarrer-un-projet"
-                className="rounded-lg bg-white px-6 py-3 text-base font-medium text-black transition-opacity hover:opacity-90"
+                className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:text-[15px]"
               >
                 Parler de votre projet
               </Link>
 
               <Link
                 href="/solutions"
-                className="flex items-center gap-2 rounded-lg border border-white px-6 py-3 text-base font-medium text-white transition-colors hover:bg-white/10"
+                className="flex items-center gap-2 rounded-lg border border-white px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-white/10 sm:text-[15px]"
               >
                 <Play className="h-4 w-4 fill-white" />
                 Découvrir nos solutions
               </Link>
             </div>
 
-            <p className="mt-4 text-sm text-white/80">
+            <p className="mt-4 text-[13px] leading-relaxed text-white/80 sm:text-sm">
               Votre projet peut encore être au stade de l&apos;idée. Nous
               commencerons par le clarifier avec vous.
             </p>

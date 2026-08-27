@@ -40,17 +40,17 @@ function TabPanel({ tab }: { tab: TabContent }) {
 
       <div className="flex min-w-0 flex-col">
 
-        <h3 className="font-display text-2xl font-bold text-white lg:text-[26px]">
+        <h3 className="font-display text-xl font-bold text-white sm:text-2xl">
           {tab.panelTitle}
         </h3>
 
-        <p className="mt-3 text-sm leading-relaxed text-white/80">
+        <p className="mt-3 text-sm leading-relaxed text-white/80 sm:text-[15px]">
           {tab.panelDescription}
         </p>
 
         <Link
           href={tab.ctaHref}
-          className="group mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-white"
+          className="group mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-white sm:text-[15px]"
         >
           {tab.ctaLabel}
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -98,7 +98,7 @@ function TabPanel({ tab }: { tab: TabContent }) {
 
                     <span className="overflow-hidden">
 
-                      <span className="block pl-[30px] pt-1.5 text-[13px] leading-relaxed text-white/70">
+                      <span className="block pl-[30px] pt-1.5 text-[13px] leading-relaxed text-white/70 sm:text-sm">
                         {item.description}
                       </span>
 
@@ -167,14 +167,14 @@ export function TabsSection() {
     <section className="bg-marketing-surface-0 px-4 py-20 lg:px-8 lg:py-28">
       <div className="mx-auto max-w-screen-2xl">
 
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+        <p className="text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
           Nos quatre pôles
         </p>
-        <h2 className="mt-3 text-center font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+        <h2 className="mt-3 text-center font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
           Une idée peut demander plusieurs expertises.
         </h2>
 
-        <p className="mx-auto mt-4 max-w-2xl text-center text-base text-marketing-foreground-2">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
           Nos quatre pôles peuvent intervenir séparément ou se combiner autour
           d&apos;une même direction, selon la réalité de votre projet.
         </p>
@@ -200,7 +200,7 @@ export function TabsSection() {
                       tabRefs.current[tab.id] = el;
                     }}
 
-                    className={`relative z-10 whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium transition-colors duration-300 ${
+                    className={`relative z-10 whitespace-nowrap rounded-full px-5 py-2.5 text-[13px] font-medium transition-colors duration-300 sm:text-sm ${
                       activeTab === tab.id
                         ? "text-white"
                         : "text-marketing-foreground-0 hover:text-marketing-foreground-1"

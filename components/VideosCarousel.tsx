@@ -57,13 +57,13 @@ export function VideosCarousel() {
       <div className="mx-auto max-w-screen-2xl">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
               Autres réalisations
             </p>
-            <h2 className="mt-3 max-w-xl font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+            <h2 className="mt-3 max-w-xl font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
               Des réponses différentes, construites autour de chaque situation.
             </h2>
-            <p className="mt-4 max-w-xl text-base text-marketing-foreground-2">
+            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">
               Identité, communication, vidéo, supports ou technologie : chaque
               projet part d&apos;un besoin réel et mobilise les expertises
               nécessaires.
@@ -72,7 +72,7 @@ export function VideosCarousel() {
 
           <Link
             href="/realisations"
-            className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-base font-medium text-white transition-opacity hover:opacity-90"
+            className="group inline-flex w-fit shrink-0 items-center gap-2 rounded-lg bg-black px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:text-[15px]"
           >
             Voir toutes nos réalisations
             <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -93,17 +93,17 @@ export function VideosCarousel() {
 
             <div className="absolute inset-x-0 bottom-0 flex flex-col gap-4 p-6 md:flex-row md:items-end md:justify-between md:p-10">
               <div className="max-w-xl">
-                <h3 className="font-display text-2xl font-bold text-white md:text-3xl">
+                <h3 className="font-display text-xl font-bold text-white sm:text-2xl">
                   {currentOriginal.title}
                 </h3>
-                <p className="mt-3 text-sm text-white/90 md:text-base">
+                <p className="mt-3 text-sm leading-relaxed text-white/90 sm:text-[15px]">
                   {currentOriginal.description}
                 </p>
               </div>
 
               <Link
                 href={currentOriginal.href}
-                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90"
+                className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90 sm:text-[15px]"
               >
                 <Play className="h-3.5 w-3.5 fill-black" />
                 {currentOriginal.cta}
@@ -133,7 +133,7 @@ export function VideosCarousel() {
                 type="button"
                 onClick={showPrevious}
                 aria-label="Projet précédent"
-                className="rounded-lg border border-black/10 px-3 py-1.5 text-sm text-marketing-foreground-0 hover:bg-black/5"
+                className="rounded-lg border border-black/10 px-3 py-1.5 text-[13px] text-marketing-foreground-0 hover:bg-black/5 sm:text-sm"
               >
                 Précédent
               </button>
@@ -141,7 +141,7 @@ export function VideosCarousel() {
                 type="button"
                 onClick={showNext}
                 aria-label="Projet suivant"
-                className="rounded-lg border border-black/10 px-3 py-1.5 text-sm text-marketing-foreground-0 hover:bg-black/5"
+                className="rounded-lg border border-black/10 px-3 py-1.5 text-[13px] text-marketing-foreground-0 hover:bg-black/5 sm:text-sm"
               >
                 Suivant
               </button>

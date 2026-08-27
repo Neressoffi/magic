@@ -21,10 +21,6 @@ export function SolutionsPole({
       <div className="mx-auto max-w-screen-2xl">
         <div className="grid grid-cols-1 gap-12 xl:grid-cols-[1.05fr_0.95fr] xl:gap-16">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-              {pole.label} · NYAKA
-            </p>
-
             <h2
               className={`mt-3 font-display text-3xl font-bold lg:text-5xl ${
                 isLight

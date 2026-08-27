@@ -57,13 +57,13 @@ export function Faq() {
       <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-10 lg:grid-cols-[1fr_2fr]">
 
         <div>
-          <h2 className="max-w-xs font-display text-3xl font-bold text-marketing-foreground-0 lg:text-5xl">
+          <h2 className="max-w-xs font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
             Réponses à vos questions
           </h2>
 
           <Link
             href="/demarrer-un-projet"
-            className="mt-6 inline-block rounded-lg border border-black/20 px-5 py-2.5 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5"
+            className="mt-6 inline-block rounded-lg border border-black/20 px-5 py-2.5 text-sm font-medium text-marketing-foreground-0 transition-colors hover:bg-black/5 sm:text-[15px]"
           >
             Parler de votre projet
           </Link>
@@ -78,7 +78,7 @@ export function Faq() {
             >
 
               <Accordion.Header>
-                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-5 text-left text-base font-medium text-marketing-foreground-0 transition-colors hover:text-marketing-foreground-1">
+                <Accordion.Trigger className="group flex w-full items-center justify-between gap-4 py-5 text-left text-[15px] font-medium text-marketing-foreground-0 transition-colors hover:text-marketing-foreground-1 sm:text-base">
                   {item.question}
 
                   <Plus className="h-4 w-4 shrink-0 text-accent transition-transform duration-300 group-data-[state=open]:rotate-45" />
@@ -87,7 +87,7 @@ export function Faq() {
 
               <Accordion.Content className="grid overflow-hidden transition-all duration-300 data-[state=closed]:grid-rows-[0fr] data-[state=closed]:opacity-0 data-[state=open]:grid-rows-[1fr] data-[state=open]:opacity-100">
                 <div className="overflow-hidden">
-                  <p className="pb-5 text-sm leading-relaxed text-marketing-foreground-2">
+                  <p className="pb-5 text-sm leading-relaxed text-marketing-foreground-2 sm:text-[15px]">
                     {item.answer}
                   </p>
                 </div>

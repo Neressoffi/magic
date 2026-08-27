@@ -49,9 +49,7 @@ export function Footer() {
               l&apos;évolution de leur marque à travers le branding, le design,
               la vidéo, l&apos;intelligence artificielle et les données.
             </p>
-            <p className="mt-3 text-sm font-medium text-foreground-2">
-              NYAKA — L&apos;empreinte de votre marque.
-            </p>
+           
           </div>
 
           <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
