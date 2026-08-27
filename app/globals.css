@@ -52,7 +52,14 @@ body {
   }
 }
 
-header nav button:focus,
-header nav button:focus-visible {
+header nav span,
+header nav a {
+  color: #ffffff;
   outline: none;
+}
+
+header nav span:hover,
+header nav a:hover,
+header nav span[data-state="open"] {
+  color: #c9a227;
 }

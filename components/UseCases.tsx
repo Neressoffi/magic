@@ -96,7 +96,7 @@ export function UseCases() {
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-marketing-foreground-2 sm:text-xs">
               À quel moment avez-vous besoin de NYAKA ?
             </p>
-            <h2 className="mt-3 max-w-xl font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[40px]">
+            <h2 className="mt-3 max-w-xl font-display text-[26px] font-bold leading-[1.2] text-marketing-foreground-0 sm:text-[32px] sm:leading-tight lg:text-[36px]">
               Votre organisation est peut-être à un tournant.
             </h2>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-marketing-foreground-2 sm:text-base lg:text-[17px]">

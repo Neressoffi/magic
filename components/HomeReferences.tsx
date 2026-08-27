@@ -13,13 +13,13 @@ export function HomeReferences() {
         <p className="mb-6 text-center text-[11px] font-semibold uppercase tracking-[0.18em] text-white/60 sm:text-xs">
           Ils nous font confiance
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-12">
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-[10rem]">
           {LOGOS.map((logo) => (
             <img
               key={logo.name}
               src={logo.src}
               alt={logo.name}
-              className="h-12 w-auto max-w-[110px] object-contain sm:h-14 sm:max-w-[130px]"
+              className="h-12 w-auto max-w-[110px] object-contain sm:h-[3.5rem] sm:max-w-[390px]"
             />
           ))}
         </div>

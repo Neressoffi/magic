@@ -58,18 +58,15 @@ function NavTrigger({
   onMouseLeave?: () => void;
 }) {
   return (
-
     <Popover.Trigger asChild>
-      <button
+      <span
         onMouseEnter={onMouseEnter}
         onMouseLeave={onMouseLeave}
-        onMouseDown={(e) => e.preventDefault()}
-        className="group flex items-center gap-1 text-base text-foreground-1 transition-colors duration-100 hover:text-accent data-[state=open]:text-accent"
+        className="group flex cursor-pointer items-center gap-1 text-2xl leading-none"
       >
         {label}
-
-        <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
-      </button>
+        <ChevronDown className="h-5 w-5 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+      </span>
     </Popover.Trigger>
   );
 }
@@ -255,14 +252,14 @@ export function Header() {
             </MegaMenu>
             <Link
               href="/realisations"
-              className="hidden text-base text-foreground-1 transition-colors duration-100 hover:text-accent xl:block"
+              className="hidden text-2xl leading-none xl:block"
             >
               Réalisations
             </Link>
 
             <Link
               href="/a-propos"
-              className="text-base text-foreground-1 transition-colors duration-100 hover:text-accent"
+              className="text-2xl leading-none"
             >
               À propos
             </Link>
@@ -274,9 +271,9 @@ export function Header() {
           <button
             type="button"
             onClick={() => setSearchOpen(true)}
-            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-sm text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex"
+            className="hidden items-center gap-2 rounded-lg border border-white/15 px-3.5 py-2 text-2xl leading-none text-foreground-2 transition-colors hover:border-white/30 hover:text-foreground-0 md:flex"
           >
-            <Search className="h-4 w-4" />
+            <Search className="h-5 w-5" />
             Rechercher
           </button>
 
@@ -291,14 +288,14 @@ export function Header() {
 
           <Link
             href="/notre-approche"
-            className="hidden rounded-lg px-4 py-2 text-sm font-medium text-foreground-1 transition-colors hover:bg-white/10 sm:block"
+            className="hidden rounded-lg px-4 py-2 text-2xl font-medium leading-none text-foreground-1 transition-colors hover:bg-white/10 sm:block"
           >
             Notre approche
           </Link>
 
           <Link
             href="/demarrer-un-projet"
-            className="rounded-lg bg-white px-4 py-2 text-sm font-medium text-black transition-opacity hover:opacity-90"
+            className="rounded-lg bg-white px-4 py-2 text-2xl font-medium leading-none text-black transition-opacity hover:opacity-90"
           >
             Démarrer un projet
           </Link>
