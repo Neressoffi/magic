@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
 import * as Popover from "@radix-ui/react-popover";
@@ -48,11 +48,24 @@ const ICONS: Record<string, React.ElementType> = {
   sparkles: Sparkles,
 };
 
-function NavTrigger({ label }: { label: string }) {
+function NavTrigger({
+  label,
+  onMouseEnter,
+  onMouseLeave,
+}: {
+  label: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+}) {
   return (
 
     <Popover.Trigger asChild>
-      <button className="group flex items-center gap-1 text-base text-foreground-1 transition-colors duration-100 hover:text-accent data-[state=open]:text-accent">
+      <button
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onMouseDown={(e) => e.preventDefault()}
+        className="group flex items-center gap-1 text-base text-foreground-1 transition-colors duration-100 hover:text-accent data-[state=open]:text-accent"
+      >
         {label}
 
         <ChevronDown className="h-4 w-4 transition-transform duration-200 group-data-[state=open]:rotate-180" />
@@ -92,7 +105,7 @@ function ColumnsMenu({
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="flex items-center gap-2 rounded px-2 py-1.5 -mx-2 text-xs text-foreground-2 transition-colors duration-100 hover:bg-white/5 hover:text-accent"
+                      className="flex items-center gap-2 rounded px-2 py-1.5 -mx-2 text-xs text-foreground-2 transition-colors duration-100 hover:text-accent"
                     >
                       {link.label}
                     </Link>
@@ -120,22 +133,38 @@ function ColumnsMenu({
 function MegaMenu({
   label,
   width,
+  open,
+  onShow,
+  onHide,
   children,
 }: {
   label: string;
   width: number;
+  open: boolean;
+  onShow: (label: string) => void;
+  onHide: () => void;
   children: React.ReactNode;
 }) {
   return (
-    <Popover.Root>
+    <Popover.Root
+      open={open}
+      onOpenChange={(next) => (next ? onShow(label) : onHide())}
+    >
 
-      <NavTrigger label={label} />
+      <NavTrigger
+        label={label}
+        onMouseEnter={() => onShow(label)}
+        onMouseLeave={onHide}
+      />
       <Popover.Portal>
 
         <Popover.Content
           sideOffset={16}
           align="start"
           style={{ width }}
+          onOpenAutoFocus={(event) => event.preventDefault()}
+          onMouseEnter={() => onShow(label)}
+          onMouseLeave={onHide}
 
           className="z-50 max-w-[95vw] rounded-[10px] bg-surface-1 px-10 py-8 shadow-2xl outline-none data-[state=open]:animate-in"
         >
@@ -150,6 +179,19 @@ export function Header() {
 
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const showMenu = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenMenu(label);
+  };
+
+  // Petit délai pour laisser le temps d'aller de l'intitulé vers le panneau.
+  const hideMenu = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setOpenMenu(null), 150);
+  };
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
@@ -189,10 +231,22 @@ export function Header() {
 
           <nav className="hidden items-center gap-6 lg:flex">
 
-            <MegaMenu label="Solutions" width={980}>
+            <MegaMenu
+              label="Solutions"
+              width={980}
+              open={openMenu === "Solutions"}
+              onShow={showMenu}
+              onHide={hideMenu}
+            >
               <ColumnsMenu columns={creativeSuiteColumns} />
             </MegaMenu>
-            <MegaMenu label="Votre situation" width={720}>
+            <MegaMenu
+              label="Votre situation"
+              width={720}
+              open={openMenu === "Votre situation"}
+              onShow={showMenu}
+              onHide={hideMenu}
+            >
               <ColumnsMenu
                 columns={stockColumns}
                 footerLabel="Voir toutes les situations"

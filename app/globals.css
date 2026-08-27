@@ -51,3 +51,8 @@ body {
     display: none;
   }
 }
+
+header nav button:focus,
+header nav button:focus-visible {
+  outline: none;
+}

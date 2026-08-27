@@ -66,7 +66,7 @@ export function TextRoulette() {
 
     <div className="hidden items-center gap-6 lg:flex" aria-hidden>
 
-      <div className="h-0 w-0 border-y-[14px] border-l-[22px] border-y-transparent border-l-accent" />
+      <div className="h-0 w-0 border-y-[14px] border-l-[22px] border-y-transparent border-l-[#323232]" />
 
       <div className="h-[420px] overflow-hidden">
 
