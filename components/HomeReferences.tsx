@@ -15,12 +15,16 @@ export function HomeReferences() {
         </p>
         <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 sm:gap-x-[10rem]">
           {LOGOS.map((logo) => (
-            <img
+            <div
               key={logo.name}
-              src={logo.src}
-              alt={logo.name}
-              className="h-12 w-auto max-w-[110px] object-contain sm:h-[3.5rem] sm:max-w-[390px]"
-            />
+              className="flex h-12 items-center justify-center sm:h-[3.5rem]"
+            >
+              <img
+                src={logo.src}
+                alt={logo.name}
+                className="h-full w-auto max-w-[110px] origin-center object-contain transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:scale-110 motion-reduce:transition-none motion-reduce:hover:scale-100 sm:max-w-[390px]"
+              />
+            </div>
           ))}
         </div>
       </div>
