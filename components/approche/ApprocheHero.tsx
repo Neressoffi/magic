@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { photo } from "@/lib/media";
 
 export function ApprocheHero() {
   return (
     <section className="relative overflow-hidden">
       <img
-        src="https://picsum.photos/id/1031/1974/1175"
+        src={photo(1031, 1974, 1175)}
         alt=""
         className="absolute inset-0 h-full w-full object-cover"
       />

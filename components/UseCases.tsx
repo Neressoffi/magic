@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { photo } from "@/lib/media";
 
 const USE_CASES = [
   {
@@ -7,7 +8,7 @@ const USE_CASES = [
     description:
       "Transformer une idée en marque, structurer les premiers messages et préparer les supports nécessaires au démarrage.",
     tags: "Création · Lancement",
-    image: "https://picsum.photos/id/1060/900/1200",
+    image: photo(1060, 900, 1200),
     href: "/votre-situation#lancement",
   },
   {
@@ -15,7 +16,7 @@ const USE_CASES = [
     description:
       "Faire correspondre votre image, vos supports et vos contenus au niveau de qualité que vous souhaitez atteindre.",
     tags: "Crédibilité · Montée en gamme",
-    image: "https://picsum.photos/id/1062/900/1200",
+    image: photo(1062, 900, 1200),
     href: "/votre-situation#professionnalisation",
   },
   {
@@ -23,7 +24,7 @@ const USE_CASES = [
     description:
       "Rendre une offre, un événement ou une opportunité plus visible, plus compréhensible et plus persuasive.",
     tags: "Campagne · Vidéo",
-    image: "https://picsum.photos/id/1015/900/1200",
+    image: photo(1015, 900, 1200),
     href: "/votre-situation#communication",
   },
   {
@@ -31,7 +32,7 @@ const USE_CASES = [
     description:
       "Redéfinir ce que votre marque représente lorsque votre identité actuelle ne correspond plus à votre ambition.",
     tags: "Évolution · Rebranding",
-    image: "https://picsum.photos/id/1067/900/1200",
+    image: photo(1067, 900, 1200),
     href: "/votre-situation#repositionnement",
   },
   {
@@ -39,7 +40,7 @@ const USE_CASES = [
     description:
       "Intégrer une nouvelle expérience, une technologie, une automatisation ou un usage des données de manière cohérente.",
     tags: "IA · Données · Processus",
-    image: "https://picsum.photos/id/1047/900/1200",
+    image: photo(1047, 900, 1200),
     href: "/votre-situation#transformation",
   },
 ];

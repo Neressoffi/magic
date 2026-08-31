@@ -1,3 +1,5 @@
+import { photo } from "./media";
+
 export type Situation = {
   id: string;
   number: string;
@@ -74,7 +76,7 @@ export const situations: Situation[] = [
       { label: "Contenus vidéo et campagnes", href: "/solutions#video" },
     ],
     cta: { label: "Préparer votre lancement", href: "#" },
-    image: "https://picsum.photos/id/1060/1200/900",
+    image: photo(1060, 1200, 900),
   },
   {
     id: "professionnalisation",
@@ -104,7 +106,7 @@ export const situations: Situation[] = [
       { label: "Contenus vidéo selon les besoins", href: "/solutions#video" },
     ],
     cta: { label: "Professionnaliser votre image", href: "#" },
-    image: "https://picsum.photos/id/1062/1200/900",
+    image: photo(1062, 1200, 900),
   },
   {
     id: "communication",
@@ -140,7 +142,7 @@ export const situations: Situation[] = [
       },
     ],
     cta: { label: "Préparer votre prochaine campagne", href: "#" },
-    image: "https://picsum.photos/id/1043/1200/900",
+    image: photo(1043, 1200, 900),
   },
   {
     id: "repositionnement",
@@ -173,7 +175,7 @@ export const situations: Situation[] = [
       },
     ],
     cta: { label: "Faire évoluer votre marque", href: "#" },
-    image: "https://picsum.photos/id/1067/1200/900",
+    image: photo(1067, 1200, 900),
   },
   {
     id: "transformation",
@@ -208,6 +210,6 @@ export const situations: Situation[] = [
       },
     ],
     cta: { label: "Parler de votre projet IA ou data", href: "#" },
-    image: "https://picsum.photos/id/1015/1200/900",
+    image: photo(1015, 1200, 900),
   },
 ];

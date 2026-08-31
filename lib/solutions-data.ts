@@ -1,3 +1,5 @@
+import { photo } from "./media";
+
 export type SolutionPole = {
   id: string;
   label: string;
@@ -71,7 +73,7 @@ export const solutionsPoles: SolutionPole[] = [
     proof: {
       project: "BRIRENA HAIR",
       note: "Identité, univers visuel et déclinaisons de marque.",
-      image: "https://picsum.photos/id/1060/1200/900",
+      image: photo(1060, 1200, 900),
     },
     primaryCta: {
       label: "Découvrir nos projets de branding",
@@ -106,7 +108,7 @@ export const solutionsPoles: SolutionPole[] = [
     proof: {
       project: "KAWA Coffee Shop",
       note: "Plusieurs supports cohérents plutôt qu'un visuel isolé.",
-      image: "https://picsum.photos/id/1062/1200/900",
+      image: photo(1062, 1200, 900),
     },
     primaryCta: {
       label: "Voir nos réalisations design",
@@ -141,7 +143,7 @@ export const solutionsPoles: SolutionPole[] = [
     proof: {
       project: "THE VISION",
       note: "Message, vidéo et déclinaisons montrés ensemble.",
-      image: "https://picsum.photos/id/1043/1200/900",
+      image: photo(1043, 1200, 900),
     },
     primaryCta: {
       label: "Découvrir nos contenus vidéo",
@@ -176,7 +178,7 @@ export const solutionsPoles: SolutionPole[] = [
     proof: {
       project: "Prototype validé",
       note: "Démonstrations, prototypes ou projets réels uniquement.",
-      image: "https://picsum.photos/id/1047/1200/900",
+      image: photo(1047, 1200, 900),
     },
     primaryCta: {
       label: "Parler d'un projet IA",

@@ -1,3 +1,5 @@
+import { photo } from "./media";
+
 export type AccordionItem = {
   icon: string;
   title: string;
@@ -32,21 +34,21 @@ export const tabs: TabContent[] = [
         title: "Positionnement",
         description:
           "Clarifier ce que la marque représente, pour qui, et ce qui doit la distinguer.",
-        image: "https://picsum.photos/id/1025/1200/900",
+        image: photo(1025, 1200, 900),
       },
       {
         icon: "layout",
         title: "Identité visuelle",
         description:
           "Logo, couleurs, typographie et règles pour une marque reconnaissable.",
-        image: "https://picsum.photos/id/1065/1200/900",
+        image: photo(1065, 1200, 900),
       },
       {
         icon: "box",
         title: "Direction artistique",
         description:
           "Donner une cohérence visuelle à tous les points de contact de la marque.",
-        image: "https://picsum.photos/id/1055/1200/900",
+        image: photo(1055, 1200, 900),
       },
     ],
   },
@@ -65,21 +67,21 @@ export const tabs: TabContent[] = [
         title: "Supports print",
         description:
           "Flyers, brochures, catalogues et documents commerciaux cohérents avec la marque.",
-        image: "https://picsum.photos/id/1065/1200/900",
+        image: photo(1065, 1200, 900),
       },
       {
         icon: "image",
         title: "Menus et catalogues",
         description:
           "Présenter l'offre de façon claire, premium et utilisable au quotidien.",
-        image: "https://picsum.photos/id/1025/1200/900",
+        image: photo(1025, 1200, 900),
       },
       {
         icon: "box",
         title: "Présentations",
         description:
           "Des supports professionnels pour présenter une offre, un projet ou une vision.",
-        image: "https://picsum.photos/id/1055/1200/900",
+        image: photo(1055, 1200, 900),
       },
     ],
   },
@@ -98,21 +100,21 @@ export const tabs: TabContent[] = [
         title: "Vidéo publicitaire",
         description:
           "Transformer une offre ou un message en teaser, spot ou contenu de lancement.",
-        image: "https://picsum.photos/id/1035/1200/900",
+        image: photo(1035, 1200, 900),
       },
       {
         icon: "box",
         title: "Campagnes créatives",
         description:
           "Construire un concept, un message et des déclinaisons cohérentes.",
-        image: "https://picsum.photos/id/1045/1200/900",
+        image: photo(1045, 1200, 900),
       },
       {
         icon: "image",
         title: "Contenus de lancement",
         description:
           "Attirer l'attention autour d'un lancement, d'une offre ou d'un événement.",
-        image: "https://picsum.photos/id/1025/1200/900",
+        image: photo(1025, 1200, 900),
       },
     ],
   },
@@ -131,21 +133,21 @@ export const tabs: TabContent[] = [
         title: "Assistants intelligents",
         description:
           "Concevoir un assistant ou un chatbot à partir d'un usage et d'un objectif précis.",
-        image: "https://picsum.photos/id/1055/1200/900",
+        image: photo(1055, 1200, 900),
       },
       {
         icon: "box",
         title: "Collecte de données",
         description:
           "Organiser la collecte d'informations pour mieux comprendre et accompagner vos publics.",
-        image: "https://picsum.photos/id/1045/1200/900",
+        image: photo(1045, 1200, 900),
       },
       {
         icon: "layout",
         title: "Automatisation",
         description:
           "Intégrer l'automatisation là où elle simplifie un parcours ou une décision.",
-        image: "https://picsum.photos/id/1065/1200/900",
+        image: photo(1065, 1200, 900),
       },
     ],
   },

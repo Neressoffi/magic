@@ -1,3 +1,5 @@
+import { photo } from "./media";
+
 export type ProjectPole =
   | "branding"
   | "design"
@@ -59,11 +61,11 @@ export const featuredProject = {
   ],
   result:
     "Une présentation plus professionnelle et plus cohérente de l'offre KAWA, avec un support physique premium et une base digitale permettant de prolonger l'expérience client.",
-  image: "https://picsum.photos/id/1060/1600/1100",
+  image: photo(1060, 1600, 1100),
   gallery: [
-    "https://picsum.photos/id/1060/900/700",
-    "https://picsum.photos/id/225/900/700",
-    "https://picsum.photos/id/431/900/700",
+    photo(1060, 900, 700),
+    photo(225, 900, 700),
+    photo(431, 900, 700),
   ],
   caseStudyHref: "/realisations/kawa-coffee-shop",
 };
@@ -78,7 +80,7 @@ export const projects: ProjectCard[] = [
     interventions:
       "Stratégie de message, flyers, vidéos, scripts, contenus et campagnes.",
     poles: ["video", "design"],
-    image: "https://picsum.photos/id/1015/1200/900",
+    image: photo(1015, 1200, 900),
     note: "À présenter avec une sélection de campagnes cohérentes, pas une accumulation de visuels isolés.",
   },
   {
@@ -90,7 +92,7 @@ export const projects: ProjectCard[] = [
     interventions:
       "Concepts de campagne, messages, visuels, contenus et déclinaisons multilingues.",
     poles: ["video", "design"],
-    image: "https://picsum.photos/id/1043/1200/900",
+    image: photo(1043, 1200, 900),
     note: "Privilégier une campagne représentative montrant le système de communication.",
   },
   {
@@ -102,7 +104,7 @@ export const projects: ProjectCard[] = [
     interventions:
       "Logo, direction visuelle, variantes et recommandations de marque.",
     poles: ["branding"],
-    image: "https://picsum.photos/id/1039/1200/900",
+    image: photo(1039, 1200, 900),
     note: "Présenter uniquement les éléments validés et les rendus finaux.",
   },
   {
@@ -114,7 +116,7 @@ export const projects: ProjectCard[] = [
     interventions:
       "Logo, palette, typographies, moodboard et déclinaisons d'identité.",
     poles: ["branding"],
-    image: "https://picsum.photos/id/1067/1200/900",
+    image: photo(1067, 1200, 900),
     note: "Projet pertinent pour la catégorie Branding et identité.",
   },
   {
@@ -125,7 +127,7 @@ export const projects: ProjectCard[] = [
       "Projet de conception de supports professionnels destinés à mieux présenter l'offre et renforcer la perception de l'entreprise.",
     interventions: "Catalogue et supports graphiques.",
     poles: ["design"],
-    image: "https://picsum.photos/id/1062/1200/900",
+    image: photo(1062, 1200, 900),
     note: "Le contenu exact à publier doit être validé avant mise en ligne.",
   },
 ];
@@ -136,63 +138,63 @@ export const kawaCaseStudy = {
     "Transformer une carte de menu en prolongement de l'expérience de marque.",
   sector: "Restauration / Coffee shop",
   location: "Bastos, Yaoundé",
-  heroImage: "https://picsum.photos/id/1060/1974/1175",
+  heroImage: photo(1060, 1974, 1175),
   sections: [
     {
       id: "contexte",
       title: "Contexte",
       content:
         "KAWA Coffee Shop est un établissement situé à Bastos, Yaoundé. Le projet portait sur la professionnalisation de la présentation de son offre, entre expérience en salle et supports digitaux.",
-      image: "https://picsum.photos/id/1060/1400/900",
+      image: photo(1060, 1400, 900),
     },
     {
       id: "demande",
       title: "Demande initiale",
       content:
         "Le client souhaitait au départ une carte de menu plus claire et plus professionnelle pour présenter son offre en salle.",
-      image: "https://picsum.photos/id/225/1400/900",
+      image: photo(225, 1400, 900),
     },
     {
       id: "probleme",
       title: "Problème à résoudre",
       content:
         "La carte ne devait pas rester un simple document tarifaire. Elle devait devenir un support de marque lisible, cohérent avec l'univers du coffee shop, et capable d'évoluer vers une expérience plus digitale.",
-      image: "https://picsum.photos/id/431/1400/900",
+      image: photo(431, 1400, 900),
     },
     {
       id: "direction",
       title: "Direction retenue",
       content:
         "Une direction visuelle vintage et premium a été retenue pour renforcer la perception de KAWA, avec des principes de cohérence entre identité, lisibilité et usage réel en salle.",
-      image: "https://picsum.photos/id/1011/1400/900",
+      image: photo(1011, 1400, 900),
     },
     {
       id: "conception",
       title: "Conception",
       content:
         "Structuration des catégories, hiérarchie des informations, formats adaptés à l'usage, conception du menu imprimé et d'un menu digital consultable sur mobile, avec QR codes et logique de parcours.",
-      image: "https://picsum.photos/id/292/1400/900",
+      image: photo(292, 1400, 900),
     },
     {
       id: "production",
       title: "Production",
       content:
         "Les choix d'impression, les adaptations techniques et les contraintes de production ont guidé les décisions finales pour obtenir un livrable premium utilisable au quotidien.",
-      image: "https://picsum.photos/id/366/1400/900",
+      image: photo(366, 1400, 900),
     },
     {
       id: "resultat",
       title: "Résultat",
       content:
         "Une présentation plus professionnelle et plus cohérente de l'offre KAWA, avec un support physique premium et une base digitale permettant de prolonger l'expérience client. La preuve repose sur la transformation visible, la cohérence du système et la qualité du livrable final.",
-      image: "https://picsum.photos/id/488/1400/900",
+      image: photo(488, 1400, 900),
     },
     {
       id: "evolution",
       title: "Évolution possible",
       content:
         "Des prolongements ont été envisagés : fidélisation, activation via WhatsApp, événements et collecte de données. Ces pistes restent des évolutions possibles, et non des livrables déjà réalisés.",
-      image: "https://picsum.photos/id/513/1400/900",
+      image: photo(513, 1400, 900),
     },
   ] satisfies CaseStudySection[],
 };

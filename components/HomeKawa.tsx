@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { photo } from "@/lib/media";
 
 export function HomeKawa() {
   return (
@@ -8,7 +9,7 @@ export function HomeKawa() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <img
-              src="https://picsum.photos/id/1060/1600/1200"
+              src={photo(1060, 1600, 1200)}
               alt="KAWA Coffee Shop"
               className="absolute inset-0 h-full w-full object-cover"
             />

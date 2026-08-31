@@ -4,30 +4,31 @@ import {
   Music,
   Video,
 } from "lucide-react";
+import { photo } from "@/lib/media";
 
 const TOOL_TILES = [
   {
     label: "Identité de marque",
     icon: ImageIcon,
-    image: "https://picsum.photos/id/1039/500/620",
+    image: photo(1039, 500, 620),
     href: "/solutions#branding",
   },
   {
     label: "Contenus vidéo",
     icon: Video,
-    image: "https://picsum.photos/id/1043/500/620",
+    image: photo(1043, 500, 620),
     href: "/solutions#video",
   },
   {
     label: "Campagnes créatives",
     icon: Clapperboard,
-    image: "https://picsum.photos/id/1044/500/620",
+    image: photo(1044, 500, 620),
     href: "/solutions#video",
   },
   {
     label: "IA & données",
     icon: Music,
-    image: "https://picsum.photos/id/1047/500/620",
+    image: photo(1047, 500, 620),
     href: "/solutions#ia-data",
   },
 ];
@@ -133,7 +134,7 @@ export function BentoGrid() {
           <div className="flex flex-col gap-3 sm:gap-4">
             <div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-auto sm:min-h-[200px] sm:flex-1">
               <img
-                src="https://picsum.photos/id/1076/700/450"
+                src={photo(1076, 700, 450)}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover"
               />
@@ -144,11 +145,11 @@ export function BentoGrid() {
                 {[
                   {
                     label: "Projet de marque",
-                    image: "https://picsum.photos/id/1050/400/300",
+                    image: photo(1050, 400, 300),
                   },
                   {
                     label: "Campagne",
-                    image: "https://picsum.photos/id/1052/400/300",
+                    image: photo(1052, 400, 300),
                   },
                 ].map((folder) => (
                   <div
@@ -170,7 +171,7 @@ export function BentoGrid() {
 
               <div className="relative aspect-[16/10] overflow-hidden rounded-lg sm:aspect-auto sm:min-h-[140px] sm:flex-1">
                 <img
-                  src="https://picsum.photos/id/1058/500/350"
+                  src={photo(1058, 500, 350)}
                   alt=""
                   className="absolute inset-0 h-full w-full object-cover"
                 />

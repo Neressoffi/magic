@@ -2,13 +2,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRight, Play } from "lucide-react";
+import { photo } from "@/lib/media";
 
 const ORIGINALS = [
   {
     title: "THE VISION",
     description:
       "Structurer des campagnes et des contenus capables de rendre les opportunités d'études, d'immigration et de recrutement plus compréhensibles et plus engageantes.",
-    poster: "https://picsum.photos/id/1015/1600/800",
+    poster: photo(1015, 1600, 800),
     href: "/realisations",
     cta: "Voir le projet",
   },
@@ -16,7 +17,7 @@ const ORIGINALS = [
     title: "7G Services",
     description:
       "Construire une communication claire et rassurante pour des services financiers et d'assistance reliant la Russie et l'Afrique.",
-    poster: "https://picsum.photos/id/1043/1600/800",
+    poster: photo(1043, 1600, 800),
     href: "/realisations",
     cta: "Voir le projet",
   },
@@ -24,7 +25,7 @@ const ORIGINALS = [
     title: "NEMESIS",
     description:
       "Définir un univers de marque capable de traduire une ambition plus grande et de soutenir la future évolution du projet.",
-    poster: "https://picsum.photos/id/1016/1600/800",
+    poster: photo(1016, 1600, 800),
     href: "/realisations",
     cta: "Voir le projet",
   },
@@ -32,7 +33,7 @@ const ORIGINALS = [
     title: "BRIRENA HAIR",
     description:
       "Créer les bases visuelles d'une marque afro-luxury destinée aux femmes africaines en Russie.",
-    poster: "https://picsum.photos/id/1067/1600/800",
+    poster: photo(1067, 1600, 800),
     href: "/realisations",
     cta: "Voir le projet",
   },
